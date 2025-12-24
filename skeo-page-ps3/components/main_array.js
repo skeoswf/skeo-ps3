@@ -1,9 +1,13 @@
-import { xmbIcons } from '../xmb_icon_arrays/main_array.js';
+import Image from "next/image.js";
 
-function LoadXmbIcons() {
+function LoadXmbIcons({ iconObj }) {
   return (
-    <div id='test'>tessss</div>
+
+    <div className="icon-square">
+      <Image className="icon-image" src={iconObj.image} alt={iconObj.text}></Image>
+      <p>{iconObj.text}</p>
+    </div>
   )
-}
+};
 
 export default LoadXmbIcons;
