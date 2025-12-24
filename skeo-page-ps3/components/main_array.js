@@ -6,12 +6,12 @@ function LoadXmbIcons({ iconObj }) {
       <Image
         src={iconObj.image}
         alt={iconObj.text}
-        width={100}
-        height={100}
+        width={200}
+        height={200}
         className="icon-image"
         priority={iconObj.active}
       />
-      <p>{iconObj.text}</p>
+      <span>{iconObj.text}</span>
     </div>
   );
 }
