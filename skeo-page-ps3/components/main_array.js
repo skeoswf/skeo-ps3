@@ -9,9 +9,9 @@ function LoadXmbIcons({ iconObj }) {
         width={200}
         height={200}
         className="icon-image"
-        priority={iconObj.active}
+        unoptimized={true}
       />
-      <span>{iconObj.text}</span>
+      <span className="icon-square-text">{iconObj.text}</span>
     </div>
   );
 }
