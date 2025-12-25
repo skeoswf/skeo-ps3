@@ -6,8 +6,8 @@ function LoadXmbIcons({ iconObj }) {
       <Image
         src={iconObj.image}
         alt={iconObj.text}
-        width={200}
-        height={200}
+        width={120}
+        height={120}
         className="icon-image"
         unoptimized={true}
       />
