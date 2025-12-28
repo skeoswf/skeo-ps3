@@ -65,10 +65,13 @@ a {
   font-family: "ps3-font";
   font-size: 15px;
   text-shadow: 0px 0px 8px rgb(255, 255, 255);
+  pointer-events: none;
+  -webkit-user-select: none;
 }
 
 .icon-square-text {
   margin-top: -30px;
+  pointer-events: none;
 }
 
 .XMB-horizontal {
@@ -76,6 +79,7 @@ a {
   flex-direction: row;
   padding-top: 30vh;
   padding-left: 20vw;
+  pointer-events: none;
 }
 
 .active-icon {
