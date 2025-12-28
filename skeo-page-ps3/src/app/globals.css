@@ -77,3 +77,7 @@ a {
   padding-top: 30vh;
   padding-left: 20vw;
 }
+
+.active-icon {
+  background-color: red;
+}

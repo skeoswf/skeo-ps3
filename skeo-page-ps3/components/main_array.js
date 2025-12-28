@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function LoadXmbIcons({ iconObj }) {
   return (
-    <div className="icon-square">
+    <div className={`icon-square ${iconObj.active ? "active-icon" : ""}`}>
       <Image
         src={iconObj.image}
         alt={iconObj.text}
