@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import LoadXmbIcons from "../../components/main_array";
+import LoadSecondXMB from "../../components/secondary_array";
 import { xmbIcons as initialIcons } from "../../xmb_icon_arrays/main_array_data";
 
 export default function Home() {
@@ -33,10 +34,18 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="XMB-horizontal">
-      {xmbIcons.map(icon => (
-        <LoadXmbIcons key={icon.id} iconObj={icon} />
-      ))}
-    </div>
+    <>
+      <div className="XMB-horizontal">
+        {xmbIcons.map(icon => (
+          <LoadXmbIcons key={icon.id} iconObj={icon} />
+        ))}
+      </div>
+
+      <div className="XMB-vertical">
+        {xmbIcons.map(icon => (
+          <LoadSecondXMB key={icon.id} iconObj={icon} />
+        ))}
+      </div>
+    </>
   );
 }
