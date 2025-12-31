@@ -85,3 +85,7 @@ a {
 .active-icon {
   background-color: red;
 }
+
+.active-sub-item {
+  background-color: blue;
+}
