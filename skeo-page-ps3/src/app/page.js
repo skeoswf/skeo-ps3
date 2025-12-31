@@ -9,15 +9,20 @@ export default function Home() {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+      if (
+        e.key === "ArrowLeft" ||
+        e.key === "ArrowRight" ||
+        e.key === "a" ||
+        e.key === "d"
+      ) {
         setXmbIcons(prev => {
           const currentIndex = prev.findIndex(i => i.active);
-          const direction = e.key === "ArrowLeft" ? -1 : 1;
+          const direction = (e.key === "ArrowLeft" || e.key === "a") ? -1 : 1;
           const newIndex = (currentIndex + direction + prev.length) % prev.length;
 
           return prev.map((icon, index) => ({
             ...icon,
-            active: index === newIndex
+            active: (index === newIndex)
           }));
         });
       }
