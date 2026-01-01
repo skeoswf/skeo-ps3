@@ -21,10 +21,18 @@ export default function Home() {
           const direction = (e.key === "ArrowLeft" || e.key === "a") ? -1 : 1;
           const newIndex = (currentIndex + direction + prev.length) % prev.length;
 
-          return prev.map((icon, index) => ({
-            ...icon,
-            active: (index === newIndex)
-          }));
+          return prev.map((icon, index) => {
+            const isActive = index === newIndex;
+
+            return {
+              ...icon,
+              active: isActive,
+              items: icon.items.map((item, i) => ({
+                ...item,
+                active: isActive && i === 0   // only first child lights up
+              }))
+            };
+          });
         });
       }
     };
@@ -32,6 +40,7 @@ export default function Home() {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
+
 
   return (
     <>
