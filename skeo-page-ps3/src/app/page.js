@@ -16,9 +16,9 @@ export default function Home() {
         e.key === "a" ||
         e.key === "d"
       ) {
-        setXmbIcons(prev => {
-          const currentIndex = prev.findIndex(i => i.active);
-          const direction = (e.key === "ArrowLeft" || e.key === "a") ? -1 : 1;
+        setXmbIcons((prev) => {
+          const currentIndex = prev.findIndex((i) => i.active);
+          const direction = e.key === "ArrowLeft" || e.key === "a" ? -1 : 1;
           const newIndex = (currentIndex + direction + prev.length) % prev.length;
 
           return prev.map((icon, index) => {
@@ -29,9 +29,39 @@ export default function Home() {
               active: isActive,
               items: icon.items.map((item, i) => ({
                 ...item,
-                active: isActive && i === 0   // only first child lights up
-              }))
+                active: isActive && i === 0, // only first child lights up
+              })),
             };
+          });
+        });
+      } else if (
+        e.key === "ArrowUp" ||
+        e.key === "ArrowDown" ||
+        e.key === "w" ||
+        e.key === "s"
+      ) {
+        setXmbIcons((prev) => {
+          const currentSubIconIndex = prev.findIndex((icon) => icon.items.findIndex((item) => item.active) !== -1);
+
+          if (currentSubIconIndex === -1) return prev;
+
+          const currentSubIconItems = prev[currentSubIconIndex].items;
+          const activeItemIndex = currentSubIconItems.findIndex((item) => item.active);
+
+          const direction = e.key === "ArrowUp" ? -1 : 1;
+          const newIndex = (activeItemIndex + direction + currentSubIconItems.length) % currentSubIconItems.length;
+
+          return prev.map((icon, index) => {
+            if (index === currentSubIconIndex) {
+              return {
+                ...icon,
+                items: icon.items.map((item, i) => ({
+                  ...item,
+                  active: i === newIndex,
+                })),
+              };
+            }
+            return icon;
           });
         });
       }
@@ -41,17 +71,16 @@ export default function Home() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-
   return (
     <>
       <div className="XMB-horizontal">
-        {xmbIcons.map(icon => (
+        {xmbIcons.map((icon) => (
           <LoadXmbIcons key={icon.id} iconObj={icon} />
         ))}
       </div>
 
       <div className="XMB-vertical">
-        {xmbIcons.map(icon => (
+        {xmbIcons.map((icon) => (
           <LoadSecondXMB key={icon.id} iconObj={icon} />
         ))}
       </div>
