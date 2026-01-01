@@ -74,13 +74,14 @@ a {
   pointer-events: none;
 }
 
-.XMB-horizontal {
+/* .XMB-horizontal {
   display: flex;
   flex-direction: row;
-  padding-top: 30vh;
-  padding-left: 20vw;
+  margin-top: 30vh;
+  margin-left: 20vw;
   pointer-events: none;
-}
+  position: relative;
+} */
 
 .active-icon {
   background-color: red;
@@ -88,4 +89,42 @@ a {
 
 .active-sub-item {
   background-color: blue;
+}
+
+/* .XMB-vertical {
+  background-color: green;
+  width: 120px;
+  text-align: center;
+  margin-left: 31.12vw;
+}
+
+ */
+
+.XMB-container {
+  position: relative;
+  margin-top: 30vh;
+  margin-left: 20vw;
+  width: fit-content;
+  padding-bottom: 150px;
+
+  --active-x: 0px;
+  --row-bottom: 120px;
+  /* fallback */
+}
+
+.XMB-horizontal {
+  display: flex;
+  flex-direction: row;
+
+  margin: 0;
+
+}
+
+.XMB-vertical {
+  position: absolute;
+  left: var(--active-x);
+  top: calc(var(--row-bottom) + 10px);
+  /* 10px gap under the icons */
+  width: 120px;
+  text-align: center;
 }
