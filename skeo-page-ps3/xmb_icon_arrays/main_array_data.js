@@ -111,21 +111,21 @@ const xmbIcons = [
     items: [
       {
         id: "videos_set_1",
-        title: "sample video 1",
+        title: "video set 1",
         text_content: "sample video 1 description",
         asset: { type: "video", src: null },
         active: false
       },
       {
         id: "videos_set_2",
-        title: "sample video 2",
+        title: "video set 2",
         text_content: "sample video 2 description",
         asset: { type: "video", src: null },
         active: false
       },
       {
         id: "videos_set_3",
-        title: "sample video 3",
+        title: "video set 3",
         text_content: "sample video 3 description",
         asset: { type: "video", src: null },
         active: false
@@ -141,21 +141,21 @@ const xmbIcons = [
     items: [
       {
         id: "photos_set_1",
-        title: "sample photo 1",
+        title: "photo set 1",
         text_content: "sample photo 1 description",
         asset: { type: "image", src: null },
         active: false
       },
       {
         id: "photos_set_2",
-        title: "sample photo 2",
+        title: "photo set 2",
         text_content: "sample photo 2 description",
         asset: { type: "image", src: null },
         active: false
       },
       {
         id: "photos_set_3",
-        title: "sample photo 3",
+        title: "photo set 3",
         text_content: "sample photo 3 description",
         asset: { type: "image", src: null },
         active: false

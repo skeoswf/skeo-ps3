@@ -1,4 +1,6 @@
 import Image from "next/image";
+import LoadSecondXMB from "./secondary_array";
+
 
 function LoadXmbIcons({ iconObj }) {
   return (
@@ -12,6 +14,7 @@ function LoadXmbIcons({ iconObj }) {
         unoptimized={true}
       />
       <span className="icon-square-text">{iconObj.text}</span>
+
     </div>
   );
 }
