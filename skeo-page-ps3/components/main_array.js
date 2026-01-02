@@ -1,6 +1,4 @@
 import Image from "next/image";
-import LoadSecondXMB from "./secondary_array";
-
 
 function LoadXmbIcons({ iconObj }) {
   return (

@@ -75,6 +75,8 @@ export default function Home() {
         e.key === "s"
       ) {
         setXmbIcons((prev) => {
+          // -1 is returned by findIndex if no active item is found
+          // find index of the currently active sub-icon item
           const currentSubIconIndex = prev.findIndex(
             (icon) => icon.items.findIndex((item) => item.active) !== -1
           );
