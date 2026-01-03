@@ -88,6 +88,7 @@ a {
   margin-left: 20vw;
   width: fit-content;
   padding-bottom: 150px;
+  /* fallback values */
   --active-x: 0px;
   --row-bottom: 120px;
 }
@@ -100,6 +101,14 @@ a {
 }
 
 .XMB-vertical {
+  position: absolute;
+  left: var(--active-x);
+  top: calc(var(--row-bottom) + 10px);
+  width: 120px;
+  text-align: center;
+}
+
+.above-active {
   position: absolute;
   left: var(--active-x);
   top: calc(var(--row-bottom) + 10px);
