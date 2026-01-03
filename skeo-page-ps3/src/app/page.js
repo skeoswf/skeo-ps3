@@ -1,6 +1,13 @@
 "use client";
 
-import { useState, useEffect, useLayoutEffect, useRef, useCallback } from "react";
+import {
+  useState,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useCallback
+} from "react";
+
 import LoadXmbIcons from "../../components/main_array";
 import LoadSecondXMB from "../../components/secondary_array";
 import { xmbIcons as initialIcons } from "../../xmb_icon_arrays/main_array_data";
@@ -8,6 +15,8 @@ import { xmbIcons as initialIcons } from "../../xmb_icon_arrays/main_array_data"
 export default function Home() {
   const [xmbIcons, setXmbIcons] = useState(initialIcons);
 
+  // use ref lets use reference values not tied to state updates/ needed for rendering. changes in useRef do not cause re-renders\
+  // added reference to jsx for container.current and iconRefs.current. references strictly for dom measurements
   const containerRef = useRef(null);
   const iconRefs = useRef([]);
 
@@ -17,6 +26,21 @@ export default function Home() {
     if (!containerEl) return;
 
     const activeIndex = xmbIcons.findIndex((i) => i.active);
+
+    const aboveIconIndex = () => {
+
+      let result = [];
+      for (let i = 0; i < activeIndex; i++) {
+        result.push(i);
+      }
+      return result;
+    }
+
+    const aboveIconElements = aboveIconIndex().map(index => iconRefs.current[index]);
+    aboveIconElements.forEach(el => {
+      console.log("test")
+    });
+
     const activeEl = iconRefs.current[activeIndex];
     if (!activeEl) return;
 
@@ -26,7 +50,8 @@ export default function Home() {
     // left edge of active icon relative to container
     const x = activeRect.left - containerRect.left;
 
-    containerEl.style.setProperty("--active-x", `${x}px`);
+    containerEl.style.setProperty("--active-x", `
+      ${x}px`);
     containerEl.style.setProperty("--row-bottom", `${activeRect.bottom - containerRect.top}px`);
   }, [xmbIcons]);
 
