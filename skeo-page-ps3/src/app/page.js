@@ -26,20 +26,13 @@ export default function Home() {
     if (!containerEl) return;
 
     const activeIndex = xmbIcons.findIndex((i) => i.active);
+    if (activeIndex === -1) return;
 
-    const aboveIconIndex = () => {
+    const activeIcon = xmbIcons[activeIndex];
 
-      let result = [];
-      for (let i = 0; i < activeIndex; i++) {
-        result.push(i);
-      }
-      return result;
-    }
+    const activeSubIdx = activeIcon.items.findIndex((item) => item.active);
+    containerEl.style.setProperty("--sub-active-idx", `${Math.max(activeSubIdx, 0)}`);
 
-    const aboveIconElements = aboveIconIndex().map(index => iconRefs.current[index]);
-    aboveIconElements.forEach(el => {
-      console.log("test")
-    });
 
     const activeEl = iconRefs.current[activeIndex];
     if (!activeEl) return;
@@ -50,8 +43,7 @@ export default function Home() {
     // left edge of active icon relative to container
     const x = activeRect.left - containerRect.left;
 
-    containerEl.style.setProperty("--active-x", `
-      ${x}px`);
+    containerEl.style.setProperty("--active-x", `${x}px`);
     containerEl.style.setProperty("--row-bottom", `${activeRect.bottom - containerRect.top}px`);
   }, [xmbIcons]);
 
