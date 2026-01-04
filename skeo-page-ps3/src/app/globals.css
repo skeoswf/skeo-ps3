@@ -11,12 +11,21 @@
   --foreground: #171717;
 }
 
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+
+  html {
+    color-scheme: dark;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
@@ -26,17 +35,11 @@ body {
 }
 
 body {
-  color: var(--foreground);
   background: var(--background);
+  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 a {
@@ -44,27 +47,20 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
-
-#test {
-  background-color: red;
-  width: 100px;
-  height: 100px;
-}
+/* ---------- icons ---------- */
 
 .icon-square {
   width: 120px;
   height: 120px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
   font-family: "ps3-font";
   font-size: 15px;
-  text-shadow: 0px 0px 8px rgb(255, 255, 255);
+  text-shadow: 0 0 8px rgb(255, 255, 255);
+
   pointer-events: none;
   -webkit-user-select: none;
 }
@@ -74,44 +70,57 @@ a {
   pointer-events: none;
 }
 
-.active-icon {
-  background-color: red;
+/* ---------- xmb layout ---------- */
+
+.XMB-container {
+  position: relative;
+  width: fit-content;
+  height: 60vh;
+
+  margin-top: 30vh;
+  margin-left: 20vw;
+  padding-bottom: 150px;
+
+  /* fallbacks / positioning vars */
+  --active-x: 0px;
+  --row-bottom: 120px;
+
+  /* sub-menu alignment */
+  --sub-step: 22px;
+  /* item height + gap (tune) */
+  --sub-active-slot: 0;
+  /* 0 = first item under icon */
+  --sub-active-idx: 0;
+}
+
+.XMB-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.XMB-vertical {
+  position: absolute;
+  left: var(--active-x);
+  top: calc(var(--row-bottom) + 10px + (var(--sub-active-slot) * var(--sub-step)) - (var(--sub-active-idx) * var(--sub-step)));
+
+  width: 120px;
+  text-align: center;
+}
+
+/* ---------- sub-items ---------- */
+
+.sub-icon,
+.sub-above,
+.sub-main {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .active-sub-item {
   background-color: blue;
 }
 
-.XMB-container {
-  position: relative;
-  margin-top: 30vh;
-  margin-left: 20vw;
-  width: fit-content;
-  padding-bottom: 150px;
-  /* fallback values */
-  --active-x: 0px;
-  --row-bottom: 120px;
-}
-
-.XMB-horizontal {
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-
-}
-
-.XMB-vertical {
-  position: absolute;
-  left: var(--active-x);
-  top: calc(var(--row-bottom) + 10px);
-  width: 120px;
-  text-align: center;
-}
-
 .above-active {
-  position: absolute;
-  left: var(--active-x);
-  top: calc(var(--row-bottom) + 10px);
-  width: 120px;
-  text-align: center;
+  opacity: 0.6;
 }
