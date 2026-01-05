@@ -43,6 +43,7 @@ export default function Home() {
     // left edge of active icon relative to container
     const x = activeRect.left - containerRect.left;
 
+    containerEl.style.setProperty("--row-top", `${activeRect.top - containerRect.top}px`);
     containerEl.style.setProperty("--active-x", `${x}px`);
     containerEl.style.setProperty("--row-bottom", `${activeRect.bottom - containerRect.top}px`);
   }, [xmbIcons]);
@@ -141,9 +142,16 @@ export default function Home() {
         ))}
       </div>
 
+      <div className="XMB-vertical-above">
+        {xmbIcons.map((icon) => (
+          <LoadSecondXMB key={icon.id} iconObj={icon} mode="above" />
+        ))}
+      </div>
+
+      {/* active + below items (rendered below the main icon row) */}
       <div className="XMB-vertical">
         {xmbIcons.map((icon) => (
-          <LoadSecondXMB key={icon.id} iconObj={icon} />
+          <LoadSecondXMB key={icon.id} iconObj={icon} mode="below" />
         ))}
       </div>
     </div>
