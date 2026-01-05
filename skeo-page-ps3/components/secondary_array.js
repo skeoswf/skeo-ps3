@@ -1,4 +1,4 @@
-function LoadSecondXMB({ iconObj, mode = "below" }) {
+function LoadSecondXMB({ iconObj, mode = "below", activeItemRef }) {
   if (!iconObj?.active) return null;
 
   const activeIdx = iconObj.items.findIndex((item) => item.active);
@@ -27,6 +27,7 @@ function LoadSecondXMB({ iconObj, mode = "below" }) {
       {belowItems.map((item) => (
         <div
           key={item.id}
+          ref={item.active ? activeItemRef : null}
           className={`sub-item ${item.active ? "active-sub-item" : ""}`}
         >
           <span className="sub-context-text">{item.title}</span>

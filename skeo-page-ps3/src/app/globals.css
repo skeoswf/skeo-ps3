@@ -1,3 +1,7 @@
+/* =======================
+   FONTS
+======================= */
+
 @font-face {
   font-family: "ps3-font";
   src:
@@ -5,6 +9,10 @@
     url("/fonts/FOT-Rodin Pro DB.woff") format("woff");
   font-display: swap;
 }
+
+/* =======================
+   ROOT / THEME
+======================= */
 
 :root {
   --background: #ffffff;
@@ -21,6 +29,10 @@
     color-scheme: dark;
   }
 }
+
+/* =======================
+   GLOBAL RESET
+======================= */
 
 * {
   box-sizing: border-box;
@@ -47,7 +59,9 @@ a {
   text-decoration: none;
 }
 
-/* ---------- icons ---------- */
+/* =======================
+   MAIN ICONS (TOP ROW)
+======================= */
 
 .icon-square {
   width: 120px;
@@ -59,10 +73,10 @@ a {
 
   font-family: "ps3-font";
   font-size: 15px;
-  text-shadow: 0 0 8px rgb(255, 255, 255);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.85);
 
   pointer-events: none;
-  -webkit-user-select: none;
+  user-select: none;
 }
 
 .icon-square-text {
@@ -70,7 +84,9 @@ a {
   pointer-events: none;
 }
 
-/* ---------- xmb layout ---------- */
+/* =======================
+   XMB LAYOUT ENGINE
+======================= */
 
 .XMB-container {
   position: relative;
@@ -81,15 +97,14 @@ a {
   margin-left: 20vw;
   padding-bottom: 150px;
 
-  /* fallbacks / positioning vars */
+  /* Geometry interface (JS-driven) */
   --active-x: 0px;
   --row-bottom: 120px;
+  --row-top: 0px;
 
-  /* sub-menu alignment */
+  /* Sub-menu geometry */
   --sub-step: 22px;
-  /* item height + gap (tune) */
   --sub-active-slot: 0;
-  /* 0 = first item under icon */
   --sub-active-idx: 0;
 }
 
@@ -98,42 +113,49 @@ a {
   flex-direction: row;
 }
 
+/* Sub-menu below active icon */
 .XMB-vertical {
   position: absolute;
   left: var(--active-x);
-  top: calc(var(--row-bottom) + 10px + (var(--sub-active-slot) * var(--sub-step)) - (var(--sub-active-idx) * var(--sub-step)));
-
+  top: calc(var(--row-bottom) + 40px);
   width: 120px;
   text-align: center;
 }
 
+/* Sub-menu above active icon */
 .XMB-vertical-above {
   position: absolute;
   left: var(--active-x);
-  top: calc(var(--row-top) - 10px);
-  /* 10px gap above the main icon row */
+  top: calc(var(--row-top) - 15px);
   width: 120px;
   text-align: center;
 
   transform: translateY(-100%);
-  /* anchor bottom at row-top */
 }
 
+/* =======================
+   SUB-ITEM STACKS
+======================= */
 
-/* ---------- sub-items ---------- */
-
-.sub-icon,
-.sub-above,
-.sub-main {
+.sub-icon {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.active-sub-item {
+/* Default dim state */
+.sub-item {
+  opacity: 0.6;
+  transition: opacity 120ms ease;
+}
+
+/* Active highlight */
+.sub-item.active-sub-item {
+  opacity: 1;
   background-color: blue;
 }
 
+/* Above-stack visual dim */
 .above-active {
   opacity: 0.6;
 }

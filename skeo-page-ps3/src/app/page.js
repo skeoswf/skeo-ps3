@@ -19,6 +19,8 @@ export default function Home() {
   // added reference to jsx for container.current and iconRefs.current. references strictly for dom measurements
   const containerRef = useRef(null);
   const iconRefs = useRef([]);
+  const activeSubItemRef = useRef(null);
+
 
   // measure where the active icon is, and store it in a CSS var on the container
   const updateVerticalPosition = useCallback(() => {
@@ -32,6 +34,15 @@ export default function Home() {
 
     const activeSubIdx = activeIcon.items.findIndex((item) => item.active);
     containerEl.style.setProperty("--sub-active-idx", `${Math.max(activeSubIdx, 0)}`);
+
+    const subEl = activeSubItemRef.current;
+    if (subEl) {
+      const h = subEl.getBoundingClientRect().height;
+
+      // gap between items in your CSS is 6px
+      containerEl.style.setProperty("--sub-step", `${h + 6}px`);
+    }
+
 
 
     const activeEl = iconRefs.current[activeIndex];
@@ -151,7 +162,12 @@ export default function Home() {
       {/* active + below items (rendered below the main icon row) */}
       <div className="XMB-vertical">
         {xmbIcons.map((icon) => (
-          <LoadSecondXMB key={icon.id} iconObj={icon} mode="below" />
+          <LoadSecondXMB
+            key={icon.id}
+            iconObj={icon}
+            mode="below"
+            activeItemRef={activeSubItemRef}
+          />
         ))}
       </div>
     </div>
