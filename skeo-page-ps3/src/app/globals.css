@@ -107,6 +107,19 @@ a {
   text-align: center;
 }
 
+.XMB-vertical-above {
+  position: absolute;
+  left: var(--active-x);
+  top: calc(var(--row-top) - 10px);
+  /* 10px gap above the main icon row */
+  width: 120px;
+  text-align: center;
+
+  transform: translateY(-100%);
+  /* anchor bottom at row-top */
+}
+
+
 /* ---------- sub-items ---------- */
 
 .sub-icon,
