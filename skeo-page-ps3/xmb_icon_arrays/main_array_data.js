@@ -143,21 +143,93 @@ const xmbIcons = [
         id: "photos_set_1",
         title: "photo set 1",
         text_content: "sample photo 1 description",
-        asset: { type: "image", src: null },
+        asset:
+          [
+            {
+              type: "image",
+              src: "/photosets/set1_motorcycle/photo1_1.png"
+            },
+            {
+              type: "image",
+              src: "/photosets/set1_motorcycle/photo1_2.png"
+            },
+          ],
         active: false
       },
       {
         id: "photos_set_2",
         title: "photo set 2",
         text_content: "sample photo 2 description",
-        asset: { type: "image", src: null },
+        asset:
+          [
+            {
+              type: "image",
+              src: "/photosets/set2_hands/photo3_2.png"
+            },
+            {
+              type: "image",
+              src: "/photosets/set2_hands/photo4_2.png"
+            },
+            {
+              type: "image",
+              src: "/photosets/set2_hands/photos5_2.png"
+            },
+          ],
         active: false
       },
       {
         id: "photos_set_3",
         title: "photo set 3",
         text_content: "sample photo 3 description",
-        asset: { type: "image", src: null },
+        asset:
+          [
+            {
+              type: "image",
+              src: "/photosets/set3_smoke/photos6_3.png"
+            },
+            {
+              type: "image",
+              src: "/photosets/set3_smoke/photos7_3.png"
+            },
+            {
+              type: "image",
+              src: "/photosets/set3_smoke/photos8_3.png"
+            },
+          ],
+        active: false
+      },
+      {
+        id: "photos_set_4",
+        title: "photo set 3",
+        text_content: "sample photo 3 description",
+        asset:
+          [
+            {
+              type: "image",
+              src: "/photosets/set4_helmet/photos9_4.png"
+            },
+            {
+              type: "image",
+              src: "/photosets/set4_helmet/photos10_4.png"
+            },
+          ],
+        active: false
+      },
+      {
+        id: "photos_set_3",
+        title: "photo set 5",
+        text_content: "sample photo 3 description",
+        asset:
+          [
+            {
+              type: "image",
+              src: "/photosets/set5_cat/photos11_5.png"
+            },
+            {
+              type: "image",
+              src: "/photosets/set5_cat/photos12_5.png"
+            },
+          ],
         active: false
       },
     ],
