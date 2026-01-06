@@ -15,7 +15,7 @@ import { xmbIcons as initialIcons } from "../../xmb_icon_arrays/main_array_data"
 export default function Home() {
   const [xmbIcons, setXmbIcons] = useState(initialIcons);
 
-  // use ref lets use reference values not tied to state updates/ needed for rendering. changes in useRef do not cause re-renders\
+  // use ref lets use reference values not tied to state updates/ needed for rendering. changes in useRef do not cause re-renders
   // added reference to jsx for container.current and iconRefs.current. references strictly for dom measurements
   const containerRef = useRef(null);
   const iconRefs = useRef([]);
@@ -38,12 +38,8 @@ export default function Home() {
     const subEl = activeSubItemRef.current;
     if (subEl) {
       const h = subEl.getBoundingClientRect().height;
-
-      // gap between items in your CSS is 6px
       containerEl.style.setProperty("--sub-step", `${h + 6}px`);
     }
-
-
 
     const activeEl = iconRefs.current[activeIndex];
     if (!activeEl) return;
