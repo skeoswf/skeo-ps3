@@ -216,7 +216,7 @@ const xmbIcons = [
         active: false
       },
       {
-        id: "photos_set_3",
+        id: "photos_set_5",
         title: "photo set 5",
         text_content: "sample photo 3 description",
         asset:
