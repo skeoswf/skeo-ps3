@@ -14,13 +14,14 @@ import { xmbIcons as initialIcons } from "../../xmb_icon_arrays/main_array_data"
 
 export default function Home() {
   const [xmbIcons, setXmbIcons] = useState(initialIcons);
+  const [xoffset, setxoffset] = useState(0)
+  const [yoffset, setyoffset] = useState(0)
 
   // use ref lets use reference values not tied to state updates/ needed for rendering. changes in useRef do not cause re-renders
   // added reference to jsx for container.current and iconRefs.current. references strictly for dom measurements
   const containerRef = useRef(null);
   const iconRefs = useRef([]);
   const activeSubItemRef = useRef(null);
-
 
   // measure where the active icon is, and store it in a CSS var on the container
   const updateVerticalPosition = useCallback(() => {
@@ -80,6 +81,19 @@ export default function Home() {
           const direction = e.key === "ArrowLeft" || e.key === "a" ? -1 : 1;
           const newIndex = (currentIndex + direction + prev.length) % prev.length;
 
+
+          if (e.key === "ArrowLeft" || e.key === "a") {
+            setxoffset(prev => prev + 60)
+          }
+
+          if (e.key === "ArrowRight" || e.key === "d") {
+            setxoffset(prev => prev - 60)
+
+            // if over value, set value back to __ 
+
+          }
+
+
           return prev.map((icon, index) => {
             const isActive = index === newIndex;
 
@@ -136,13 +150,16 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="XMB-container" ref={containerRef}>
+    <div className="XMB-container" ref={containerRef} >
       <div className="XMB-horizontal">
         {xmbIcons.map((icon, idx) => (
           <div
             key={icon.id}
             ref={(el) => (iconRefs.current[idx] = el)}
             className="XMB-icon-wrap"
+            style={{
+              transform: `translate(${xoffset}px, ${yoffset}px)`
+            }}
           >
             <LoadXmbIcons iconObj={icon} />
           </div>
