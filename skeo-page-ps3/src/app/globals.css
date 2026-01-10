@@ -89,12 +89,13 @@ a {
 ======================= */
 
 .XMB-container {
+  user-select: none;
   position: relative;
   width: fit-content;
   height: 60vh;
 
   margin-top: 30vh;
-  margin-left: 20vw;
+  margin-left: 30vw;
   padding-bottom: 150px;
 
   /* Geometry interface (JS-driven) */

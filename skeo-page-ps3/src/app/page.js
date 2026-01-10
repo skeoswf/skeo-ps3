@@ -83,15 +83,13 @@ export default function Home() {
 
 
           if (e.key === "ArrowLeft" || e.key === "a") {
-            setxoffset(prev => prev + 60)
+            setxoffset(prev => (prev > 60 ? -540 : prev + 60));
           }
 
           if (e.key === "ArrowRight" || e.key === "d") {
-            setxoffset(prev => prev - 60)
-
-            // if over value, set value back to __ 
-
+            setxoffset(prev => (prev <= -540 ? 120 : prev - 60));
           }
+
 
 
           return prev.map((icon, index) => {
