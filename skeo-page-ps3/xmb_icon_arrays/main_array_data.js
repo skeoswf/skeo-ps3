@@ -110,28 +110,39 @@ const xmbIcons = [
     active: false,
     items: [
       {
-        id: "videos_set_1",
-        title: "video set 1",
-        text_content: "sample video 1 description",
-        asset: { type: "video", src: null },
+        id: "videos_set_1_concerts",
+        title: "concerts",
+        text_content: "videos from concerts",
+        asset: [
+          { type: "video", src: "/videosets/videos1_concerts/diles-music.mp4" },
+          { type: "video", src: "/videosets/videos1_concerts/wisp.mp4" },
+        ],
         active: false
       },
       {
-        id: "videos_set_2",
-        title: "video set 2",
-        text_content: "sample video 2 description",
-        asset: { type: "video", src: null },
+        id: "videos_set_2_cat",
+        title: "pixel",
+        text_content: "pixel videos",
+        asset: [
+          { type: "video", src: "/videosets/videos2_cat/pixel1.mp4" },
+          { type: "video", src: "/videosets/videos2_cat/pixel2.mp4" },
+        ],
         active: false
       },
       {
-        id: "videos_set_3",
-        title: "video set 3",
-        text_content: "sample video 3 description",
-        asset: { type: "video", src: null },
+        id: "videos_set_3_instruments",
+        title: "instruments",
+        text_content: "music snippets",
+        asset: [
+          { type: "video", src: "/videosets/videos3_instruments/pianosnippet.mp4" },
+          { type: "video", src: "/videosets/videos3_instruments/sarahguitar.mp4" },
+          { type: "video", src: "/videosets/videos3_instruments/squiddy.mp4" },
+        ],
         active: false
       },
     ],
   },
+
 
   {
     id: 5,
@@ -145,14 +156,8 @@ const xmbIcons = [
         text_content: "sample photo 1 description",
         asset:
           [
-            {
-              type: "image",
-              src: "/photosets/set1_motorcycle/photo1_1.png"
-            },
-            {
-              type: "image",
-              src: "/photosets/set1_motorcycle/photo1_2.png"
-            },
+            { type: "image", src: "/photosets/set1_motorcycle/photo1_1.png" },
+            { type: "image", src: "/photosets/set1_motorcycle/photo1_2.png" },
           ],
         active: false
       },
@@ -162,18 +167,9 @@ const xmbIcons = [
         text_content: "sample photo 2 description",
         asset:
           [
-            {
-              type: "image",
-              src: "/photosets/set2_hands/photo3_2.png"
-            },
-            {
-              type: "image",
-              src: "/photosets/set2_hands/photo4_2.png"
-            },
-            {
-              type: "image",
-              src: "/photosets/set2_hands/photos5_2.png"
-            },
+            { type: "image", src: "/photosets/set2_hands/photo3_2.png" },
+            { type: "image", src: "/photosets/set2_hands/photo4_2.png" },
+            { type: "image", src: "/photosets/set2_hands/photos5_2.png" },
           ],
         active: false
       },
@@ -183,18 +179,9 @@ const xmbIcons = [
         text_content: "sample photo 3 description",
         asset:
           [
-            {
-              type: "image",
-              src: "/photosets/set3_smoke/photos6_3.png"
-            },
-            {
-              type: "image",
-              src: "/photosets/set3_smoke/photos7_3.png"
-            },
-            {
-              type: "image",
-              src: "/photosets/set3_smoke/photos8_3.png"
-            },
+            { type: "image", src: "/photosets/set3_smoke/photos6_3.png" },
+            { type: "image", src: "/photosets/set3_smoke/photos7_3.png" },
+            { type: "image", src: "/photosets/set3_smoke/photos8_3.png" },
           ],
         active: false
       },
@@ -204,14 +191,8 @@ const xmbIcons = [
         text_content: "sample photo 3 description",
         asset:
           [
-            {
-              type: "image",
-              src: "/photosets/set4_helmet/photos9_4.png"
-            },
-            {
-              type: "image",
-              src: "/photosets/set4_helmet/photos10_4.png"
-            },
+            { type: "image", src: "/photosets/set4_helmet/photos9_4.png" },
+            { type: "image", src: "/photosets/set4_helmet/photos10_4.png" },
           ],
         active: false
       },
@@ -221,14 +202,8 @@ const xmbIcons = [
         text_content: "sample photo 3 description",
         asset:
           [
-            {
-              type: "image",
-              src: "/photosets/set5_cat/photos11_5.png"
-            },
-            {
-              type: "image",
-              src: "/photosets/set5_cat/photos12_5.png"
-            },
+            { type: "image", src: "/photosets/set5_cat/photos11_5.png" },
+            { type: "image", src: "/photosets/set5_cat/photos12_5.png" },
           ],
         active: false
       },
