@@ -8,13 +8,13 @@ const xmbIcons = [
       {
         id: "home_about",
         title: "about",
-        text_content: "home about test content",
+        text_content: "originally, this page was intended to be a sort of professional/portfolio page. i always felt that the xmb bar from the playstation 3 era was clean, interactive, and intuitive, without it being plagued by an overtly'sterile' quality you see in a lot of more modern uis. with a place for photos and videos as well, it'd be a nice way to also showcase who i am -- beyond the resume.",
         active: false
       },
       {
         id: "home_resources_used",
         title: "resources used",
-        text_content: "home resources used test content",
+        text_content: "sounds / xmb references [[[come back to this]]]",
         active: false
       },
       {
@@ -36,23 +36,23 @@ const xmbIcons = [
       {
         id: "user_about",
         title: "about me",
-        text_content: "skeo about test content",
+        text_content: "i am a software engineer currently looking for my first role! i graduated nashville software school in 2025, with a focus on development fundamentals and problem solving. the final three months of the program was executed in a simulated company environment with scrum methodology. \\n in the past, i was in the food industry -- working both roles for both FOH and BOH-- being a line cook, barista, FOH manager, and trainer.",
         active: true
       },
       {
         id: "user_resume",
         title: "resume",
-        text_content: "skeo resume test content",
+        text_content: "skeo resume test content [[UPDATE AND REPLACE]]",
         asset: {
           type: "pdf",
-          src: null,
+          src: "resume/skeo_resume_v2.pdf",
         },
         active: false
       },
       {
         id: "user_linkedin",
         title: "linkedin",
-        text_content: "skeo linkedin test content",
+        text_content: "my linkedin",
         link: "https://www.linkedin.com/in/sk3o",
         active: false
       },
@@ -105,6 +105,67 @@ const xmbIcons = [
 
   {
     id: 4,
+    text: "Photos",
+    image: "/xmb_icons/photos-icon.png",
+    active: false,
+    items: [
+      {
+        id: "photos_set_1",
+        title: "photo set 1",
+        text_content: "sample photo 1 description",
+        asset: [
+          { type: "image", src: "/photosets/set1_motorcycle/photo1_1.png" },
+          { type: "image", src: "/photosets/set1_motorcycle/photo1_2.png" },
+        ],
+        active: false
+      },
+      {
+        id: "photos_set_2",
+        title: "photo set 2",
+        text_content: "sample photo 2 description",
+        asset: [
+          { type: "image", src: "/photosets/set2_hands/photo3_2.png" },
+          { type: "image", src: "/photosets/set2_hands/photo4_2.png" },
+          { type: "image", src: "/photosets/set2_hands/photos5_2.png" },
+        ],
+        active: false
+      },
+      {
+        id: "photos_set_3",
+        title: "photo set 3",
+        text_content: "sample photo 3 description",
+        asset: [
+          { type: "image", src: "/photosets/set3_smoke/photos6_3.png" },
+          { type: "image", src: "/photosets/set3_smoke/photos7_3.png" },
+          { type: "image", src: "/photosets/set3_smoke/photos8_3.png" },
+        ],
+        active: false
+      },
+      {
+        id: "photos_set_4",
+        title: "photo set 4",
+        text_content: "sample photo 4 description",
+        asset: [
+          { type: "image", src: "/photosets/set4_helmet/photos9_4.png" },
+          { type: "image", src: "/photosets/set4_helmet/photos10_4.png" },
+        ],
+        active: false
+      },
+      {
+        id: "photos_set_5",
+        title: "photo set 5",
+        text_content: "sample photo 5 description",
+        asset: [
+          { type: "image", src: "/photosets/set5_cat/photos11_5.png" },
+          { type: "image", src: "/photosets/set5_cat/photos12_5.png" },
+        ],
+        active: false
+      },
+    ],
+  },
+
+  {
+    id: 5,
     text: "Videos",
     image: "/xmb_icons/videos-icon.png",
     active: false,
@@ -143,72 +204,6 @@ const xmbIcons = [
     ],
   },
 
-
-  {
-    id: 5,
-    text: "Photos",
-    image: "/xmb_icons/photos-icon.png",
-    active: false,
-    items: [
-      {
-        id: "photos_set_1",
-        title: "photo set 1",
-        text_content: "sample photo 1 description",
-        asset:
-          [
-            { type: "image", src: "/photosets/set1_motorcycle/photo1_1.png" },
-            { type: "image", src: "/photosets/set1_motorcycle/photo1_2.png" },
-          ],
-        active: false
-      },
-      {
-        id: "photos_set_2",
-        title: "photo set 2",
-        text_content: "sample photo 2 description",
-        asset:
-          [
-            { type: "image", src: "/photosets/set2_hands/photo3_2.png" },
-            { type: "image", src: "/photosets/set2_hands/photo4_2.png" },
-            { type: "image", src: "/photosets/set2_hands/photos5_2.png" },
-          ],
-        active: false
-      },
-      {
-        id: "photos_set_3",
-        title: "photo set 3",
-        text_content: "sample photo 3 description",
-        asset:
-          [
-            { type: "image", src: "/photosets/set3_smoke/photos6_3.png" },
-            { type: "image", src: "/photosets/set3_smoke/photos7_3.png" },
-            { type: "image", src: "/photosets/set3_smoke/photos8_3.png" },
-          ],
-        active: false
-      },
-      {
-        id: "photos_set_4",
-        title: "photo set 3",
-        text_content: "sample photo 3 description",
-        asset:
-          [
-            { type: "image", src: "/photosets/set4_helmet/photos9_4.png" },
-            { type: "image", src: "/photosets/set4_helmet/photos10_4.png" },
-          ],
-        active: false
-      },
-      {
-        id: "photos_set_5",
-        title: "photo set 5",
-        text_content: "sample photo 3 description",
-        asset:
-          [
-            { type: "image", src: "/photosets/set5_cat/photos11_5.png" },
-            { type: "image", src: "/photosets/set5_cat/photos12_5.png" },
-          ],
-        active: false
-      },
-    ],
-  },
 
   {
     id: 6,

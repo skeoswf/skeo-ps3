@@ -34,6 +34,16 @@
    GLOBAL RESET
 ======================= */
 
+@keyframes fadeSwitch {
+  0% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -75,8 +85,15 @@ a {
   font-size: 15px;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.85);
 
+  opacity: 0.6;
+
   pointer-events: none;
   user-select: none;
+}
+
+.active-icon {
+  opacity: 1;
+  animation: fadeSwitch 1s ease;
 }
 
 .icon-square-text {
@@ -94,7 +111,7 @@ a {
   width: fit-content;
   height: 60vh;
 
-  margin-top: 30vh;
+  margin-top: 25vh;
   margin-left: 30vw;
   padding-bottom: 150px;
 
@@ -142,7 +159,9 @@ a {
 .sub-icon {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 30px;
+  font-size: 16px;
+  font-family: ps3-font;
 }
 
 /* Default dim state */
@@ -154,10 +173,20 @@ a {
 /* Active highlight */
 .sub-item.active-sub-item {
   opacity: 1;
-  background-color: blue;
+  animation: fadeSwitch 1s ease;
 }
 
 /* Above-stack visual dim */
 .above-active {
   opacity: 0.6;
+}
+
+
+.content-div {
+  background-color: red;
+  width: 700px;
+  height: 500px;
+  margin-left: 20vw;
+  margin-top: 10vh;
+  background-image: url("/photosets/set2_hands/photo4_2.png")
 }
