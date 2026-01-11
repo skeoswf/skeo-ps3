@@ -11,7 +11,7 @@
 }
 
 /* =======================
-   ROOT / THEME
+   THEME
 ======================= */
 
 :root {
@@ -44,16 +44,6 @@
   }
 }
 
-@keyframes fadeSwitchOut {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.6;
-  }
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -80,8 +70,45 @@ a {
 }
 
 /* =======================
+   XMB CONTAINER + LAYOUT
+======================= */
+
+.XMB-container {
+  position: relative;
+  width: fit-content;
+  height: 60vh;
+
+  margin-top: 25vh;
+  margin-left: 30vw;
+  padding-bottom: 150px;
+
+  user-select: none;
+
+  /* X anchor for submenus (fixed “slot” under active icon) */
+  --anchor-x: 120px;
+
+  /* (still used by submenu top offsets) */
+  --row-bottom: 120px;
+  --row-top: 0px;
+
+  /* (currently NOT used for scroll motion, but harmless + used by your JS writer) */
+  --sub-step: 22px;
+  --sub-active-idx: 0;
+}
+
+.XMB-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+/* =======================
    MAIN ICONS (TOP ROW)
 ======================= */
+
+.XMB-icon-wrap {
+  transition: transform 220ms cubic-bezier(0.2, 0.9, 0.2, 1);
+  will-change: transform;
+}
 
 .icon-square {
   width: 120px;
@@ -112,64 +139,35 @@ a {
 }
 
 /* =======================
-   XMB LAYOUT ENGINE
+   SUB MENUS (ABOVE + BELOW)
 ======================= */
 
-.XMB-container {
-  user-select: none;
-  position: relative;
-  width: fit-content;
-  height: 60vh;
-
-  margin-top: 25vh;
-  margin-left: 30vw;
-  padding-bottom: 150px;
-
-  /* Geometry interface (JS-driven) */
-  --active-x: 0px;
-  --row-bottom: 120px;
-  --row-top: 0px;
-
-  /* Sub-menu geometry */
-  --sub-step: 22px;
-  --sub-active-slot: 0;
-  --sub-active-idx: 0;
-
-  --anchor-x: 120px;
-}
-
-.XMB-horizontal {
-  display: flex;
-  flex-direction: row;
-}
-
-/* Sub-menu below active icon */
-.XMB-vertical {
-  position: absolute;
-  left: 0;
-  top: calc(var(--row-bottom) + 40px);
-  width: 120px;
-  text-align: center;
-
-  transform: translateX(var(--anchor-x));
-  transition: transform 220ms cubic-bezier(0.2, 0.9, 0.2, 1);
-  will-change: transform;
-}
-
+.XMB-vertical,
 .XMB-vertical-above {
   position: absolute;
   left: 0;
-  top: calc(var(--row-top) - 15px);
   width: 120px;
   text-align: center;
 
-  transform: translateX(var(--anchor-x)) translateY(-100%);
+  /* keep locked under the anchored active slot */
   transition: transform 220ms cubic-bezier(0.2, 0.9, 0.2, 1);
   will-change: transform;
 }
 
+/* below active icon */
+.XMB-vertical {
+  top: calc(var(--row-bottom) + 40px);
+  transform: translateX(var(--anchor-x));
+}
+
+/* above active icon */
+.XMB-vertical-above {
+  top: calc(var(--row-top) - 15px);
+  transform: translateX(var(--anchor-x)) translateY(-100%);
+}
+
 /* =======================
-   SUB-ITEM STACKS
+   SUB-ITEM STYLES
 ======================= */
 
 .sub-icon {
@@ -177,37 +175,33 @@ a {
   flex-direction: column;
   gap: 30px;
   font-size: 16px;
-  font-family: ps3-font;
+  font-family: "ps3-font";
 }
 
-/* Default dim state */
 .sub-item {
   opacity: 0.6;
   transition: opacity 120ms ease;
 }
 
-/* Active highlight */
 .sub-item.active-sub-item {
   opacity: 1;
   animation: fadeSwitch 1s ease;
 }
 
-/* Above-stack visual dim */
 .above-active {
   opacity: 0.6;
 }
 
+/* =======================
+   CONTENT PANEL (TEMP)
+======================= */
 
 .content-div {
-  background-color: red;
   width: 700px;
   height: 500px;
   margin-left: 20vw;
   margin-top: 10vh;
-  background-image: url("/photosets/set2_hands/photo4_2.png")
-}
 
-.XMB-icon-wrap {
-  transition: transform 220ms cubic-bezier(0.2, 0.9, 0.2, 1);
-  will-change: transform;
+  background-color: red;
+  background-image: url("/photosets/set2_hands/photo4_2.png");
 }
