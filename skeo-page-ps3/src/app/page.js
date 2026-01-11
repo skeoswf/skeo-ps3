@@ -15,7 +15,6 @@ import { xmbIcons as initialIcons } from "../../xmb_icon_arrays/main_array_data"
 export default function Home() {
   const [xmbIcons, setXmbIcons] = useState(initialIcons);
   const [xoffset, setxoffset] = useState(0)
-  const [yoffset, setyoffset] = useState(0)
 
   // use ref lets use reference values not tied to state updates/ needed for rendering. changes in useRef do not cause re-renders
   // added reference to jsx for container.current and iconRefs.current. references strictly for dom measurements
@@ -149,6 +148,7 @@ export default function Home() {
 
   return (
     <div className="XMB-container" ref={containerRef} >
+
       <div className="XMB-horizontal">
         {xmbIcons.map((icon, idx) => (
           <div
@@ -156,7 +156,7 @@ export default function Home() {
             ref={(el) => (iconRefs.current[idx] = el)}
             className="XMB-icon-wrap"
             style={{
-              transform: `translate(${xoffset}px, ${yoffset}px)`
+              transform: `translate(${xoffset}px)`
             }}
           >
             <LoadXmbIcons iconObj={icon} />
@@ -181,6 +181,11 @@ export default function Home() {
           />
         ))}
       </div>
+
+      <div className="content-div">
+        <p>test</p>
+      </div>
+
     </div>
   );
 }
