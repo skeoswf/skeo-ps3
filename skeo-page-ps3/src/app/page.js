@@ -21,6 +21,7 @@ export default function Home() {
   const containerRef = useRef(null);
   const iconRefs = useRef([]);
   const activeSubItemRef = useRef(null);
+  const anchorIndexRef = useRef(initialIcons.findIndex(i => i.active));
 
   // measure where the active icon is, and store it in a CSS var on the container
   const updateVerticalPosition = useCallback(() => {
@@ -44,15 +45,10 @@ export default function Home() {
     const activeEl = iconRefs.current[activeIndex];
     if (!activeEl) return;
 
-    const activeRect = activeEl.getBoundingClientRect();
-    const containerRect = containerEl.getBoundingClientRect();
 
     // left edge of active icon relative to container
-    const x = activeRect.left - containerRect.left;
 
-    containerEl.style.setProperty("--row-top", `${activeRect.top - containerRect.top}px`);
-    containerEl.style.setProperty("--active-x", `${x}px`);
-    containerEl.style.setProperty("--row-bottom", `${activeRect.bottom - containerRect.top}px`);
+
   }, [xmbIcons]);
 
   // run after DOM updates so measurements are correct (important)
@@ -81,13 +77,7 @@ export default function Home() {
           const newIndex = (currentIndex + direction + prev.length) % prev.length;
 
 
-          if (e.key === "ArrowLeft" || e.key === "a") {
-            setxoffset(prev => (prev > 60 ? -540 : prev + 60));
-          }
-
-          if (e.key === "ArrowRight" || e.key === "d") {
-            setxoffset(prev => (prev <= -540 ? 120 : prev - 60));
-          }
+          setxoffset((anchorIndexRef.current - newIndex) * 120);
 
 
 
@@ -158,6 +148,7 @@ export default function Home() {
             style={{
               transform: `translate(${xoffset}px)`
             }}
+
           >
             <LoadXmbIcons iconObj={icon} />
           </div>
