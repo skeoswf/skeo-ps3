@@ -9,20 +9,23 @@ const xmbIcons = [
         id: "home_about",
         title: "about",
         text_content: "originally, this page was intended to be a sort of professional/portfolio page. i always felt that the xmb bar from the playstation 3 era was clean, interactive, and intuitive, without it being plagued by an overtly'sterile' quality you see in a lot of more modern uis. with a place for photos and videos as well, it'd be a nice way to also showcase who i am -- beyond the resume.",
-        active: false
+        active: false,
+        type: "text"
       },
       {
         id: "home_resources_used",
         title: "resources used",
         text_content: "sounds / xmb references [[[come back to this]]]",
-        active: false
+        active: false,
+        type: "text"
       },
       {
         id: "home_repository_link",
         title: "repository link",
         text_content: "home repository link test content",
         link: "https://github.com/skeoswf/skeo-ps3",
-        active: false
+        active: false,
+        type: "link"
       },
     ],
   },
@@ -37,7 +40,8 @@ const xmbIcons = [
         id: "user_about",
         title: "about me",
         text_content: "i am a software engineer currently looking for my first role! i graduated nashville software school in 2025, with a focus on development fundamentals and problem solving. the final three months of the program was executed in a simulated company environment with scrum methodology. \\n in the past, i was in the food industry -- working both roles for both FOH and BOH-- being a line cook, barista, FOH manager, and trainer.",
-        active: true
+        active: true,
+        type: "text"
       },
       {
         id: "user_resume",
@@ -47,14 +51,16 @@ const xmbIcons = [
           type: "pdf",
           src: "resume/skeo_resume_v2.pdf",
         },
-        active: false
+        active: false,
+        type: "pdf"
       },
       {
         id: "user_linkedin",
         title: "linkedin",
         text_content: "my linkedin",
         link: "https://www.linkedin.com/in/sk3o",
-        active: false
+        active: false,
+        type: "link"
       },
     ],
   },
@@ -70,35 +76,40 @@ const xmbIcons = [
         title: "github profile",
         text_content: "link to my github repositories",
         link: "https://github.com/skeoswf",
-        active: false
+        active: false,
+        type: "link"
       },
       {
         id: "github_notemap_repo",
         title: "notemap",
         text_content: "notemap repository test content",
         link: "https://github.com/skeoswf/notemap",
-        active: false
+        active: false,
+        type: "link"
       },
       {
         id: "github_vocab_you_lary_repo",
         title: "vocab-you-lary",
         text_content: "vocab-you-lary repository test content",
         link: "https://github.com/skeoswf/vocab-you-lary",
-        active: false
+        active: false,
+        type: "link"
       },
       {
         id: "github_superbeatboy_repo",
         title: "supa beat boy",
         text_content: "supabeatboy repository test content",
         link: "https://github.com/skeoswf/super-beat-boy",
-        active: false
+        active: false,
+        type: "link"
       },
       {
         id: "github_calculator_repo",
         title: "calculator",
         text_content: "calculator repository test content",
         link: "https://github.com/skeoswf/calculator",
-        active: false
+        active: false,
+        type: "link"
       },
     ],
   },
@@ -117,7 +128,8 @@ const xmbIcons = [
           { type: "image", src: "/photosets/set1_motorcycle/photo1_1.png" },
           { type: "image", src: "/photosets/set1_motorcycle/photo1_2.png" },
         ],
-        active: false
+        active: false,
+        type: "image"
       },
       {
         id: "photos_set_2",
