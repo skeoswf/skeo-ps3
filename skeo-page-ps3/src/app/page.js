@@ -4,11 +4,13 @@ import { useState, useEffect, useLayoutEffect, useRef, useCallback } from "react
 
 import LoadXmbIcons from "../../components/main_array";
 import LoadSecondXMB from "../../components/secondary_array";
+import XMBcontent from "../../components/content";
 import { xmbIcons as initialIcons } from "../../xmb_icon_arrays/main_array_data";
 
 export default function Home() {
   const [xmbIcons, setXmbIcons] = useState(initialIcons);
   const [xoffset, setxoffset] = useState(0);
+
 
   const containerRef = useRef(null);
   const activeSubItemRef = useRef(null);
@@ -48,7 +50,14 @@ export default function Home() {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      // left/right main icons
+
+      // prevents div from popping to top of page
+
+      const navKeys = ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "a", "d", "w", "s"];
+      if (navKeys.includes(e.key)) {
+        e.preventDefault();
+      }
+
       if (
         e.key === "ArrowLeft" ||
         e.key === "ArrowRight" ||
@@ -144,14 +153,16 @@ export default function Home() {
             key={icon.id}
             iconObj={icon}
             mode="below"
-            activeItemRef={activeSubItemRef}
+
           />
         ))}
       </div>
 
-      <div className="content-div">
-        <p>test</p>
-      </div>
+      {/* <div className="content-div">
+        {xmbIcons.map((icon) => (
+          <XMBcontent key={icon.id} iconObj={icon} />
+        ))}
+      </div> */}
     </div>
   );
 }
