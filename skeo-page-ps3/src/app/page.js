@@ -158,11 +158,11 @@ export default function Home() {
         ))}
       </div>
 
-      {/* <div className="content-div">
+      <div className="content-div">
         {xmbIcons.map((icon) => (
           <XMBcontent key={icon.id} iconObj={icon} />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 }

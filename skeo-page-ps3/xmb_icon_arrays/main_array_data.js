@@ -8,7 +8,7 @@ const xmbIcons = [
       {
         id: "home_about",
         title: "about",
-        text_content: "originally, this page was intended to be a sort of professional/portfolio page. i always felt that the xmb bar from the playstation 3 era was clean, interactive, and intuitive, without it being plagued by an overtly'sterile' quality you see in a lot of more modern uis. with a place for photos and videos as well, it'd be a nice way to also showcase who i am -- beyond the resume.",
+        text_content: "originally, this page was intended to be a sort of professional/portfolio page. i always felt that the xmb bar from the playstation 3 era was clean, interactive, and intuitive, without it being plagued by an overtly 'sterile' quality you see in a lot of more modern uis. with a place for photos and videos as well, it'd be a nice way to also showcase who i am -- beyond the resume.",
         active: false,
         type: "text"
       },
@@ -39,7 +39,11 @@ const xmbIcons = [
       {
         id: "user_about",
         title: "about me",
-        text_content: "i am a software engineer currently looking for my first role! i graduated nashville software school in 2025, with a focus on development fundamentals and problem solving. the final three months of the program was executed in a simulated company environment with scrum methodology. \\n in the past, i was in the food industry -- working both roles for both FOH and BOH-- being a line cook, barista, FOH manager, and trainer.",
+        text_content: `i am a software engineer currently looking for my first role! i graduated nashville software school in 2025, with a focus on development fundamentals and problem solving. the final three months of the program was executed in a simulated company environment with scrum methodology.
+
+        in the past, i was in the food industry -- working both FOH and BOH -- with roles ranging from line cook, barista, FOH manager, and trainer.
+        
+        in my personal life, i enjoy new things immensely, and am always looking to learn! i especially love my riding my motorcycle (kawasaki ninja!!), making music, cooking, and photography.`,
         active: true,
         type: "text"
       },
@@ -190,7 +194,8 @@ const xmbIcons = [
           { type: "video", src: "/videosets/videos1_concerts/diles-music.mp4" },
           { type: "video", src: "/videosets/videos1_concerts/wisp.mp4" },
         ],
-        active: false
+        active: false,
+        type: "video"
       },
       {
         id: "videos_set_2_cat",
@@ -200,7 +205,8 @@ const xmbIcons = [
           { type: "video", src: "/videosets/videos2_cat/pixel1.mp4" },
           { type: "video", src: "/videosets/videos2_cat/pixel2.mp4" },
         ],
-        active: false
+        active: false,
+        type: "video"
       },
       {
         id: "videos_set_3_instruments",
@@ -211,7 +217,8 @@ const xmbIcons = [
           { type: "video", src: "/videosets/videos3_instruments/sarahguitar.mp4" },
           { type: "video", src: "/videosets/videos3_instruments/squiddy.mp4" },
         ],
-        active: false
+        active: false,
+        type: "video"
       },
     ],
   },
@@ -228,7 +235,8 @@ const xmbIcons = [
         title: "instagram",
         text_content: "instagram link test content",
         link: "https://www.instagram.com/strawberrycult_/",
-        active: false
+        active: false,
+        type: "link"
       },
     ],
   },

@@ -8,13 +8,29 @@ function XMBcontent({ iconObj }) {
 
   switch (iconObj.items[activeIdx].type) {
     case "text":
-      return <p>this content is text haha</p>;
+      return (
+        <p className="textContent">{iconObj.items[activeIdx].text_content}</p>
+      );
 
     case "link":
-      return <p>this content is link haha</p>;
+      return (
+        <p>this content is link haha</p>
+      );
 
     case "pdf":
-      return <p>this content is pdf haha</p>;
+      return (
+        <p>this content is pdf haha</p>
+      );
+
+    case "image":
+      return (
+        <p>this content is image haha</p>
+      )
+
+    case "video":
+      return (
+        <p>this content is video haha</p>
+      )
 
     default:
       return null;

@@ -177,6 +177,7 @@ a {
   gap: 30px;
   font-size: 16px;
   font-family: "ps3-font";
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.85);
 }
 
 .sub-item {
@@ -186,7 +187,9 @@ a {
 
 .sub-item.active-sub-item {
   opacity: 1;
-  animation: fadeSwitch 1s ease;
+  animation: fadeSwitch 0.5s ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .above-active {
@@ -205,4 +208,13 @@ a {
   /* 
   background-color: red;
   background-image: url("/photosets/set2_hands/photo4_2.png"); */
+}
+
+
+.textContent {
+  font-family: ps3-font;
+  white-space: pre-line;
+  animation: fadeSwitch 1.5s ease;
+  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.4);
+  text-align: left;
 }
