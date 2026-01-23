@@ -5,8 +5,9 @@ function XMBcontent({ iconObj }) {
 
   const activeIdx = iconObj.items.findIndex((item) => item.active);
   if (activeIdx === -1) return null;
+  let activeItem = iconObj.items[activeIdx].type
 
-  switch (iconObj.items[activeIdx].type) {
+  switch (activeItem) {
     case "text":
       return (
         <p className="textContent">{iconObj.items[activeIdx].text_content}</p>
@@ -30,6 +31,23 @@ function XMBcontent({ iconObj }) {
     case "video":
       return (
         <p>this content is video haha</p>
+      )
+
+    case "linkstack":
+      return (
+        <div className="linkstack-container">
+          {iconObj.items[activeIdx].links.map((link) =>
+          (
+            <a
+              key={link.id}
+              href={link.link}
+              target="_blank"
+              className="linkstack-buttons"
+            >
+              {link.text_content}
+            </a>
+          ))}
+        </div>
       )
 
     default:
