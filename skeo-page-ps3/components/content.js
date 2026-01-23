@@ -20,6 +20,7 @@ function XMBcontent({ iconObj }) {
           <a
             href={iconObj.items[activeIdx].link}
             className="linkstack-buttons"
+            target="_blank"
           >
             {iconObj.items[activeIdx].text_content}
           </a>
@@ -29,6 +30,20 @@ function XMBcontent({ iconObj }) {
     case "pdf":
       return (
         <p>this content is pdf haha</p>
+      );
+
+    case "about":
+      return (
+        <div className="linkstack-container">
+          <p className="aboutContent">{iconObj.items[activeIdx].text_content}</p>
+          <a
+            href={iconObj.items[activeIdx].link}
+            className="linkstack-buttons resume-button"
+            target="_blank"
+          >
+            resume
+          </a>
+        </div>
       );
 
     case "image":
