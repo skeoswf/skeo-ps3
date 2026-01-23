@@ -15,7 +15,15 @@ function XMBcontent({ iconObj }) {
 
     case "link":
       return (
-        <p>this content is link haha</p>
+        <div className="linkstack-container">
+          <p className="linkDescription">{iconObj.items[activeIdx].text_description}</p>
+          <a
+            href={iconObj.items[activeIdx].link}
+            className="linkstack-buttons"
+          >
+            {iconObj.items[activeIdx].text_content}
+          </a>
+        </div>
       );
 
     case "pdf":

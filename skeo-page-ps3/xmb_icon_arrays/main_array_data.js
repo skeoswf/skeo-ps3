@@ -44,7 +44,8 @@ const xmbIcons = [
       {
         id: "home_repository_link",
         title: "repository link",
-        text_content: `home repository link test content`,
+        text_content: `repository for this project on github`,
+        text_description: 'for this project, i used react with next.js to build the frontend. the site is hosted on vercel, and the code repository can be found on my github linked below.',
         link: "https://github.com/skeoswf/skeo-ps3",
         active: false,
         type: "link"
