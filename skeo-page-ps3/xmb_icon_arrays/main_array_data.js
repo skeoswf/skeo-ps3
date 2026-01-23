@@ -68,23 +68,15 @@ const xmbIcons = [
         
         in my personal life, i enjoy new things immensely, and am always looking to learn! i especially love my riding my motorcycle (kawasaki ninja!!), making music, cooking, and photography.`,
         active: true,
-        type: "text"
+        type: "about",
+        link: "resume/skeo_resume_v2.pdf"
       },
-      {
-        id: "user_resume",
-        title: "resume",
-        text_content: `skeo resume test content [[UPDATE AND REPLACE]]`,
-        asset: {
-          type: "pdf",
-          src: "resume/skeo_resume_v2.pdf",
-        },
-        active: false,
-        type: "pdf"
-      },
+
       {
         id: "user_linkedin",
         title: "linkedin",
         text_content: `my linkedin`,
+        text_description: `feel free to connect with me on linkedin! im always looking to expand my network and meet new people in the industry. maybe even hit me up for some fun projects!`,
         link: "https://www.linkedin.com/in/sk3o",
         active: false,
         type: "link"
@@ -102,6 +94,7 @@ const xmbIcons = [
         id: "github_all_repos",
         title: "github profile",
         text_content: `link to my github repositories`,
+        text_description: `check out my github profile to see all of my repositories, including personal works, projects, and collaborations with other developers.`,
         link: "https://github.com/skeoswf",
         active: false,
         type: "link"
@@ -109,15 +102,34 @@ const xmbIcons = [
       {
         id: "github_notemap_repo",
         title: "notemap",
-        text_content: `notemap repository test content`,
+        text_content: `notemap repository`,
+        text_description: `an application tailored for both casual and professional musicians to create and view bands, organize their upcoming gigs, and connect with other musicians
+
+        'notemap' solves the problem of communication between musicians who 1) largely perform freelance, 2) is looking for fulfill a role (or roles) for a group, 3) is already in a group and is looking for members, or 4) is interested in creating a group. for the most part, outside of relatively niche online communities and local networking, it can be hard for the average musician to socially connect for the sole purpose of performance
+
+        notemap was developed during as a frontstone capstone during my time at nashville software school. created with react, react-bootstrap, and firebase.`,
         link: "https://github.com/skeoswf/notemap",
+        active: false,
+        type: "link"
+      },
+      {
+        id: "github_groovetime_repo",
+        title: "groovetime",
+        text_content: `groovetime repository`,
+        text_description: `'groovetime!' is the backend for a social music-sharing platform built around a rotating weekly prompt called a 'weekly groove!', where users submit and rate video-based interpretations of a theme.
+
+        the backend handles user authentication, profile management, submission workflows, rating logic, weekly archiving, and winner calculation. unlike traditional music platforms that focus on passive consumption, groovetime! supports active participation through a point-based system and community-driven rankings.
+
+        the system is built with django and exposes a rest api consumed by a react frontend. it implements complex many-to-many relationships between users, submissions, and ratings, along with real-time data updates and admin-controlled weekly prompts.`,
+        link: "https://github.com/skeoswf/groovetime-backend",
         active: false,
         type: "link"
       },
       {
         id: "github_vocab_you_lary_repo",
         title: "vocab-you-lary",
-        text_content: `vocab-you-lary repository test content`,
+        text_content: `vocab-you-lary repository`,
+        text_description: `a vocabulary building application designed to help users practice study on user submitted vocabularly words. created with firebase`,
         link: "https://github.com/skeoswf/vocab-you-lary",
         active: false,
         type: "link"
@@ -125,8 +137,18 @@ const xmbIcons = [
       {
         id: "github_superbeatboy_repo",
         title: "supa beat boy",
-        text_content: `supabeatboy repository test content`,
+        text_content: `supabeatboy repository`,
+        text_description: `a WIP personal project. more or less planned to be a custom glorified beat pad. users can upload their own sounds, edit sounds and hotkeys, archive and delete. i want to eventually have it be able to pull audio from local and online sources, and allow the user to splice samples from that audio.`,
         link: "https://github.com/skeoswf/super-beat-boy",
+        active: false,
+        type: "link"
+      },
+      {
+        id: "github_flicker_repo",
+        title: "flickerwalk",
+        text_content: `flickerwalk repository`,
+        text_description: `another WIP personal project. a relatively unsettling atmospheric point and click adventure game with some sort of scattered lore thinly veiled as something else. maybe with a rudimentary inventory system?`,
+        link: "https://github.com/skeoswf/flickerwalk",
         active: false,
         type: "link"
       },
@@ -134,7 +156,7 @@ const xmbIcons = [
         id: "github_calculator_repo",
         title: "calculator",
         text_content: `calculator repository test content`,
-        link: "https://github.com/skeoswf/calculator",
+        text_description: `a simple calculator application built with basic arithmetic functions. designed for quick calculations and ease of use.`,
         active: false,
         type: "link"
       },
@@ -256,8 +278,10 @@ const xmbIcons = [
       {
         id: "socials_instagram",
         title: "instagram",
-        text_content: "instagram link test content",
+        text_content: "instagram link",
         link: "https://www.instagram.com/strawberrycult_/",
+        text_content: `ig handle: @strawberrycult_`,
+        text_description: `my very casual instagram for the very curious`,
         active: false,
         type: "link"
       },

@@ -50,6 +50,17 @@
   padding: 0;
 }
 
+@keyframes highlight {
+  0% {
+    background-color: rgba(7, 46, 54, 0.4);
+  }
+
+  100% {
+    background-color: rgb(15, 108, 129, 0.4);
+    text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.8);
+  }
+}
+
 html,
 body {
   max-width: 100vw;
@@ -213,7 +224,8 @@ a {
 
 
 .textContent,
-.linkDescription {
+.linkDescription,
+.aboutContent {
   font-family: ps3-font;
   white-space: pre-line;
   animation: fadeSwitch 1.5s ease;
@@ -222,8 +234,12 @@ a {
 }
 
 .linkDescription {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: center;
+}
+
+.aboutContent {
+  margin-bottom: 20px;
 }
 
 .linkstack-container {
@@ -245,12 +261,19 @@ a {
 }
 
 .linkstack-buttons:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(19, 109, 169, 0.4);
   cursor: pointer;
   transition: all ease 200ms;
 }
 
 .linkstack-buttons:active {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(52, 148, 212, 0.4);
   transition: all ease 100ms;
+  color: rgba(252, 252, 48, 0.659);
+}
+
+.resume-button {
+  animation: highlight 1s ease infinite alternate;
+  box-shadow: 0px 0px 120px rgb(19, 109, 169);
+  border-radius: 16px;
 }
