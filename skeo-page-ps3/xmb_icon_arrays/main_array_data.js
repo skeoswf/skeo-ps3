@@ -15,14 +15,36 @@ const xmbIcons = [
       {
         id: "home_resources_used",
         title: "resources used",
-        text_content: "sounds / xmb references [[[come back to this]]]",
+        text_content: `sounds / xmb references [[[come back to this]]]`,
         active: false,
-        type: "text"
+        type: "linkstack",
+        links: [
+          {
+            id: "home_resource_ps3_dev_wiki",
+            text_content: `ps3 developer wiki`,
+            link: "https://www.psdevwiki.com/ps3/Landing_Page"
+          },
+          {
+            id: "home_resource_ps3_user_guide",
+            text_content: `playstation 3's user guide -- "about the XMB™ (XrossMediaBar)"`,
+            link: "https://manuals.playstation.net/document/en/ps3/current/basicoperations/xmb.html"
+          },
+          {
+            id: "home_resource_ps3_xmb_sounds",
+            text_content: `ps3 xmb sound effects provided by sounds.spriters-resource.com`,
+            link: "https://sounds.spriters-resource.com/playstation_3/playstationhome/asset/450189/"
+          },
+          {
+            id: "home_resource_fot_rodin_pro_db",
+            text_content: `xmb font: fot rodin pro db`,
+            link: "https://fontsgeek.com/fonts/fot-rodin-pro-db"
+          }
+        ]
       },
       {
         id: "home_repository_link",
         title: "repository link",
-        text_content: "home repository link test content",
+        text_content: `home repository link test content`,
         link: "https://github.com/skeoswf/skeo-ps3",
         active: false,
         type: "link"
@@ -50,7 +72,7 @@ const xmbIcons = [
       {
         id: "user_resume",
         title: "resume",
-        text_content: "skeo resume test content [[UPDATE AND REPLACE]]",
+        text_content: `skeo resume test content [[UPDATE AND REPLACE]]`,
         asset: {
           type: "pdf",
           src: "resume/skeo_resume_v2.pdf",
@@ -61,7 +83,7 @@ const xmbIcons = [
       {
         id: "user_linkedin",
         title: "linkedin",
-        text_content: "my linkedin",
+        text_content: `my linkedin`,
         link: "https://www.linkedin.com/in/sk3o",
         active: false,
         type: "link"
@@ -78,7 +100,7 @@ const xmbIcons = [
       {
         id: "github_all_repos",
         title: "github profile",
-        text_content: "link to my github repositories",
+        text_content: `link to my github repositories`,
         link: "https://github.com/skeoswf",
         active: false,
         type: "link"
@@ -86,7 +108,7 @@ const xmbIcons = [
       {
         id: "github_notemap_repo",
         title: "notemap",
-        text_content: "notemap repository test content",
+        text_content: `notemap repository test content`,
         link: "https://github.com/skeoswf/notemap",
         active: false,
         type: "link"
@@ -94,7 +116,7 @@ const xmbIcons = [
       {
         id: "github_vocab_you_lary_repo",
         title: "vocab-you-lary",
-        text_content: "vocab-you-lary repository test content",
+        text_content: `vocab-you-lary repository test content`,
         link: "https://github.com/skeoswf/vocab-you-lary",
         active: false,
         type: "link"
@@ -102,7 +124,7 @@ const xmbIcons = [
       {
         id: "github_superbeatboy_repo",
         title: "supa beat boy",
-        text_content: "supabeatboy repository test content",
+        text_content: `supabeatboy repository test content`,
         link: "https://github.com/skeoswf/super-beat-boy",
         active: false,
         type: "link"
@@ -110,7 +132,7 @@ const xmbIcons = [
       {
         id: "github_calculator_repo",
         title: "calculator",
-        text_content: "calculator repository test content",
+        text_content: `calculator repository test content`,
         link: "https://github.com/skeoswf/calculator",
         active: false,
         type: "link"
@@ -127,7 +149,7 @@ const xmbIcons = [
       {
         id: "photos_set_1",
         title: "photo set 1",
-        text_content: "sample photo 1 description",
+        text_content: `sample photo 1 description`,
         asset: [
           { type: "image", src: "/photosets/set1_motorcycle/photo1_1.png" },
           { type: "image", src: "/photosets/set1_motorcycle/photo1_2.png" },
@@ -138,7 +160,7 @@ const xmbIcons = [
       {
         id: "photos_set_2",
         title: "photo set 2",
-        text_content: "sample photo 2 description",
+        text_content: `sample photo 2 description`,
         asset: [
           { type: "image", src: "/photosets/set2_hands/photo3_2.png" },
           { type: "image", src: "/photosets/set2_hands/photo4_2.png" },
@@ -149,7 +171,7 @@ const xmbIcons = [
       {
         id: "photos_set_3",
         title: "photo set 3",
-        text_content: "sample photo 3 description",
+        text_content: `sample photo 3 description`,
         asset: [
           { type: "image", src: "/photosets/set3_smoke/photos6_3.png" },
           { type: "image", src: "/photosets/set3_smoke/photos7_3.png" },
@@ -160,7 +182,7 @@ const xmbIcons = [
       {
         id: "photos_set_4",
         title: "photo set 4",
-        text_content: "sample photo 4 description",
+        text_content: `sample photo 4 description`,
         asset: [
           { type: "image", src: "/photosets/set4_helmet/photos9_4.png" },
           { type: "image", src: "/photosets/set4_helmet/photos10_4.png" },
@@ -170,7 +192,7 @@ const xmbIcons = [
       {
         id: "photos_set_5",
         title: "photo set 5",
-        text_content: "sample photo 5 description",
+        text_content: `sample photo 5 description`,
         asset: [
           { type: "image", src: "/photosets/set5_cat/photos11_5.png" },
           { type: "image", src: "/photosets/set5_cat/photos12_5.png" },
