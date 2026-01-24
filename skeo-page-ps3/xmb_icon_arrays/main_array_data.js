@@ -175,7 +175,7 @@ const xmbIcons = [
         text_content: `sample photo 1 description`,
         asset: [
           { type: "image", src: "/photosets/set1_motorcycle/photo1_1.png" },
-          { type: "image", src: "/photosets/set1_motorcycle/photo1_2.png" },
+          { type: "image", src: "/photosets/set1_motorcycle/photo2_1.png" },
         ],
         active: false,
         type: "image"
