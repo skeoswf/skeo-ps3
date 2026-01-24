@@ -103,9 +103,9 @@ const xmbIcons = [
         id: "github_notemap_repo",
         title: "notemap",
         text_content: `notemap repository`,
-        text_description: `an application tailored for both casual and professional musicians to create and view bands, organize their upcoming gigs, and connect with other musicians
+        text_description: `an application tailored for both casual and professional musicians to create and view bands, organize their upcoming gigs, and connect with other musicians.
 
-        'notemap' solves the problem of communication between musicians who 1) largely perform freelance, 2) is looking for fulfill a role (or roles) for a group, 3) is already in a group and is looking for members, or 4) is interested in creating a group. for the most part, outside of relatively niche online communities and local networking, it can be hard for the average musician to socially connect for the sole purpose of performance
+        'notemap' solves the problem of communication between musicians who 1) largely perform freelance, 2) is looking for fulfill a role (or roles) for a group, 3) is already in a group and is looking for members, or 4) is interested in creating a group. for the most part, outside of relatively niche online communities and local networking, it can be hard for the average musician to socially connect for the sole purpose of performance.
 
         notemap was developed during as a frontstone capstone during my time at nashville software school. created with react, react-bootstrap, and firebase.`,
         link: "https://github.com/skeoswf/notemap",
@@ -129,7 +129,7 @@ const xmbIcons = [
         id: "github_vocab_you_lary_repo",
         title: "vocab-you-lary",
         text_content: `vocab-you-lary repository`,
-        text_description: `a vocabulary building application designed to help users practice study on user submitted vocabularly words. created with firebase`,
+        text_description: `a vocabulary building application designed to help users practice study on user submitted vocabularly words. created with firebase.`,
         link: "https://github.com/skeoswf/vocab-you-lary",
         active: false,
         type: "link"
@@ -189,7 +189,8 @@ const xmbIcons = [
           { type: "image", src: "/photosets/set2_hands/photo4_2.png" },
           { type: "image", src: "/photosets/set2_hands/photos5_2.png" },
         ],
-        active: false
+        active: false,
+        type: "image"
       },
       {
         id: "photos_set_3",
@@ -200,7 +201,8 @@ const xmbIcons = [
           { type: "image", src: "/photosets/set3_smoke/photos7_3.png" },
           { type: "image", src: "/photosets/set3_smoke/photos8_3.png" },
         ],
-        active: false
+        active: false,
+        type: "image"
       },
       {
         id: "photos_set_4",
@@ -210,7 +212,8 @@ const xmbIcons = [
           { type: "image", src: "/photosets/set4_helmet/photos9_4.png" },
           { type: "image", src: "/photosets/set4_helmet/photos10_4.png" },
         ],
-        active: false
+        active: false,
+        type: "image"
       },
       {
         id: "photos_set_5",
@@ -220,7 +223,8 @@ const xmbIcons = [
           { type: "image", src: "/photosets/set5_cat/photos11_5.png" },
           { type: "image", src: "/photosets/set5_cat/photos12_5.png" },
         ],
-        active: false
+        active: false,
+        type: "image"
       },
     ],
   },

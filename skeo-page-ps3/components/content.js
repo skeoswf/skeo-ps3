@@ -48,7 +48,10 @@ function XMBcontent({ iconObj }) {
 
     case "image":
       return (
-        <p>this content is image haha</p>
+        <div
+          className="image-container"
+          style={{ backgroundImage: `url(${iconObj.items[activeIdx].asset[0].src})` }}>
+        </div>
       )
 
     case "video":
