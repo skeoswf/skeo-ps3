@@ -27,11 +27,11 @@ export default function Home() {
 
     const activeIcon = xmbIcons[activeIndex];
 
-    // active sub-index (useful if you ever re-enable scrolling)
+    // active sub-index 
     const activeSubIdx = activeIcon.items.findIndex((item) => item.active);
     containerEl.style.setProperty("--sub-active-idx", `${Math.max(activeSubIdx, 0)}`);
 
-    // keep sub-step accurate (only matters if you use it in CSS later)
+    // keep sub-step accurate
     const subEl = activeSubItemRef.current;
     if (subEl) {
       const h = subEl.getBoundingClientRect().height;
