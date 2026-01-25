@@ -231,6 +231,7 @@ a {
   animation: fadeSwitch 1.5s ease;
   text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.4);
   text-align: left;
+
 }
 
 .linkDescription {
@@ -285,6 +286,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   animation: fadeSwitch 1.5s ease;
+  transition: background-image 200ms ease;
 }
 
 .photo-select-container {
