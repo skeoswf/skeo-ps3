@@ -127,6 +127,8 @@ export default function Home() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
+  const activeIcon = xmbIcons.find((icon) => icon.active);
+
   return (
     <div className="XMB-container" ref={containerRef}>
       <div className="XMB-horizontal">
@@ -159,9 +161,9 @@ export default function Home() {
       </div>
 
       <div className="content-div">
-        {xmbIcons.map((icon) => (
-          <XMBcontent key={icon.id} iconObj={icon} />
-        ))}
+        {activeIcon && (
+          <XMBcontent key={activeIcon.id} iconObj={activeIcon} />
+        )}
       </div>
     </div>
   );

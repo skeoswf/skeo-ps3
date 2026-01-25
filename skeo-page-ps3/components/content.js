@@ -6,7 +6,14 @@ function XMBcontent({ iconObj }) {
 
   const activeIdx = iconObj.items.findIndex((item) => item.active);
   if (activeIdx === -1) return null;
-  let activeItem = iconObj.items[activeIdx].type
+
+  const activeItem = iconObj.items[activeIdx].type;
+
+  const [activePhotoIdx, setActivePhotoIdx] = useState(0);
+
+  useEffect(() => {
+    setActivePhotoIdx(0);
+  }, [activeIdx]);
 
   switch (activeItem) {
     case "text":
@@ -22,6 +29,7 @@ function XMBcontent({ iconObj }) {
             href={iconObj.items[activeIdx].link}
             className="linkstack-buttons"
             target="_blank"
+            rel="noopener noreferrer"
           >
             {iconObj.items[activeIdx].text_content}
           </a>
@@ -29,9 +37,7 @@ function XMBcontent({ iconObj }) {
       );
 
     case "pdf":
-      return (
-        <p>this content is pdf haha</p>
-      );
+      return <p>this content is pdf haha</p>;
 
     case "about":
       return (
@@ -41,20 +47,14 @@ function XMBcontent({ iconObj }) {
             href={iconObj.items[activeIdx].link}
             className="linkstack-buttons resume-button"
             target="_blank"
+            rel="noopener noreferrer"
           >
             resume
           </a>
         </div>
       );
 
-    case "image":
-
-      const [activePhotoIdx, setActivePhotoIdx] = useState(0);
-
-      useEffect(() => {
-        setActivePhotoIdx(0);
-      }, [activeIdx]);
-
+    case "image": {
       const assets = iconObj.items[activeIdx]?.asset ?? [];
       const safeIdx = Math.min(activePhotoIdx, Math.max(assets.length - 1, 0));
       const currentSrc = assets[safeIdx]?.src;
@@ -79,28 +79,27 @@ function XMBcontent({ iconObj }) {
           </div>
         </>
       );
+    }
 
     case "video":
-      return (
-        <p>this content is video haha</p>
-      )
+      return <p>this content is video haha</p>;
 
     case "linkstack":
       return (
         <div className="linkstack-container">
-          {iconObj.items[activeIdx].links.map((link) =>
-          (
+          {iconObj.items[activeIdx].links.map((link) => (
             <a
               key={link.id}
               href={link.link}
               target="_blank"
+              rel="noopener noreferrer"
               className="linkstack-buttons"
             >
               {link.text_content}
             </a>
           ))}
         </div>
-      )
+      );
 
     default:
       return null;
