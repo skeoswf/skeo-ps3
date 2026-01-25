@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 function XMBcontent({ iconObj }) {
   if (!iconObj?.active) return null;
@@ -9,10 +8,12 @@ function XMBcontent({ iconObj }) {
 
   const activeItem = iconObj.items[activeIdx].type;
 
-  const [activePhotoIdx, setActivePhotoIdx] = useState(0);
+  // one selector index for image/video sets
+  const [activeAssetIdx, setActiveAssetIdx] = useState(0);
 
+  // reset whenever you move to a different sub-item (photoset/videoset/etc.)
   useEffect(() => {
-    setActivePhotoIdx(0);
+    setActiveAssetIdx(0);
   }, [activeIdx]);
 
   switch (activeItem) {
@@ -24,7 +25,9 @@ function XMBcontent({ iconObj }) {
     case "link":
       return (
         <div className="linkstack-container">
-          <p className="linkDescription">{iconObj.items[activeIdx].text_description}</p>
+          <p className="linkDescription">
+            {iconObj.items[activeIdx].text_description}
+          </p>
           <a
             href={iconObj.items[activeIdx].link}
             className="linkstack-buttons"
@@ -56,7 +59,7 @@ function XMBcontent({ iconObj }) {
 
     case "image": {
       const assets = iconObj.items[activeIdx]?.asset ?? [];
-      const safeIdx = Math.min(activePhotoIdx, Math.max(assets.length - 1, 0));
+      const safeIdx = Math.min(activeAssetIdx, Math.max(assets.length - 1, 0));
       const currentSrc = assets[safeIdx]?.src;
 
       return (
@@ -69,11 +72,11 @@ function XMBcontent({ iconObj }) {
           />
 
           <div className="photo-select-container">
-            {assets.map((photo, index) => (
+            {assets.map((asset, index) => (
               <div
-                key={photo.src}
+                key={asset.src}
                 className={`photo-select ${index === safeIdx ? "active" : ""}`}
-                onClick={() => setActivePhotoIdx(index)}
+                onClick={() => setActiveAssetIdx(index)}
               />
             ))}
           </div>
@@ -81,8 +84,39 @@ function XMBcontent({ iconObj }) {
       );
     }
 
-    case "video":
-      return <p>this content is video haha</p>;
+    case "video": {
+      // same asset array shape as image, just video srcs
+      const assets = iconObj.items[activeIdx]?.asset ?? [];
+      const safeIdx = Math.min(activeAssetIdx, Math.max(assets.length - 1, 0));
+      const currentSrc = assets[safeIdx]?.src;
+
+      return (
+        <>
+          <div className="video-container">
+            {currentSrc ? (
+              <video
+                key={currentSrc} // forces reload when switching videos
+                className="video-player"
+                src={currentSrc}
+                controls
+                playsInline
+                preload="metadata"
+              />
+            ) : null}
+          </div>
+
+          <div className="photo-select-container">
+            {assets.map((asset, index) => (
+              <div
+                key={asset.src}
+                className={`photo-select ${index === safeIdx ? "active" : ""}`}
+                onClick={() => setActiveAssetIdx(index)}
+              />
+            ))}
+          </div>
+        </>
+      );
+    }
 
     case "linkstack":
       return (
