@@ -70,6 +70,25 @@ export default function Home() {
     });
   };
 
+  const handleSubItemClick = (newSubIndex) => {
+    setXmbIcons((prev) => {
+      const activeIconIndex = prev.findIndex((icon) => icon.active);
+      if (activeIconIndex === -1) return prev;
+
+      return prev.map((icon, idx) => {
+        if (idx !== activeIconIndex) return icon;
+
+        return {
+          ...icon,
+          items: icon.items.map((item, itemIdx) => ({
+            ...item,
+            active: itemIdx === newSubIndex,
+          })),
+        };
+      });
+    });
+  };
+
   useEffect(() => {
     const handleKeyDown = (e) => {
 
@@ -167,7 +186,12 @@ export default function Home() {
 
       <div className="XMB-vertical-above">
         {xmbIcons.map((icon) => (
-          <LoadSecondXMB key={icon.id} iconObj={icon} mode="above" />
+          <LoadSecondXMB
+            key={icon.id}
+            iconObj={icon}
+            mode="above"
+            onSubClick={handleSubItemClick}
+          />
         ))}
       </div>
 
@@ -177,7 +201,7 @@ export default function Home() {
             key={icon.id}
             iconObj={icon}
             mode="below"
-
+            onSubClick={handleSubItemClick}
           />
         ))}
       </div>
