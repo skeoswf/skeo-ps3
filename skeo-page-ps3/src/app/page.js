@@ -48,6 +48,28 @@ export default function Home() {
     return () => window.removeEventListener("resize", updateVerticalPosition);
   }, [updateVerticalPosition]);
 
+  const handleIconClick = (newIndex) => {
+    setXmbIcons((prev) => {
+      const currentIndex = prev.findIndex((i) => i.active);
+
+      // keep active icon locked to the anchor slot
+      setxoffset((anchorIndexRef.current - newIndex) * 120);
+
+      return prev.map((icon, index) => {
+        const isActive = index === newIndex;
+
+        return {
+          ...icon,
+          active: isActive,
+          items: icon.items.map((item, i) => ({
+            ...item,
+            active: isActive && i === 0,
+          })),
+        };
+      });
+    });
+  };
+
   useEffect(() => {
     const handleKeyDown = (e) => {
 
@@ -132,13 +154,13 @@ export default function Home() {
   return (
     <div className="XMB-container" ref={containerRef}>
       <div className="XMB-horizontal">
-        {xmbIcons.map((icon) => (
+        {xmbIcons.map((icon, index) => (
           <div
             key={icon.id}
             className="XMB-icon-wrap"
             style={{ transform: `translate(${xoffset}px)` }}
           >
-            <LoadXmbIcons iconObj={icon} />
+            <LoadXmbIcons iconObj={icon} onClick={() => handleIconClick(index)} />
           </div>
         ))}
       </div>

@@ -101,6 +101,9 @@ function XMBcontent({ iconObj }) {
                 controls
                 playsInline
                 preload="metadata"
+                onLoadedMetadata={(e) => {
+                  e.currentTarget.volume = 0.20;
+                }}
               />
             ) : null}
           </div>

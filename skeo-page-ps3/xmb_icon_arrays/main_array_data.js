@@ -236,35 +236,46 @@ const xmbIcons = [
     active: false,
     items: [
       {
-        id: "videos_set_1_concerts",
-        title: "concerts",
+        id: "videos_set_1_cats",
+        title: "my cat pixel!!",
+        text_content: "videos of cats",
+        asset: [
+          { type: "video", src: "/videosets/catvidyas/cat1.mp4" },
+          { type: "video", src: "/videosets/catvidyas/cat2.mp4" },
+        ],
+        active: false,
+        type: "video"
+      },
+      {
+        id: "videos_set_2_concerts",
+        title: "concert snippets",
         text_content: "videos from concerts",
         asset: [
-          { type: "video", src: "/videosets/videos1_concerts/diles-music.mp4" },
-          { type: "video", src: "/videosets/videos1_concerts/wisp.mp4" },
+          { type: "video", src: "/videosets/concertvidyas/concert1.mp4" },
+          { type: "video", src: "/videosets/concertvidyas/concert2.mp4" },
         ],
         active: false,
         type: "video"
       },
       {
-        id: "videos_set_2_cat",
-        title: "pixel",
-        text_content: "pixel videos",
+        id: "videos_set_3_music",
+        title: "music clips",
+        text_content: "music clips",
         asset: [
-          { type: "video", src: "/videosets/videos2_cat/pixel1.mp4" },
-          { type: "video", src: "/videosets/videos2_cat/pixel2.mp4" },
+          { type: "video", src: "/videosets/musicvidyas/music1.mp4" },
+          { type: "video", src: "/videosets/musicvidyas/music2.mp4" },
+          { type: "video", src: "/videosets/musicvidyas/music3.mp4" },
         ],
         active: false,
         type: "video"
       },
       {
-        id: "videos_set_3_instruments",
-        title: "instruments",
-        text_content: "music snippets",
+        id: "videos_set_3_talks",
+        title: "ambient?",
+        text_content: "talk snippets",
         asset: [
-          { type: "video", src: "/videosets/videos3_instruments/pianosnippet.mp4" },
-          { type: "video", src: "/videosets/videos3_instruments/sarahguitar.mp4" },
-          { type: "video", src: "/videosets/videos3_instruments/squiddy.mp4" },
+          { type: "video", src: "/videosets/talkvidyas/talk1.mp4" },
+          { type: "video", src: "/videosets/talkvidyas/talk2.mp4" }
         ],
         active: false,
         type: "video"

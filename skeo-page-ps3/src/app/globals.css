@@ -136,9 +136,14 @@ a {
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.85);
 
   opacity: 0.6;
+  transition: opacity 150ms ease;
 
-  pointer-events: none;
   user-select: none;
+}
+
+.icon-square:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .active-icon {
