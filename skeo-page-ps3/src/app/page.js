@@ -5,6 +5,7 @@ import { useState, useEffect, useLayoutEffect, useRef, useCallback } from "react
 import LoadXmbIcons from "../../components/main_array";
 import LoadSecondXMB from "../../components/secondary_array";
 import XMBcontent from "../../components/content";
+import InfoboxContent from "../../components/infobox_content";
 import { xmbIcons as initialIcons } from "../../xmb_icon_arrays/main_array_data";
 
 export default function Home() {
@@ -171,20 +172,29 @@ export default function Home() {
   const activeIcon = xmbIcons.find((icon) => icon.active);
 
   return (
-    <div className="XMB-container" ref={containerRef}>
-      <div className="XMB-horizontal">
+    <div
+      className="XMB-container"
+      ref={containerRef}
+    >
+      <div
+        className="XMB-horizontal"
+      >
         {xmbIcons.map((icon, index) => (
           <div
             key={icon.id}
             className="XMB-icon-wrap"
             style={{ transform: `translate(${xoffset}px)` }}
           >
-            <LoadXmbIcons iconObj={icon} onClick={() => handleIconClick(index)} />
+            <LoadXmbIcons
+              iconObj={icon}
+              onClick={() => handleIconClick(index)}
+            />
           </div>
         ))}
       </div>
 
-      <div className="XMB-vertical-above">
+      <div
+        className="XMB-vertical-above">
         {xmbIcons.map((icon) => (
           <LoadSecondXMB
             key={icon.id}
@@ -208,8 +218,16 @@ export default function Home() {
 
       <div className="content-div">
         {activeIcon && (
-          <XMBcontent key={activeIcon.id} iconObj={activeIcon} />
+          <XMBcontent
+            key={activeIcon.id}
+            iconObj={activeIcon} />
         )}
+      </div>
+
+      <div
+        className="information-box-container"
+      >
+        <InfoboxContent />
       </div>
     </div>
   );

@@ -155,7 +155,7 @@ const xmbIcons = [
       {
         id: "github_calculator_repo",
         title: "calculator",
-        text_content: `calculator repository test content`,
+        text_content: `calculator repository`,
         text_description: `a simple calculator application built with basic arithmetic functions. designed for quick calculations and ease of use.`,
         active: false,
         type: "link"
