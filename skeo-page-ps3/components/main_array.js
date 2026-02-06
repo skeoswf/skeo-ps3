@@ -19,7 +19,11 @@ function LoadXmbIcons({ iconObj, onClick }) {
         className="icon-image"
         unoptimized
       />
-      <span className="icon-square-text">{iconObj.text}</span>
+      <span
+        className="icon-square-text"
+      >
+        {iconObj.text}
+      </span>
     </div>
   );
 }
