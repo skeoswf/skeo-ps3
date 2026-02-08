@@ -15,7 +15,7 @@ export async function GET(request) {
 
   const lookupIp = ip && ip !== "127.0.0.1" && ip !== "::1"
     ? ip
-    : "170.141.168.10";
+    : "170.141.168.10"; // test ip address
 
   const geo = await client.city(lookupIp);
 
