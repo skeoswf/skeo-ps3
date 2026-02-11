@@ -38,10 +38,6 @@ function XMBcontent({ iconObj }) {
           </a>
         </div>
       );
-
-    case "pdf":
-      return <p>this content is pdf haha</p>;
-
     case "about":
       return (
         <div className="linkstack-container">

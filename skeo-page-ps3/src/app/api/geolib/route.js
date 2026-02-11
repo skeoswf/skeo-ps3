@@ -15,7 +15,7 @@ export async function GET(request) {
 
   const lookupIp = ip && ip !== "127.0.0.1" && ip !== "::1"
     ? ip
-    : "170.141.168.10"; // test ip address
+    : "151.143.51.85"; // test ip address - sacremento area
 
   const geo = await client.city(lookupIp);
 
