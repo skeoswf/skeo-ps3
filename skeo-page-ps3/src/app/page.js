@@ -9,9 +9,17 @@ import InfoboxContent from "../../components/infobox_content";
 import { xmbIcons as initialIcons } from "../../xmb_icon_arrays/main_array_data";
 
 export default function Home() {
+
+  let audioOn = true;
+
+  const playAudio = (sound) => {
+    if (audioOn) {
+      new Audio(`/sounds/snd_system_${sound}.wav`).play().catch(() => { });
+    }
+  }
+
   const [xmbIcons, setXmbIcons] = useState(initialIcons);
   const [xoffset, setxoffset] = useState(0);
-
 
   const containerRef = useRef(null);
   const activeSubItemRef = useRef(null);
@@ -50,6 +58,10 @@ export default function Home() {
   }, [updateVerticalPosition]);
 
   const handleIconClick = (newIndex) => {
+
+    playAudio("ok");
+
+
     setXmbIcons((prev) => {
       const currentIndex = prev.findIndex((i) => i.active);
 
@@ -72,6 +84,9 @@ export default function Home() {
   };
 
   const handleSubItemClick = (newSubIndex) => {
+
+    playAudio("ok");
+
     setXmbIcons((prev) => {
       const activeIconIndex = prev.findIndex((icon) => icon.active);
       if (activeIconIndex === -1) return prev;
@@ -97,6 +112,9 @@ export default function Home() {
 
       const navKeys = ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "a", "d", "w", "s"];
       if (navKeys.includes(e.key)) {
+        if (audioOn) {
+          playAudio("ng");
+        }
         e.preventDefault();
       }
 
@@ -106,6 +124,7 @@ export default function Home() {
         e.key === "a" ||
         e.key === "d"
       ) {
+
         setXmbIcons((prev) => {
           const currentIndex = prev.findIndex((i) => i.active);
           const direction = e.key === "ArrowLeft" || e.key === "a" ? -1 : 1;
@@ -188,6 +207,7 @@ export default function Home() {
             <LoadXmbIcons
               iconObj={icon}
               onClick={() => handleIconClick(index)}
+
             />
           </div>
         ))}
