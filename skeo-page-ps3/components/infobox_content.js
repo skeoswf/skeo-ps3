@@ -8,23 +8,36 @@ function InfoboxContent() {
   const { data: geoData, error: geoError } = useSWR("/api/geolib", fetcher);
 
   let roughLocation = geoData?.city
+  console.log(roughLocation);
 
-  const { data: weatherData, error: weatherError } = useSWR(`http://api.weatherapi.com/v1/forecast.json?key=7de18e37cf0249249d274829260102&q=${roughLocation}&days=1&aqi=no&alerts=no`, fetcher);
+  const { data: weatherData, error: weatherError } = useSWR(
+    roughLocation
+      ? `http://api.weatherapi.com/v1/forecast.json?key=7de18e37cf0249249d274829260102&q=${roughLocation}&days=1&aqi=no&alerts=no`
+      : null,
+    fetcher
+  );
 
-  // for now i dont care if the key is exposed, since it's a free api and the key is rate limited. if this becomes a problem in the future, we can do things proper and create an api route that fetches the weather data and keeps the key secret. but for now this is fine and simpler.
 
-  if (weatherError) return <div>Failed to load weather data.</div>;
-  if (geoError) return <div>Failed to load geolocation data.</div>;
-  if (!weatherData) return <div>Loading weather data...</div>;
+  // for now i dont care if the key is exposed, since it's a free api and the key is rate limited. if this becomes a problem in the future, we can do things proper and create an api route that fetches the weather data and keeps the key secret. but for -- pragmatically -- now this is fine and simpler.
 
-  let currentWeather = weatherData.current.condition.text;
-  let currentTemp = weatherData.current.temp_f;
+  if (weatherError) return <div>failed to load weather data</div>;
+  if (geoError) return <div>failed to load geolocation data</div>;
+  if (!weatherData) return <div>loading weather data...</div>;
+  if (!geoData) return <div>loading location...</div>;
+
+  let currentWeather = weatherData?.current.condition.text;
+  let currentTemp = weatherData?.current.temp_f;
 
   return (
     <div id="infobox-content">
-      <p className="infobox-date info-p">{currentWeather.toLowerCase()}</p>
-      <p className="infobox-temp info-p">{currentTemp}°F</p>
-      <p className="infobox-time info-p">8:22 pm</p>
+      <div className="infobox-date-time">
+        <p className="infobox-date info-p">dec. 10th, 2016</p>
+        <p className="infobox-time info-p">11:14 pm</p>
+      </div>
+      <div className="infobox-weather">
+        <p className="infobox-date info-p">{currentWeather.toLowerCase()}</p>
+        <p className="infobox-temp info-p">{currentTemp}°f</p>
+      </div>
     </div>
   );
 }
