@@ -1,7 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import useSWR from "swr";
 
 function InfoboxContent() {
+  const infoboxDate = useRef(null);
+  const dateNote = useRef(null);
+
   const [time, setTime] = useState(new Date());
   const [minDelayPassed, setMinDelayPassed] = useState(false);
 
@@ -16,6 +19,24 @@ function InfoboxContent() {
     return () => clearTimeout(t);
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (!infoboxDate.current || !dateNote.current) return;
+
+      let dateNoteLeft = infoboxDate.current.getBoundingClientRect().left;
+      let dateNoteTop = infoboxDate.current.getBoundingClientRect().top;
+
+      dateNote.current.style.setProperty("--left", `${dateNoteLeft}px`);
+      dateNote.current.style.setProperty("--top", `${dateNoteTop}px`);
+    };
+
+    window.addEventListener("resize", handleResize); // on resize, update the position of the date note
+
+    handleResize(); // also call it once on mount to set initial position
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const formattedTime = time
     .toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
     .toLowerCase();
@@ -23,6 +44,19 @@ function InfoboxContent() {
   const formattedDate = time
     .toLocaleDateString([], { month: "short", day: "numeric", year: "numeric" })
     .toLowerCase();
+
+  const noteShow = () => {
+    dateNote.current.classList.remove("opacity-off");
+    dateNote.current.classList.add("opacity-on");
+  }
+
+  const noteHide = () => {
+    dateNote.current.classList.remove("opacity-on");
+    dateNote.current.classList.add("opacity-off");
+  }
+
+  const currentHour = time.getHours();
+  console.log("current hour value -- 0 to 23", currentHour);
 
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const { data: geoData, error: geoError } = useSWR("/api/geolib", fetcher);
@@ -36,6 +70,8 @@ function InfoboxContent() {
     fetcher
   );
 
+  // is it awful practice to have an api key in frontend code? yes. but it was also free and i really doubt anyone would be enough of a loser (well...) to use/abuse it. it's easier to just do this for now. tech debt wont apply too much here even in the worse possible outcomes.
+
   if (weatherError) return <div>failed to load weather data</div>;
   if (geoError) return <div>failed to load geolocation data</div>;
 
@@ -47,27 +83,35 @@ function InfoboxContent() {
 
   return (
     <div id="infobox-content">
-      <div className="infobox-date-time">
+
+      <div className="infobox-date-time" ref={infoboxDate} onMouseEnter={noteShow} onMouseLeave={noteHide}>
         <p className="infobox-date info-p">{formattedDate}</p>
         <p className="infobox-time info-p">{formattedTime}</p>
       </div>
 
-      {/* Crossfade container */}
+      {/* crossfade container */}
       <div className="infobox-weather crossfade">
-        {/* Placeholder layer */}
+        {/* placeholder layer */}
         <div className={`layer ${isReady ? "out" : "in"}`}>
           <p className="infobox-date info-p">getting the weather...</p>
           <p className="infobox-temp info-p">...and the temperatures</p>
         </div>
 
-        {/* Real data layer */}
+        {/* real data layer */}
         <div className={`layer ${isReady ? "in" : "out"}`}>
           <p className="infobox-date info-p">{currentWeather.toLowerCase()}</p>
           <p className="infobox-temp info-p">{currentTemp}°f</p>
         </div>
+
       </div>
+
+
+      <div className="infobox-date-note opacity-off" ref={dateNote}>test content</div>
     </div>
   );
+
+
 }
+
 
 export default InfoboxContent;

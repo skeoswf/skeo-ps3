@@ -343,6 +343,7 @@ a {
   right: 0%;
   top: 100px;
 
+  pointer-events: none;
 }
 
 #infobox-content {
@@ -353,6 +354,7 @@ a {
   height: 100%;
   flex-direction: row;
   gap: 40%;
+
 }
 
 .infobox-date-time,
@@ -367,6 +369,7 @@ a {
   -webkit-backdrop-filter: blur(4.9px);
 
   transition: all ease 0.5s;
+  pointer-events: auto;
 }
 
 .infobox-date-time:hover,
@@ -406,6 +409,8 @@ a {
   backdrop-filter: blur(4.9px);
   -webkit-backdrop-filter: blur(4.9px);
   transition: all ease 0.5s;
+
+
 }
 
 .infobox-weather.crossfade:hover {
@@ -431,4 +436,24 @@ a {
 
 .infobox-weather.crossfade .layer.in {
   opacity: 1;
+}
+
+.infobox-date-note {
+  color: rgba(255, 255, 0, 0.489);
+  font-size: 14px;
+  position: absolute;
+  text-align: center;
+  left: var(--left);
+  top: var(--top);
+  width: 440px;
+}
+
+.opacity-off {
+  opacity: 0;
+  transition: all ease 200ms;
+}
+
+.opacity-on {
+  opacity: 1;
+  transition: all ease 200ms;
 }
