@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import useSWR from "swr";
 
+import hourNote from "../public/hover_notes/time_notes";
+
 function InfoboxContent() {
   const infoboxDate = useRef(null);
   const dateNote = useRef(null);
