@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import useSWR from "swr";
 
 import hourNote from "../public/hover_notes/time_notes";
+import weatherNote from "../public/hover_notes/weather_notes";
 
 function InfoboxContent() {
   const infoboxDate = useRef(null);
