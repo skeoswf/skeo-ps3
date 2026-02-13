@@ -100,6 +100,8 @@ function InfoboxContent() {
   const currentWeather = weatherData?.current?.condition?.text ?? "";
   const currentTemp = weatherData?.current?.temp_f;
 
+  const currentWeatherText = weatherNoteText.find((note) => note.condition === currentWeather);
+
   return (
     <div id="infobox-content">
 
@@ -134,7 +136,7 @@ function InfoboxContent() {
 
 
       <div className="infobox-date-note opacity-off" ref={dateNote}>{currentHourText ? currentHourText.note : ""}</div>
-      <div className="infobox-weather-note opacity-off" ref={weatherNote}>test content</div>
+      <div className="infobox-weather-note opacity-off" ref={weatherNote}>{currentWeatherText ? currentWeatherText.note : ""}</div>
     </div>
   );
 
