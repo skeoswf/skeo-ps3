@@ -5,6 +5,9 @@ function InfoboxContent() {
   const infoboxDate = useRef(null);
   const dateNote = useRef(null);
 
+  const infoboxWeather = useRef(null);
+  const weatherNote = useRef(null);
+
   const [time, setTime] = useState(new Date());
   const [minDelayPassed, setMinDelayPassed] = useState(false);
 
@@ -23,14 +26,17 @@ function InfoboxContent() {
     const handleResize = () => {
       if (!infoboxDate.current || !dateNote.current) return;
 
-      let dateNoteLeft = infoboxDate.current.getBoundingClientRect().left;
-      let dateNoteTop = infoboxDate.current.getBoundingClientRect().top;
+      let { left: dateNoteLeft, top: dateNoteTop } = infoboxDate.current.getBoundingClientRect();
+      let { left: weatherNoteLeft, top: weatherNoteTop } = infoboxWeather.current.getBoundingClientRect();
 
       dateNote.current.style.setProperty("--left", `${dateNoteLeft}px`);
       dateNote.current.style.setProperty("--top", `${dateNoteTop}px`);
+
+      weatherNote.current.style.setProperty("--left", `${weatherNoteLeft}px`);
+      weatherNote.current.style.setProperty("--top", `${weatherNoteTop}px`);
     };
 
-    window.addEventListener("resize", handleResize); // on resize, update the position of the date note
+    window.addEventListener("resize", handleResize); // on resize, update the position of the note
 
     handleResize(); // also call it once on mount to set initial position
 
@@ -45,14 +51,24 @@ function InfoboxContent() {
     .toLocaleDateString([], { month: "short", day: "numeric", year: "numeric" })
     .toLowerCase();
 
-  const noteShow = () => {
+  const dateNoteShow = () => {
     dateNote.current.classList.remove("opacity-off");
     dateNote.current.classList.add("opacity-on");
   }
 
-  const noteHide = () => {
+  const dateNoteHide = () => {
     dateNote.current.classList.remove("opacity-on");
     dateNote.current.classList.add("opacity-off");
+  }
+
+  const weatherNoteShow = () => {
+    weatherNote.current.classList.remove("opacity-off");
+    weatherNote.current.classList.add("opacity-on");
+  }
+
+  const weatherNoteHide = () => {
+    weatherNote.current.classList.remove("opacity-on");
+    weatherNote.current.classList.add("opacity-off");
   }
 
   const currentHour = time.getHours();
@@ -84,13 +100,19 @@ function InfoboxContent() {
   return (
     <div id="infobox-content">
 
-      <div className="infobox-date-time" ref={infoboxDate} onMouseEnter={noteShow} onMouseLeave={noteHide}>
+      <div className="infobox-date-time"
+        ref={infoboxDate}
+        onMouseEnter={dateNoteShow}
+        onMouseLeave={dateNoteHide}
+      >
         <p className="infobox-date info-p">{formattedDate}</p>
         <p className="infobox-time info-p">{formattedTime}</p>
       </div>
 
       {/* crossfade container */}
-      <div className="infobox-weather crossfade">
+      <div className="infobox-weather crossfade" ref={infoboxWeather}
+        onMouseEnter={weatherNoteShow}
+        onMouseLeave={weatherNoteHide}>
         {/* placeholder layer */}
         <div className={`layer ${isReady ? "out" : "in"}`}>
           <p className="infobox-date info-p">getting the weather...</p>
@@ -98,7 +120,9 @@ function InfoboxContent() {
         </div>
 
         {/* real data layer */}
-        <div className={`layer ${isReady ? "in" : "out"}`}>
+        <div className={`layer ${isReady ? "in" : "out"}`}
+
+        >
           <p className="infobox-date info-p">{currentWeather.toLowerCase()}</p>
           <p className="infobox-temp info-p">{currentTemp}°f</p>
         </div>
@@ -107,6 +131,7 @@ function InfoboxContent() {
 
 
       <div className="infobox-date-note opacity-off" ref={dateNote}>test content</div>
+      <div className="infobox-weather-note opacity-off" ref={weatherNote}>test content</div>
     </div>
   );
 
