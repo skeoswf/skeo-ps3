@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import useSWR from "swr";
 
-import hourNote from "../public/hover_notes/time_notes";
-import weatherNote from "../public/hover_notes/weather_notes";
+import hourNoteText from "../public/hover_notes/time_notes";
+import weatherNoteText from "../public/hover_notes/weather_notes";
 
 function InfoboxContent() {
   const infoboxDate = useRef(null);
@@ -75,7 +75,7 @@ function InfoboxContent() {
   }
 
   const currentHour = time.getHours();
-  console.log("current hour value -- 0 to 23", currentHour);
+  const currentHourText = hourNoteText.find((note) => note.hour === (currentHour))
 
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const { data: geoData, error: geoError } = useSWR("/api/geolib", fetcher);
@@ -133,7 +133,7 @@ function InfoboxContent() {
       </div>
 
 
-      <div className="infobox-date-note opacity-off" ref={dateNote}>test content</div>
+      <div className="infobox-date-note opacity-off" ref={dateNote}>{currentHourText ? currentHourText.note : ""}</div>
       <div className="infobox-weather-note opacity-off" ref={weatherNote}>test content</div>
     </div>
   );
