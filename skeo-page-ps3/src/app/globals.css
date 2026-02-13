@@ -425,9 +425,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* or center; match your old look */
+
   padding: 0 10px;
-  /* optional, gives breathing room */
+
 
   opacity: 0;
   transition: opacity 350ms ease;
@@ -438,7 +438,8 @@ a {
   opacity: 1;
 }
 
-.infobox-date-note {
+.infobox-date-note,
+.infobox-weather-note {
   color: rgba(255, 255, 0, 0.489);
   font-size: 14px;
   position: absolute;

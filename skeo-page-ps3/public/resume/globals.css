@@ -92,7 +92,6 @@ a {
   --row-bottom: 120px;
   --row-top: 0px;
 
-  /* (currently NOT used for scroll motion, but harmless + used by your JS writer) */
   --sub-step: 22px;
   --sub-active-idx: 0;
 }
