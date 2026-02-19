@@ -14,8 +14,8 @@ const xmbIcons = [
       },
       {
         id: "home_resources_used",
-        title: "resources used",
-        text_content: `sounds / xmb references [[[come back to this]]]`,
+        title: "resources",
+
         active: false,
         type: "linkstack",
         links: [
@@ -42,10 +42,33 @@ const xmbIcons = [
         ]
       },
       {
+        id: "apis_used",
+        title: "APIs",
+        active: false,
+        type: "linkstack",
+        links: [
+          {
+            id: "web3forms_contact_form",
+            text_content: `web3forms contact form api`,
+            link: "https://www.web3forms.com/"
+          },
+          {
+            id: "geoip_api",
+            text_content: `maxmind's geoip api -- to find user's rough location`,
+            link: "https://www.maxmind.com/en/home"
+          },
+          {
+            id: "weather_api",
+            text_content: `weather api -- to use rough location to get user's current weather`,
+            link: "https://www.weatherapi.com/"
+          },
+        ]
+      },
+      {
         id: "home_repository_link",
         title: "repository link",
         text_content: `repository for this project on github`,
-        text_description: 'for this project, i used react with next.js to build the frontend. the site is hosted on vercel, and the code repository can be found on my github linked below.',
+        text_description: 'for this project, i used react with next.js. the site is hosted on vercel, and the code repository can be found on my github linked below.',
         link: "https://github.com/skeoswf/skeo-ps3",
         active: false,
         type: "link"
