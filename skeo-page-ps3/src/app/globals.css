@@ -75,6 +75,8 @@ body {
   font-family: "ps3-font", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  animation: fadeSwitch 3s ease;
 }
 
 a {
@@ -112,6 +114,8 @@ a {
 .XMB-horizontal {
   display: flex;
   flex-direction: row;
+
+  animation: fadeSwitch 3s ease;
 }
 
 /* =======================

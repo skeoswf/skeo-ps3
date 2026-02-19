@@ -73,6 +73,12 @@ const xmbIcons = [
       },
 
       {
+        id: "user_contact",
+        title: "contact",
+        active: false,
+        type: "contact",
+      },
+      {
         id: "user_linkedin",
         title: "linkedin",
         text_content: `my linkedin`,
@@ -81,6 +87,7 @@ const xmbIcons = [
         active: false,
         type: "link"
       },
+
     ],
   },
 

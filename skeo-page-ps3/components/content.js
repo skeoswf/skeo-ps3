@@ -134,6 +134,13 @@ function XMBcontent({ iconObj }) {
         </div>
       );
 
+    case "contact":
+      return (
+        <div className="contact-container">
+          <p className="contactContent">{iconObj.items[activeIdx].text_content}</p>
+        </div>
+      );
+
     default:
       return null;
   }
