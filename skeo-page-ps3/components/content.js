@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 
 function XMBcontent({ iconObj }) {
   if (!iconObj?.active) return null;
@@ -10,6 +10,23 @@ function XMBcontent({ iconObj }) {
 
   // one selector index for image/video sets
   const [activeAssetIdx, setActiveAssetIdx] = useState(0);
+
+  // form state
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    formData.append("access_key", "3627884a-0948-435b-81e7-4b94f3969f91");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+    setResult(data.success ? "Success!" : "Error");
+  };
 
   // reset whenever you move to a different sub-item (photoset/videoset/etc.)
   useEffect(() => {
@@ -38,6 +55,7 @@ function XMBcontent({ iconObj }) {
           </a>
         </div>
       );
+
     case "about":
       return (
         <div className="linkstack-container">
@@ -63,7 +81,7 @@ function XMBcontent({ iconObj }) {
           <div
             className="image-container"
             style={{
-              backgroundImage: currentSrc ? `url(${currentSrc})` : "none"
+              backgroundImage: currentSrc ? `url(${currentSrc})` : "none",
             }}
           />
 
@@ -98,7 +116,7 @@ function XMBcontent({ iconObj }) {
                 playsInline
                 preload="metadata"
                 onLoadedMetadata={(e) => {
-                  e.currentTarget.volume = 0.20;
+                  e.currentTarget.volume = 0.2;
                 }}
               />
             ) : null}
@@ -120,7 +138,7 @@ function XMBcontent({ iconObj }) {
     case "linkstack":
       return (
         <div className="linkstack-container">
-          {iconObj.items[activeIdx].links.map((link) => (
+          {iconObj.items[activeIdx].links?.map((link) => (
             <a
               key={link.id}
               href={link.link}
@@ -136,9 +154,13 @@ function XMBcontent({ iconObj }) {
 
     case "contact":
       return (
-        <div className="contact-container">
-          <p className="contactContent">{iconObj.items[activeIdx].text_content}</p>
-        </div>
+        <form className="contact-form" onSubmit={onSubmit}>
+          <input type="text" name="name" placeholder="name" className="contact-box" required />
+          <input type="email" name="email" placeholder="your email" className="contact-box" required />
+          <textarea name="message" placeholder="what's up?" className="contact-box" required></textarea>
+          <button type="submit">Submit</button>
+          <p>{result}</p>
+        </form>
       );
 
     default:
