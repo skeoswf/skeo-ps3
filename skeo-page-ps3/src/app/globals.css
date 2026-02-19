@@ -462,3 +462,12 @@ a {
   opacity: 1;
   transition: all ease 200ms;
 }
+
+.contact-form {
+  background-color: red;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}

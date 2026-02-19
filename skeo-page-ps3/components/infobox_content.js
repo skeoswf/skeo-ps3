@@ -5,6 +5,7 @@ import hourNoteText from "../public/hover_notes/time_notes";
 import weatherNoteText from "../public/hover_notes/weather_notes";
 
 function InfoboxContent() {
+
   const infoboxDate = useRef(null);
   const dateNote = useRef(null);
 

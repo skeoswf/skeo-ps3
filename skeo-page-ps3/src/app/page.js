@@ -9,14 +9,13 @@ import InfoboxContent from "../../components/infobox_content";
 import { xmbIcons as initialIcons } from "../../xmb_icon_arrays/main_array_data";
 
 export default function Home() {
-
   let audioOn = true;
 
   const playAudio = (sound) => {
     if (audioOn) {
       new Audio(`/sounds/snd_system_${sound}.wav`).play().catch(() => { });
     }
-  }
+  };
 
   const [xmbIcons, setXmbIcons] = useState(initialIcons);
   const [xoffset, setxoffset] = useState(0);
@@ -36,9 +35,12 @@ export default function Home() {
 
     const activeIcon = xmbIcons[activeIndex];
 
-    // active sub-index 
+    // active sub-index
     const activeSubIdx = activeIcon.items.findIndex((item) => item.active);
-    containerEl.style.setProperty("--sub-active-idx", `${Math.max(activeSubIdx, 0)}`);
+    containerEl.style.setProperty(
+      "--sub-active-idx",
+      `${Math.max(activeSubIdx, 0)}`
+    );
 
     // keep sub-step accurate
     const subEl = activeSubItemRef.current;
@@ -58,13 +60,9 @@ export default function Home() {
   }, [updateVerticalPosition]);
 
   const handleIconClick = (newIndex) => {
-
     playAudio("ok");
 
-
     setXmbIcons((prev) => {
-      const currentIndex = prev.findIndex((i) => i.active);
-
       // keep active icon locked to the anchor slot
       setxoffset((anchorIndexRef.current - newIndex) * 120);
 
@@ -84,7 +82,6 @@ export default function Home() {
   };
 
   const handleSubItemClick = (newSubIndex) => {
-
     playAudio("ok");
 
     setXmbIcons((prev) => {
@@ -105,26 +102,46 @@ export default function Home() {
     });
   };
 
+  const isTypingField = (el) => {
+    if (!el) return false;
+    const tag = el.tagName?.toLowerCase();
+    return (
+      tag === "input" ||
+      tag === "textarea" ||
+      tag === "select" ||
+      el.isContentEditable
+    );
+  };
+
   useEffect(() => {
     const handleKeyDown = (e) => {
+      // if user is typing in a form field, don't do XMB navigation
+      if (isTypingField(e.target)) return;
 
       // prevents div from popping to top of page
+      const navKeys = [
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowUp",
+        "ArrowDown",
+        "a",
+        "d",
+        "w",
+        "s",
+      ];
 
-      const navKeys = ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "a", "d", "w", "s"];
       if (navKeys.includes(e.key)) {
-        if (audioOn) {
-          playAudio("ng");
-        }
+        if (audioOn) playAudio("ng");
         e.preventDefault();
       }
 
+      // left/right main icons
       if (
         e.key === "ArrowLeft" ||
         e.key === "ArrowRight" ||
         e.key === "a" ||
         e.key === "d"
       ) {
-
         setXmbIcons((prev) => {
           const currentIndex = prev.findIndex((i) => i.active);
           const direction = e.key === "ArrowLeft" || e.key === "a" ? -1 : 1;
@@ -186,35 +203,25 @@ export default function Home() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  },);
+  }, [xmbIcons]); // if you want fewer rebinds, we can refactor to avoid this dep
 
   const activeIcon = xmbIcons.find((icon) => icon.active);
 
   return (
-    <div
-      className="XMB-container"
-      ref={containerRef}
-    >
-      <div
-        className="XMB-horizontal"
-      >
+    <div className="XMB-container" ref={containerRef}>
+      <div className="XMB-horizontal">
         {xmbIcons.map((icon, index) => (
           <div
             key={icon.id}
             className="XMB-icon-wrap"
             style={{ transform: `translate(${xoffset}px)` }}
           >
-            <LoadXmbIcons
-              iconObj={icon}
-              onClick={() => handleIconClick(index)}
-
-            />
+            <LoadXmbIcons iconObj={icon} onClick={() => handleIconClick(index)} />
           </div>
         ))}
       </div>
 
-      <div
-        className="XMB-vertical-above">
+      <div className="XMB-vertical-above">
         {xmbIcons.map((icon) => (
           <LoadSecondXMB
             key={icon.id}
@@ -237,16 +244,10 @@ export default function Home() {
       </div>
 
       <div className="content-div">
-        {activeIcon && (
-          <XMBcontent
-            key={activeIcon.id}
-            iconObj={activeIcon} />
-        )}
+        {activeIcon && <XMBcontent key={activeIcon.id} iconObj={activeIcon} />}
       </div>
 
-      <div
-        className="information-box-container"
-      >
+      <div className="information-box-container">
         <InfoboxContent />
       </div>
     </div>
