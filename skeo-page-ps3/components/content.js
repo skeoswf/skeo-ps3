@@ -25,7 +25,14 @@ function XMBcontent({ iconObj }) {
     });
 
     const data = await response.json();
-    setResult(data.success ? "Success!" : "Error");
+    if (data.success) {
+      setResult("i got your message! i'll get back to ya as soon as i can");
+      event.target.reset();
+
+      setTimeout(() => 3000);// resets the form fields after successful submission
+    } else {
+      setResult("Error");
+    }
   };
 
   // reset whenever you move to a different sub-item (photoset/videoset/etc.)
@@ -158,8 +165,8 @@ function XMBcontent({ iconObj }) {
           <input type="text" name="name" placeholder="name" className="contact-box" required />
           <input type="email" name="email" placeholder="your email" className="contact-box" required />
           <textarea name="message" placeholder="what's up?" className="contact-box" required></textarea>
-          <button type="submit">Submit</button>
-          <p>{result}</p>
+          <button type="submit" className="submit-button">submit</button>
+          <p className={`contact-result ${result ? "show" : ""}`}>{result}</p>
         </form>
       );
 
