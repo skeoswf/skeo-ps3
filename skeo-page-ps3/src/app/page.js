@@ -253,11 +253,17 @@ export default function Home() {
         <InfoboxContent />
       </div>
 
-      <div className="audio-toggle-container">
-        <button className={`audio-toggle-button ${audioOn ? "on" : "off"}`} onClick={() => setAudioOn(!audioOn)}>
-          {audioOn ? "audio: on" : "audio: off"}
-        </button>
+      <div
+        className={`audio-toggle-button ${audioOn ? "on" : "off"}`}
+        onClick={() => {
+          if (!audioOn) {
+            new Audio(`/sounds/snd_system_ok.wav`).play().catch(() => { });
+          }
+          setAudioOn((prev) => !prev);
+        }}>
+
       </div>
-    </div>
+
+    </div >
   );
 }
