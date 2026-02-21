@@ -9,7 +9,8 @@ import InfoboxContent from "../../components/infobox_content";
 import { xmbIcons as initialIcons } from "../../xmb_icon_arrays/main_array_data";
 
 export default function Home() {
-  let audioOn = true;
+  const [audioOn, setAudioOn] = useState(true);
+
 
   const playAudio = (sound) => {
     if (audioOn) {
@@ -132,7 +133,7 @@ export default function Home() {
       ];
 
       if (navKeys.includes(e.key)) {
-        if (audioOn) playAudio("ng");
+        playAudio("ng");
         e.preventDefault();
       }
 
@@ -204,7 +205,7 @@ export default function Home() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [xmbIcons]); // if you want fewer rebinds, we can refactor to avoid this dep
+  }, [xmbIcons, audioOn]);
 
   const activeIcon = xmbIcons.find((icon) => icon.active);
 
@@ -250,6 +251,12 @@ export default function Home() {
 
       <div className="information-box-container">
         <InfoboxContent />
+      </div>
+
+      <div className="audio-toggle-container">
+        <button className={`audio-toggle-button ${audioOn ? "on" : "off"}`} onClick={() => setAudioOn(!audioOn)}>
+          {audioOn ? "audio: on" : "audio: off"}
+        </button>
       </div>
     </div>
   );
