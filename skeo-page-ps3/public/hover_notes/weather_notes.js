@@ -9,7 +9,8 @@ const weatherNote = [
   { "condition": "Patchy rain possible", "note": "umbrella? maybe?" },
   { "condition": "Snow", "note": "snowman time" },
   { "condition": "Fog", "note": "don't drive too fast in this fog!" },
-  { "condition": "Mist", "note": "mist is cool...as long as we're not in silent hill..." }
+  { "condition": "Mist", "note": "mist is cool...as long as we're not in silent hill..." },
+  { "condition": "Clear", "note": "clear skies tonight!" }
 ]
 
 export default weatherNote;
