@@ -14,6 +14,7 @@ export default function Home() {
   const playAudio = (sound) => {
     if (audioOn) {
       new Audio(`/sounds/snd_system_${sound}.wav`).play().catch(() => { });
+      // catch in case user has interacted with the page but hasn't explicitly allowed audio (e.g. by clicking an icon), which would cause a DOMException error when trying to play audio
     }
   };
 
