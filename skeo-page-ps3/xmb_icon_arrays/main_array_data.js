@@ -31,8 +31,13 @@ const xmbIcons = [
           },
           {
             id: "home_resource_ps3_xmb_sounds",
-            text_content: `ps3 xmb sound effects provided by sounds.spriters-resource.com`,
+            text_content: `sounds.spriters-resource.com -- ps3 xmb sound effects`,
             link: "https://sounds.spriters-resource.com/playstation_3/playstationhome/asset/450189/"
+          },
+          {
+            id: "soundcloud_developer_docs",
+            text_content: `soundcloud developer's docs -- for embedding the song recommendations`,
+            link: "https://developers.soundcloud.com/docs/api/guide"
           },
           {
             id: "home_resource_fot_rodin_pro_db",
@@ -201,7 +206,7 @@ const xmbIcons = [
     items: [
       {
         id: "photos_set_1",
-        title: "photo set 1",
+        title: "my bike (sharkie!)",
         text_content: `sample photo 1 description`,
         asset: [
           { type: "image", src: "/photosets/set1_motorcycle/photo1_1.png" },
@@ -212,7 +217,7 @@ const xmbIcons = [
       },
       {
         id: "photos_set_2",
-        title: "photo set 2",
+        title: "hands",
         text_content: `sample photo 2 description`,
         asset: [
           { type: "image", src: "/photosets/set2_hands/photo3_2.png" },
@@ -224,7 +229,7 @@ const xmbIcons = [
       },
       {
         id: "photos_set_3",
-        title: "photo set 3",
+        title: "habits",
         text_content: `sample photo 3 description`,
         asset: [
           { type: "image", src: "/photosets/set3_smoke/photos6_3.png" },
@@ -236,7 +241,7 @@ const xmbIcons = [
       },
       {
         id: "photos_set_4",
-        title: "photo set 4",
+        title: "helmet",
         text_content: `sample photo 4 description`,
         asset: [
           { type: "image", src: "/photosets/set4_helmet/photos9_4.png" },
@@ -248,7 +253,7 @@ const xmbIcons = [
       },
       {
         id: "photos_set_5",
-        title: "photo set 5",
+        title: "feline friends",
         text_content: `sample photo 5 description`,
         asset: [
           { type: "image", src: "/photosets/set5_cat/photos11_5.png" },
@@ -268,7 +273,7 @@ const xmbIcons = [
     items: [
       {
         id: "videos_set_1_cats",
-        title: "my cat pixel!!",
+        title: "my cat (pixel!)",
         text_content: "videos of cats",
         asset: [
           { type: "video", src: "/videosets/catvidyas/cat1.mp4" },
@@ -314,9 +319,24 @@ const xmbIcons = [
     ],
   },
 
-
   {
     id: 6,
+    text: "Music Reccs",
+    image: "/xmb_icons/soundcloud-icon.png",
+    active: false,
+    items: [
+      {
+        id: "weekly_song_current",
+        title: "current week!",
+        text_content: `this week i wanna recommend atmosphere's 'sunshine'. i have faint memories of listening to this song when i was younger. i think the track came out in 2007? i came across it sometime during late middle school/early high school, and lost the track...until recently! youtube recommendations led me back to it -- and these days -- a good 10+ years later -- ive come to really appreciate the lyrics.`,
+        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A18913738&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/rhymesayers" title="rhymesayers" target="_blank" style="color: #cccccc; text-decoration: none;">rhymesayers</a> · <a href="https://soundcloud.com/rhymesayers/atmosphere-sunshine" title="Atmosphere - Sunshine" target="_blank" style="color: #cccccc; text-decoration: none;">Atmosphere - Sunshine</a></div>`,
+        type: "song"
+      },
+    ],
+  },
+
+  {
+    id: 7,
     text: "Socials",
     image: "/xmb_icons/socials-icon.png",
     active: false,

@@ -235,7 +235,8 @@ a {
 
 .textContent,
 .linkDescription,
-.aboutContent {
+.aboutContent,
+.song-description {
   text-align: left;
   white-space: pre-line;
 
@@ -247,6 +248,11 @@ a {
 
 .linkDescription {
   margin-bottom: 20px;
+  text-align: center;
+}
+
+.song-description {
+  margin-top: 20px;
   text-align: center;
 }
 
