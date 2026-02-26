@@ -240,7 +240,8 @@ const xmbIcons = [
         text_content: `sample photo 4 description`,
         asset: [
           { type: "image", src: "/photosets/set4_helmet/photos9_4.png" },
-          { type: "image", src: "/photosets/set4_helmet/photos10_4.png" },
+          { type: "image", src: "/photosets/set4_helmet/photos11_4.png" },
+          { type: "image", src: "/photosets/set4_helmet/photos11_5.png" },
         ],
         active: false,
         type: "image"
