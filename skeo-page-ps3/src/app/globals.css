@@ -308,6 +308,8 @@ a {
   background-position: center;
   background-repeat: no-repeat;
 
+  box-shadow: 0px 0px 120px rgba(17, 139, 220, 0.8);
+
   transition: background-image 200ms ease;
   animation: fadeSwitch 1.5s ease;
 }
@@ -602,4 +604,9 @@ textarea {
   object-fit: cover;
 
   animation: pureFade 2s ease;
+}
+
+.video-player {
+  border-radius: 20px;
+  box-shadow: 0px 0px 120px rgba(17, 139, 220, 0.8);
 }
