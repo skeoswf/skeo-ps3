@@ -210,59 +210,67 @@ export default function Home() {
   const activeIcon = xmbIcons.find((icon) => icon.active);
 
   return (
-    <div className="XMB-container" ref={containerRef}>
-      <div className="XMB-horizontal">
-        {xmbIcons.map((icon, index) => (
-          <div
-            key={icon.id}
-            className="XMB-icon-wrap"
-            style={{ transform: `translate(${xoffset}px)` }}
-          >
-            <LoadXmbIcons iconObj={icon} onClick={() => handleIconClick(index)} />
-          </div>
-        ))}
-      </div>
+    <div className="video-background">
 
-      <div className="XMB-vertical-above">
-        {xmbIcons.map((icon) => (
-          <LoadSecondXMB
-            key={icon.id}
-            iconObj={icon}
-            mode="above"
-            onSubClick={handleSubItemClick}
-          />
-        ))}
-      </div>
+      <video autoPlay loop muted className="background-video">
+        <source src="/background/background_no_noise_no_fade.mp4" type="video/mp4" />
+      </video>
 
-      <div className="XMB-vertical">
-        {xmbIcons.map((icon) => (
-          <LoadSecondXMB
-            key={icon.id}
-            iconObj={icon}
-            mode="below"
-            onSubClick={handleSubItemClick}
-          />
-        ))}
-      </div>
+      <div className="XMB-container" ref={containerRef}>
 
-      <div className="content-div">
-        {activeIcon && <XMBcontent key={activeIcon.id} iconObj={activeIcon} />}
-      </div>
+        <div className="XMB-horizontal">
+          {xmbIcons.map((icon, index) => (
+            <div
+              key={icon.id}
+              className="XMB-icon-wrap"
+              style={{ transform: `translate(${xoffset}px)` }}
+            >
+              <LoadXmbIcons iconObj={icon} onClick={() => handleIconClick(index)} />
+            </div>
+          ))}
+        </div>
 
-      <div className="information-box-container">
-        <InfoboxContent />
-      </div>
+        <div className="XMB-vertical-above">
+          {xmbIcons.map((icon) => (
+            <LoadSecondXMB
+              key={icon.id}
+              iconObj={icon}
+              mode="above"
+              onSubClick={handleSubItemClick}
+            />
+          ))}
+        </div>
 
-      <div
-        className={`audio-toggle-button ${audioOn ? "on" : "off"}`}
-        onClick={() => {
-          if (!audioOn) {
-            new Audio(`/sounds/snd_system_ok.wav`).play().catch(() => { });
-          }
-          setAudioOn((prev) => !prev);
-        }}>
+        <div className="XMB-vertical">
+          {xmbIcons.map((icon) => (
+            <LoadSecondXMB
+              key={icon.id}
+              iconObj={icon}
+              mode="below"
+              onSubClick={handleSubItemClick}
+            />
+          ))}
+        </div>
 
-      </div>
+        <div className="content-div">
+          {activeIcon && <XMBcontent key={activeIcon.id} iconObj={activeIcon} />}
+        </div>
+
+        <div className="information-box-container">
+          <InfoboxContent />
+        </div>
+
+        <div
+          className={`audio-toggle-button ${audioOn ? "on" : "off"}`}
+          onClick={() => {
+            if (!audioOn) {
+              new Audio(`/sounds/snd_system_ok.wav`).play().catch(() => { });
+            }
+            setAudioOn((prev) => !prev);
+          }}>
+        </div>
+
+      </div >
 
     </div >
   );

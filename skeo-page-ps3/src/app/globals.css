@@ -1,7 +1,3 @@
-/* =======================
-   FONTS
-======================= */
-
 @font-face {
   font-family: "ps3-font";
   src:
@@ -10,9 +6,6 @@
   font-display: block;
 }
 
-/* =======================
-   THEME
-======================= */
 
 :root {
   --background: #ffffff;
@@ -30,9 +23,7 @@
   }
 }
 
-/* =======================
-   GLOBAL RESET
-======================= */
+/* animation definitions */
 
 @keyframes fadeSwitch {
   0% {
@@ -44,10 +35,14 @@
   }
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@keyframes pureFade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes highlight {
@@ -61,17 +56,25 @@
   }
 }
 
+/* global reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
   overflow-y: hidden;
-
 }
 
 body {
-  background-color: rgb(49, 15, 106);
+  background-color: black;
   color: var(--foreground);
+
   font-family: "ps3-font", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -84,12 +87,12 @@ a {
   text-decoration: none;
 }
 
-/* =======================
-   XMB CONTAINER + LAYOUT
-======================= */
+/* xmb container and layout */
 
 .XMB-container {
   position: relative;
+  z-index: 1;
+
   width: fit-content;
   height: 100vh;
 
@@ -118,9 +121,7 @@ a {
   animation: fadeSwitch 3s ease;
 }
 
-/* =======================
-   MAIN ICONS (TOP ROW)
-======================= */
+/* main icons (top row) */
 
 .XMB-icon-wrap {
   transition: transform 220ms cubic-bezier(0.2, 0.9, 0.2, 1);
@@ -128,21 +129,22 @@ a {
 }
 
 .icon-square {
-  width: 120px;
-  height: 120px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 120px;
+  height: 120px;
+
+  opacity: 0.6;
+  outline: none;
+  user-select: none;
 
   font-family: "ps3-font";
   font-size: 15px;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.85);
 
-  opacity: 0.6;
   transition: opacity 150ms ease;
-
-  user-select: none;
 }
 
 .icon-square:hover {
@@ -160,14 +162,13 @@ a {
   pointer-events: none;
 }
 
-/* =======================
-   SUB MENUS (ABOVE + BELOW)
-======================= */
+/* sub menus -- above and below */
 
 .XMB-vertical,
 .XMB-vertical-above {
   position: absolute;
   left: 0;
+
   width: 120px;
   text-align: center;
 
@@ -188,16 +189,15 @@ a {
   transform: translateX(var(--anchor-x)) translateY(-100%);
 }
 
-/* =======================
-   SUB-ITEM STYLES
-======================= */
+/* sub-item styles */
 
 .sub-icon {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  font-size: 16px;
+
   font-family: "ps3-font";
+  font-size: 16px;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.655);
 }
 
@@ -213,6 +213,7 @@ a {
 
 .sub-item.active-sub-item {
   opacity: 1;
+
   animation: fadeSwitch 0.5s ease;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -222,28 +223,26 @@ a {
   opacity: 0.6;
 }
 
-/* =======================
-   CONTENT PANEL (TEMP)
-======================= */
+/* content panel */
 
 .content-div {
   width: 700px;
   height: 500px;
+
   margin-left: 16vw;
   margin-top: 7vh;
-
 }
-
 
 .textContent,
 .linkDescription,
 .aboutContent {
-  font-family: ps3-font;
-  white-space: pre-line;
-  animation: fadeSwitch 1.5s ease;
-  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.4);
   text-align: left;
+  white-space: pre-line;
 
+  font-family: ps3-font;
+  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.4);
+
+  animation: fadeSwitch 1.5s ease;
 }
 
 .linkDescription {
@@ -256,22 +255,25 @@ a {
 }
 
 .linkstack-container {
-  align-items: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 }
 
 .linkstack-buttons,
 .submit-button {
-  font-family: ps3-font;
-  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.4);
-  animation: fadeSwitch 1.5s ease;
+  width: 100%;
+  text-align: center;
+
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  width: 100%;
-  text-align: center;
+
+  font-family: ps3-font;
+  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.4);
+
+  animation: fadeSwitch 1.5s ease;
 }
 
 .linkstack-buttons:hover,
@@ -284,43 +286,49 @@ a {
 .linkstack-buttons:active,
 .submit-button:active {
   background: rgba(52, 148, 212, 0.4);
-  transition: all ease 100ms;
   color: rgba(252, 252, 48, 0.659);
+  transition: all ease 100ms;
 }
 
 .resume-button,
 .submit-button {
-  animation: highlight 1s ease infinite alternate;
-  box-shadow: 0px 0px 120px rgb(19, 109, 169);
   border-radius: 16px;
+  box-shadow: 0px 0px 120px rgb(19, 109, 169);
+
+  animation: highlight 1s ease infinite alternate;
 }
 
 .image-container {
   width: 700px;
   height: 500px;
+
+  border-radius: 20px;
+
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  animation: fadeSwitch 1.5s ease;
-  transition: background-image 200ms ease;
 
-  border-radius: 20px;
+  transition: background-image 200ms ease;
+  animation: fadeSwitch 1.5s ease;
 }
 
 .photo-select-container {
-  margin-top: 30px;
   display: flex;
   flex-direction: row;
-  width: 100%;
   align-items: center;
   justify-content: space-around;
+
+  width: 100%;
+  margin-top: 30px;
 }
 
 .photo-select {
-  background: rgba(255, 255, 255, 0.2);
   width: 25%;
   height: 10px;
+
   border-radius: 16px;
+  background: rgba(255, 255, 255, 0.2);
+
   transition:
     background 200ms ease,
     box-shadow 300ms ease;
@@ -328,10 +336,9 @@ a {
 
 .photo-select:hover {
   background: rgba(19, 109, 169, 0.4);
-  transition: all ease 200ms;
   cursor: pointer;
+  transition: all ease 200ms;
 }
-
 
 .photo-select:active {
   background: rgba(52, 148, 212, 0.4);
@@ -343,26 +350,28 @@ a {
   box-shadow: 0px 0px 60px rgb(8, 201, 166);
 }
 
+/* info box */
 
 .information-box-container {
   position: fixed;
+  top: 100px;
+  right: 0%;
+
   width: 100%;
   height: 70px;
-  right: 0%;
-  top: 100px;
 
   pointer-events: none;
 }
 
 #infobox-content {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
   flex-direction: row;
+  align-items: center;
+
+  height: 100%;
   gap: 40%;
 
+  justify-content: space-around;
 }
 
 .infobox-date-time,
@@ -373,59 +382,53 @@ a {
   background: rgba(255, 255, 255, 0.050);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4.9px);
-  -webkit-backdrop-filter: blur(4.9px);
-
   transition: all ease 0.5s;
   pointer-events: auto;
 }
 
-.infobox-date-time:hover,
+/* .infobox-date-time:hover,
 .infobox-weather:hover {
   background: rgba(255, 255, 255, 0.090);
-}
+} */
 
 .info-p {
-  font-family: "ps3-font";
-  font-size: 16px;
   width: 200px;
   height: 35px;
-  text-align: center;
   margin: 10px;
 
+  text-align: center;
+
+  font-family: "ps3-font";
+  font-size: 16px;
   text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4);
 }
 
-/* Make the weather pill keep its size like before */
+
 .infobox-weather.crossfade {
   position: relative;
-  /* already have this via .crossfade, but fine */
+
   display: flex;
-  /* keep it a flex pill */
   flex-direction: row;
 
-  /* IMPORTANT: give it layout height even with absolute children */
-  height: 55px;
-  /* match your .info-p height(35) + margin(10+10) */
-  min-width: 440px;
-  /* 2x 200px + margins; tune to taste */
 
-  /* keep your existing glass styling */
+  height: 55px;
+  /* match .info-p height(35) + margin(10+10) */
+  min-width: 440px;
+  /* 2x 200px + margins */
+
+  /* keep existing glass styling */
   background: rgba(255, 255, 255, 0.050);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4.9px);
-  -webkit-backdrop-filter: blur(4.9px);
+
   transition: all ease 0.5s;
-
-
 }
 
-.infobox-weather.crossfade:hover {
+/* .infobox-weather.crossfade:hover {
   background: rgba(255, 255, 255, 0.090);
-}
+} */
 
-/* Layers fill the pill */
+
 .infobox-weather.crossfade .layer {
   position: absolute;
   inset: 0;
@@ -436,10 +439,10 @@ a {
 
   padding: 0 10px;
 
-
   opacity: 0;
-  transition: opacity 350ms ease;
   pointer-events: none;
+
+  transition: opacity 350ms ease;
 }
 
 .infobox-weather.crossfade .layer.in {
@@ -448,13 +451,15 @@ a {
 
 .infobox-date-note,
 .infobox-weather-note {
-  color: rgba(255, 255, 0, 0.489);
-  font-size: 14px;
   position: absolute;
-  text-align: center;
   left: var(--left);
   top: var(--top);
+
   width: 440px;
+  text-align: center;
+
+  color: rgba(255, 255, 0, 0.489);
+  font-size: 14px;
 }
 
 .opacity-off {
@@ -467,11 +472,15 @@ a {
   transition: all ease 200ms;
 }
 
+/* contact form */
+
 .contact-form {
-  width: 700px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  width: 700px;
+
   text-align: center;
   border: none;
 }
@@ -481,20 +490,31 @@ textarea::placeholder,
 input,
 textarea {
   text-align: center;
+
   font-family: ps3-font;
   font-size: 15px;
+  letter-spacing: 1px;
+
   border: none;
   border-radius: 10px;
+
   background-color: rgba(255, 255, 255, 0.2);
-  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.4);
   color: rgba(255, 255, 255, 0.463);
-  letter-spacing: 1px;
+  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.4);
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+input:active,
+textarea:active,
+input:hover,
+textarea:hover {
   border: none;
   outline: none;
+
+  color: rgba(255, 255, 255, 0.729);
+
+  transition: all ease 200ms;
 }
 
 textarea {
@@ -502,19 +522,21 @@ textarea {
 }
 
 .submit-button {
-  outline: none;
   border: none;
+  outline: none;
+
   font-size: 15px;
   color: rgba(255, 255, 255, 0.482);
 }
 
 .contact-result {
-  font-size: 14px;
-  color: rgba(255, 255, 0, 0.707);
-  text-align: center;
-  font-family: ps3-font;
-
   opacity: 0;
+
+  font-family: ps3-font;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(255, 255, 0, 0.707);
+
   transition: opacity 250ms ease;
 }
 
@@ -522,13 +544,18 @@ textarea {
   opacity: 1;
 }
 
+/* audio toggle */
+
 .audio-toggle-button {
   position: fixed;
   left: 15vw;
   bottom: 15vh;
+
   width: 50px;
   height: 50px;
+
   background-size: cover;
+
   opacity: 0.5;
   cursor: pointer;
 
@@ -545,4 +572,34 @@ textarea {
 
 .audio-toggle-button.on {
   background-image: url("/audio_toggle_images/soundon.png");
+}
+
+/* video background */
+
+.video-background {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  animation: pureFade 2s ease;
+}
+
+.video-background .background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+
+  animation: pureFade 2s ease;
 }
