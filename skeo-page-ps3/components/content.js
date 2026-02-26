@@ -159,6 +159,23 @@ function XMBcontent({ iconObj }) {
         </div>
       );
 
+    case "song":
+      return (
+        <>
+          <div
+            className="embed-soundcloud"
+            dangerouslySetInnerHTML={{
+              __html: iconObj.items[activeIdx].embedded,
+            }}
+          />
+          <div
+            className="song-description"
+          >
+            {iconObj.items[activeIdx].text_content}
+          </div>
+        </>
+      );
+
     case "contact":
       return (
         <form className="contact-form" onSubmit={onSubmit}>
