@@ -13,7 +13,7 @@ const hourNote = [
   { "hour": 11, "note": "it's almost lunchtime! yum yum yum." },
   { "hour": 12, "note": "lunchtime. i would kill for a caesar salad right now." },
   { "hour": 13, "note": "maybe i ate too much..." },
-  { "hour": 14, "note": "my parent's are probably closing up the bakery by now" },
+  { "hour": 14, "note": "my parents are probably closing up the bakery by now" },
   { "hour": 15, "note": "id always look forward to this time when i was in school" },
   { "hour": 16, "note": "closing time at starbucks! hustle! clean! count!" },
   { "hour": 17, "note": "aaand im home. smelling like coffee and syrup and milk." },
