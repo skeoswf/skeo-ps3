@@ -386,18 +386,14 @@ a {
 .infobox-weather {
   display: flex;
   flex-direction: row;
-
-  background: rgba(255, 255, 255, 0.050);
+  /* 
+  background: rgba(255, 255, 255, 0.050); */
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   transition: all ease 0.5s;
   pointer-events: auto;
 }
 
-/* .infobox-date-time:hover,
-.infobox-weather:hover {
-  background: rgba(255, 255, 255, 0.090);
-} */
 
 .info-p {
   width: 200px;
@@ -425,7 +421,7 @@ a {
   /* 2x 200px + margins */
 
   /* keep existing glass styling */
-  background: rgba(255, 255, 255, 0.050);
+  /* background: rgba(255, 255, 255, 0.050); */
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
@@ -448,7 +444,6 @@ a {
   padding: 0 10px;
 
   opacity: 0;
-  pointer-events: none;
 
   transition: opacity 350ms ease;
 }
@@ -468,6 +463,8 @@ a {
 
   color: rgba(255, 255, 0, 0.489);
   font-size: 14px;
+
+  pointer-events: none;
 }
 
 .opacity-off {

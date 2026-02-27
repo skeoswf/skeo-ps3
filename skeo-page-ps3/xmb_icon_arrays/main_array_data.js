@@ -8,9 +8,10 @@ const xmbIcons = [
       {
         id: "home_about",
         title: "about",
-        text_content: "originally, this page was intended to be a sort of professional/portfolio page. i always felt that the xmb bar from the playstation 3 era was clean, interactive, and intuitive, without it being plagued by an overtly 'sterile' quality you see in a lot of more modern uis. with a place for photos and videos as well, it'd be a nice way to also showcase who i am -- beyond the resume.",
+        text_content:
+          "originally, this page was intended to be a sort of professional/portfolio page. i always felt that the xmb bar from the playstation 3 era was clean, interactive, and intuitive, without it being plagued by an overtly 'sterile' quality you see in a lot of more modern uis. with a place for photos and videos as well, it'd be a nice way to also showcase who i am -- beyond the resume.",
         active: false,
-        type: "text"
+        type: "text",
       },
       {
         id: "home_resources_used",
@@ -22,29 +23,29 @@ const xmbIcons = [
           {
             id: "home_resource_ps3_dev_wiki",
             text_content: `ps3 developer wiki`,
-            link: "https://www.psdevwiki.com/ps3/Landing_Page"
+            link: "https://www.psdevwiki.com/ps3/Landing_Page",
           },
           {
             id: "home_resource_ps3_user_guide",
             text_content: `playstation 3's user guide -- "about the XMB™ (XrossMediaBar)"`,
-            link: "https://manuals.playstation.net/document/en/ps3/current/basicoperations/xmb.html"
+            link: "https://manuals.playstation.net/document/en/ps3/current/basicoperations/xmb.html",
           },
           {
             id: "home_resource_ps3_xmb_sounds",
             text_content: `sounds.spriters-resource.com -- ps3 xmb sound effects`,
-            link: "https://sounds.spriters-resource.com/playstation_3/playstationhome/asset/450189/"
+            link: "https://sounds.spriters-resource.com/playstation_3/playstationhome/asset/450189/",
           },
           {
             id: "soundcloud_developer_docs",
-            text_content: `soundcloud developer's docs -- for embedding the song recommendations`,
-            link: "https://developers.soundcloud.com/docs/api/guide"
+            text_content: `soundcloud developer's docs -- embedding tracks`,
+            link: "https://developers.soundcloud.com/docs/api/guide",
           },
           {
             id: "home_resource_fot_rodin_pro_db",
             text_content: `xmb font: fot rodin pro db`,
-            link: "https://fontsgeek.com/fonts/fot-rodin-pro-db"
-          }
-        ]
+            link: "https://fontsgeek.com/fonts/fot-rodin-pro-db",
+          },
+        ],
       },
       {
         id: "apis_used",
@@ -55,28 +56,29 @@ const xmbIcons = [
           {
             id: "web3forms_contact_form",
             text_content: `web3forms contact form api`,
-            link: "https://www.web3forms.com/"
+            link: "https://www.web3forms.com/",
           },
           {
             id: "geoip_api",
             text_content: `maxmind's geoip api -- to find user's rough location`,
-            link: "https://www.maxmind.com/en/home"
+            link: "https://www.maxmind.com/en/home",
           },
           {
             id: "weather_api",
             text_content: `weather api -- to use rough location to get user's current weather`,
-            link: "https://www.weatherapi.com/"
+            link: "https://www.weatherapi.com/",
           },
-        ]
+        ],
       },
       {
         id: "home_repository_link",
         title: "repository link",
         text_content: `repository for this project on github`,
-        text_description: 'for this project, i used react with next.js. the site is hosted on vercel, and the code repository can be found on my github linked below.',
+        text_description:
+          "for this project, i used react with next.js. the site is hosted on vercel, and the code repository can be found on my github linked below.",
         link: "https://github.com/skeoswf/skeo-ps3",
         active: false,
-        type: "link"
+        type: "link",
       },
     ],
   },
@@ -97,7 +99,7 @@ const xmbIcons = [
         in my personal life, i enjoy new things immensely, and am always looking to learn! i especially love my riding my motorcycle (kawasaki ninja!!), making music, cooking, and photography.`,
         active: true,
         type: "about",
-        link: "resume/skeo_resume_v2.pdf"
+        link: "resume/skeo_resume_v2.pdf",
       },
 
       {
@@ -113,9 +115,8 @@ const xmbIcons = [
         text_description: `feel free to connect with me on linkedin! im always looking to expand my network and meet new people in the industry. maybe even hit me up for some fun projects!`,
         link: "https://www.linkedin.com/in/sk3o",
         active: false,
-        type: "link"
+        type: "link",
       },
-
     ],
   },
 
@@ -132,7 +133,7 @@ const xmbIcons = [
         text_description: `check out my github profile to see all of my repositories, including personal works, projects, and collaborations with other developers.`,
         link: "https://github.com/skeoswf",
         active: false,
-        type: "link"
+        type: "link",
       },
       {
         id: "github_notemap_repo",
@@ -145,7 +146,7 @@ const xmbIcons = [
         notemap was developed during as a frontstone capstone during my time at nashville software school. created with react, react-bootstrap, and firebase.`,
         link: "https://github.com/skeoswf/notemap",
         active: false,
-        type: "link"
+        type: "link",
       },
       {
         id: "github_groovetime_repo",
@@ -158,7 +159,7 @@ const xmbIcons = [
         the system is built with django and exposes a rest api consumed by a react frontend. it implements complex many-to-many relationships between users, submissions, and ratings, along with real-time data updates and admin-controlled weekly prompts.`,
         link: "https://github.com/skeoswf/groovetime-backend",
         active: false,
-        type: "link"
+        type: "link",
       },
       {
         id: "github_vocab_you_lary_repo",
@@ -167,7 +168,7 @@ const xmbIcons = [
         text_description: `a vocabulary building application designed to help users practice study on user submitted vocabularly words. created with firebase.`,
         link: "https://github.com/skeoswf/vocab-you-lary",
         active: false,
-        type: "link"
+        type: "link",
       },
       {
         id: "github_superbeatboy_repo",
@@ -176,7 +177,7 @@ const xmbIcons = [
         text_description: `a WIP personal project. more or less planned to be a custom glorified beat pad. users can upload their own sounds, edit sounds and hotkeys, archive and delete. i want to eventually have it be able to pull audio from local and online sources, and allow the user to splice samples from that audio.`,
         link: "https://github.com/skeoswf/super-beat-boy",
         active: false,
-        type: "link"
+        type: "link",
       },
       {
         id: "github_flicker_repo",
@@ -185,7 +186,7 @@ const xmbIcons = [
         text_description: `another WIP personal project. a relatively unsettling atmospheric point and click adventure game with some sort of scattered lore thinly veiled as something else. maybe with a rudimentary inventory system?`,
         link: "https://github.com/skeoswf/flickerwalk",
         active: false,
-        type: "link"
+        type: "link",
       },
       {
         id: "github_calculator_repo",
@@ -193,13 +194,50 @@ const xmbIcons = [
         text_content: `calculator repository`,
         text_description: `a simple calculator application built with basic arithmetic functions. designed for quick calculations and ease of use.`,
         active: false,
-        type: "link"
+        type: "link",
       },
     ],
   },
 
   {
     id: 4,
+    text: "Music Recs",
+    image: "/xmb_icons/soundcloud-icon.png",
+    active: false,
+    items: [
+      {
+        id: "weekly_song_current",
+        title: "current week!",
+        text_content: `this week i wanna recommend atmosphere's 'sunshine'. i have fond memories of listening to this song when i was younger. i think the track came out in 2007? i came across it sometime during late middle school/early high school, and lost the track to memory...until recently! i was doing some laundry. and just thought 'man what was that song?'. these days -- a good 10+ years later -- ive come to really appreciate the lyrics.`,
+        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A18913738&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/rhymesayers" title="rhymesayers" target="_blank" style="color: #cccccc; text-decoration: none;">rhymesayers</a> · <a href="https://soundcloud.com/rhymesayers/atmosphere-sunshine" title="Atmosphere - Sunshine" target="_blank" style="color: #cccccc; text-decoration: none;">Atmosphere - Sunshine</a></div>`,
+        type: "song",
+      },
+      {
+        id: "weekly_song_past_1",
+        title: "feb. 15-21",
+        text_content: `this time we got dean blunt & elias ronnefelt's 'lucre 5'... i dont know anything about these guys. i believe dean blunt is a well-known producer and elias is the singer. that being said -- this track is wonderful. i adore the chill guitar and the soft, raspy vocals. the lyrics themselves give a lot to chew over-- you see feelings of acceptance, self-aware insecurity, wanting to be seen, snaps of anger, all throughout the track. big recommend!`,
+        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1998816411&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/samuel-775871805" title="sammysito" target="_blank" style="color: #cccccc; text-decoration: none;">sammysito</a> · <a href="https://soundcloud.com/samuel-775871805/dean-blunt-elias-ronnenfelt-lucre-5" title="Dean Blunt &amp; Elias Rønnenfelt - Lucre 5" target="_blank" style="color: #cccccc; text-decoration: none;">Dean Blunt &amp; Elias Rønnenfelt - Lucre 5</a></div>`,
+        type: "song",
+      },
+      {
+        id: "weekly_song_past_2",
+        title: "feb. 8-14",
+        text_content: `this week's song is '27a pitfield st" by bassvictim. the title itself points to a pretty specific not-too-memorable flat in east london. words about small emotional jabs and friends and nostalgia. the lyrics start soft and become more assertive -- being coated in this sort of catchy, hazy, electroclash(?) sound that's just super well done. this track is the second track of their fourth album ('forever') and after just now deciding to listen to the whole album-- if you're a fan of this so far-- i'd definitely recommend 'mr president'!`,
+        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2187340308&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/thirdwave6" title="T H i R D W A V E 6" target="_blank" style="color: #cccccc; text-decoration: none;">T H i R D W A V E 6</a> · <a href="https://soundcloud.com/thirdwave6/27a-pitfield-st-2" title="27a Pitfield St" target="_blank" style="color: #cccccc; text-decoration: none;">27a Pitfield St</a></div>`,
+        type: "song",
+      },
+      {
+        id: "weekly_song_past_3",
+        title: "feb. 1-7",
+        text_content: `here we got ag cook's 'official'. some people may recognize the same lyrics as charli xcx's 'official'! ag cook works closely and produces a ton of charli's (and other artist's) stuff -- and here we see him doing his "own" take of the song, on his terms. if you compare the two, immediately youd notice how ag's version is less... sparkly. not as grandiose and less rushed. the electric edge on the ends of some of his words, the layering and warping on some lines. i love it. i remember exactly where i first heard this track -- i was visiting an online friend of 7 years at this point -- and this came on his local college experimental radio station. the folks at UNC got some good taste!`,
+        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A945390475&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/agcook" title="A. G. Cook" target="_blank" style="color: #cccccc; text-decoration: none;">A. G. Cook</a> · <a href="https://soundcloud.com/agcook/official" title="Official" target="_blank" style="color: #cccccc; text-decoration: none;">Official</a></div>`,
+        type: "song",
+      },
+    ],
+  },
+
+  {
+    id: 5,
     text: "Photos",
     image: "/xmb_icons/photos-icon.png",
     active: false,
@@ -213,7 +251,7 @@ const xmbIcons = [
           { type: "image", src: "/photosets/set1_motorcycle/photo2_1.png" },
         ],
         active: false,
-        type: "image"
+        type: "image",
       },
       {
         id: "photos_set_2",
@@ -225,7 +263,7 @@ const xmbIcons = [
           { type: "image", src: "/photosets/set2_hands/photos5_2.png" },
         ],
         active: false,
-        type: "image"
+        type: "image",
       },
       {
         id: "photos_set_3",
@@ -237,7 +275,7 @@ const xmbIcons = [
           { type: "image", src: "/photosets/set3_smoke/photos8_3.png" },
         ],
         active: false,
-        type: "image"
+        type: "image",
       },
       {
         id: "photos_set_4",
@@ -249,7 +287,7 @@ const xmbIcons = [
           { type: "image", src: "/photosets/set4_helmet/photos11_5.png" },
         ],
         active: false,
-        type: "image"
+        type: "image",
       },
       {
         id: "photos_set_5",
@@ -260,13 +298,14 @@ const xmbIcons = [
           { type: "image", src: "/photosets/set5_cat/photos12_5.png" },
         ],
         active: false,
-        type: "image"
+        type: "image",
       },
     ],
   },
 
+
   {
-    id: 5,
+    id: 6,
     text: "Videos",
     image: "/xmb_icons/videos-icon.png",
     active: false,
@@ -280,7 +319,7 @@ const xmbIcons = [
           { type: "video", src: "/videosets/catvidyas/cat2.mp4" },
         ],
         active: false,
-        type: "video"
+        type: "video",
       },
       {
         id: "videos_set_2_concerts",
@@ -291,7 +330,7 @@ const xmbIcons = [
           { type: "video", src: "/videosets/concertvidyas/concert2.mp4" },
         ],
         active: false,
-        type: "video"
+        type: "video",
       },
       {
         id: "videos_set_3_music",
@@ -303,7 +342,7 @@ const xmbIcons = [
           { type: "video", src: "/videosets/musicvidyas/music3.mp4" },
         ],
         active: false,
-        type: "video"
+        type: "video",
       },
       {
         id: "videos_set_3_talks",
@@ -311,29 +350,14 @@ const xmbIcons = [
         text_content: "talk snippets",
         asset: [
           { type: "video", src: "/videosets/talkvidyas/talk1.mp4" },
-          { type: "video", src: "/videosets/talkvidyas/talk2.mp4" }
+          { type: "video", src: "/videosets/talkvidyas/talk2.mp4" },
         ],
         active: false,
-        type: "video"
+        type: "video",
       },
     ],
   },
 
-  {
-    id: 6,
-    text: "Music Reccs",
-    image: "/xmb_icons/soundcloud-icon.png",
-    active: false,
-    items: [
-      {
-        id: "weekly_song_current",
-        title: "current week!",
-        text_content: `this week i wanna recommend atmosphere's 'sunshine'. i have faint memories of listening to this song when i was younger. i think the track came out in 2007? i came across it sometime during late middle school/early high school, and lost the track...until recently! youtube recommendations led me back to it -- and these days -- a good 10+ years later -- ive come to really appreciate the lyrics.`,
-        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A18913738&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/rhymesayers" title="rhymesayers" target="_blank" style="color: #cccccc; text-decoration: none;">rhymesayers</a> · <a href="https://soundcloud.com/rhymesayers/atmosphere-sunshine" title="Atmosphere - Sunshine" target="_blank" style="color: #cccccc; text-decoration: none;">Atmosphere - Sunshine</a></div>`,
-        type: "song"
-      },
-    ],
-  },
 
   {
     id: 7,
@@ -346,10 +370,9 @@ const xmbIcons = [
         title: "instagram",
         text_content: "instagram link",
         link: "https://www.instagram.com/strawberrycult_/",
-        text_content: `ig handle: @strawberrycult_`,
         text_description: `my very casual instagram for the very curious`,
         active: false,
-        type: "link"
+        type: "link",
       },
     ],
   },

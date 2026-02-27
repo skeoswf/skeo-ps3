@@ -101,7 +101,12 @@ function InfoboxContent() {
   const currentWeather = weatherData?.current?.condition?.text ?? "";
   const currentTemp = weatherData?.current?.temp_f;
 
-  const currentWeatherText = weatherNoteText.find((note) => note.condition === currentWeather);
+  // sometimes the data has inconsistent capitalization (e.g. "Sunny" vs "sunny"), so we're forcing all lowercase to match our notes conditions -- which are all lowercase
+
+  const currentWeatherLower = currentWeather.toLowerCase();
+  const currentWeatherText = weatherNoteText.find((note) => note.condition === currentWeatherLower);
+
+  console.log("Matched note:", currentWeatherText);
 
   return (
     <div id="infobox-content">
@@ -139,6 +144,8 @@ function InfoboxContent() {
       <div className="infobox-date-note opacity-off" ref={dateNote}>{currentHourText ? currentHourText.note : ""}</div>
       <div className="infobox-weather-note opacity-off" ref={weatherNote}>{currentWeatherText ? currentWeatherText.note : ""}</div>
     </div>
+
+
   );
 
 
