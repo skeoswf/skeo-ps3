@@ -99,7 +99,7 @@ const xmbIcons = [
         in my personal life, i enjoy new things immensely, and am always looking to learn! i especially love my riding my motorcycle (kawasaki ninja!!), making music, cooking, and photography.`,
         active: true,
         type: "about",
-        link: "resume/skeo_resume_v2.pdf",
+        link: "resume/sawakkeo-resume.pdf",
       },
 
       {
