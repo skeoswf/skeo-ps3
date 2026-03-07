@@ -12,6 +12,7 @@ export default function Home() {
   const [audioOn, setAudioOn] = useState(true);
 
 
+
   const playAudio = (sound) => {
     if (audioOn) {
       new Audio(`/sounds/snd_system_${sound}.wav`).play().catch(() => { });
@@ -270,8 +271,10 @@ export default function Home() {
           }}>
         </div>
 
+
       </div >
 
+      <div className="my-name">skeo</div>
     </div >
   );
 }
