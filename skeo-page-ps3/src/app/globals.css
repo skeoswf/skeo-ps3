@@ -637,12 +637,23 @@ textarea {
 @media (max-width: 1700px) {
   .content-div {
     margin-left: 24vw;
-    width: 650px;
-
+    width: 600px;
   }
 
-  iframe {
-    width: 100%;
+  .XMB-container {
+    --icon-size: 100px;
+    --anchor-x: 100px;
+    --row-bottom: 100px;
+  }
+
+
+
+  .icon-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .xmb-vertical {
     height: 100%;
   }
 
@@ -656,6 +667,8 @@ textarea {
   .photo-select-container {
     width: 80%;
   }
+
+
 }
 
 /* =======================
@@ -689,7 +702,7 @@ textarea {
 
     --icon-size: 88px;
     --icon-font-size: 13px;
-    --sub-font-size: 14px;
+    --sub-font-size: px;
     --sub-gap: 22px;
     --anchor-x: 88px;
     --row-bottom: 88px;
@@ -704,9 +717,10 @@ textarea {
     margin-top: -20px;
   }
 
-  .icon-square {
-    width: 90px;
-    height: 90px;
+  .XMB-container {
+    --icon-size: 88px;
+    --anchor-x: 88px;
+    --row-bottom: 88px;
   }
 
   .icon-image {
@@ -795,13 +809,15 @@ textarea {
   html,
   body {
     overflow-y: hidden;
+
   }
 
   .video-background {
     min-height: 100vh;
     height: auto;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
+
   }
 
   .XMB-container {
@@ -834,11 +850,6 @@ textarea {
 
   .icon-square-text {
     margin-top: -12px;
-  }
-
-  .XMB-vertical,
-  .XMB-vertical-above {
-    width: 90px;
   }
 
   .XMB-vertical {
