@@ -612,6 +612,8 @@ textarea {
 }
 
 .video-player {
+  width: 85%;
+  height: 85%;
   border-radius: 20px;
   box-shadow: 0px 0px 120px rgba(8, 52, 82, 0.9);
 }
@@ -634,10 +636,41 @@ textarea {
   user-select: none;
 }
 
+/* less than big desktop */
+
 @media (max-width: 1700px) {
+
   .content-div {
     margin-left: 24vw;
-    width: 600px;
+    width: 40vw;
+  }
+
+  .image-container,
+  .video-player,
+  .photo-select-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .image-container {
+    height: 360px;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 360px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: 0px 0px 120px rgba(8, 52, 82, 0.9);
+  }
+
+  .video-player {
+    height: auto;
   }
 
   .XMB-container {
@@ -645,8 +678,6 @@ textarea {
     --anchor-x: 100px;
     --row-bottom: 100px;
   }
-
-
 
   .icon-image {
     width: 100px;
@@ -657,16 +688,11 @@ textarea {
     height: 100%;
   }
 
-  .image-container,
   video {
     width: 80%;
     height: 80%;
-    background-size: cover;
   }
 
-  .photo-select-container {
-    width: 80%;
-  }
 
 
 }
@@ -682,16 +708,6 @@ textarea {
     overflow-y: hidden;
   }
 
-  .photo-select-container {
-    width: 100%;
-  }
-
-  .video-background {
-    min-height: 100vh;
-    height: auto;
-    overflow: visible;
-  }
-
   .XMB-container {
     width: min(92vw, 900px);
     min-height: auto;
@@ -699,10 +715,9 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 180px;
-
     --icon-size: 88px;
     --icon-font-size: 13px;
-    --sub-font-size: px;
+    --sub-font-size: 14px;
     --sub-gap: 22px;
     --anchor-x: 88px;
     --row-bottom: 88px;
@@ -715,12 +730,6 @@ textarea {
 
   .icon-square-text {
     margin-top: -20px;
-  }
-
-  .XMB-container {
-    --icon-size: 88px;
-    --anchor-x: 88px;
-    --row-bottom: 88px;
   }
 
   .icon-image {
@@ -742,22 +751,6 @@ textarea {
     height: auto;
     margin-left: 30vw;
     margin-top: 6vh;
-    background-color: blue;
-  }
-
-  .image-container,
-  .contact-form {
-    width: 100%;
-  }
-
-  .image-container {
-    height: 360px;
-  }
-
-  .video-player {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
   }
 
   .information-box-container {
@@ -809,7 +802,7 @@ textarea {
   html,
   body {
     overflow-y: hidden;
-
+    background-color: blue;
   }
 
   .video-background {
