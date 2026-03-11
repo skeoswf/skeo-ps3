@@ -94,7 +94,7 @@ a {
   z-index: 1;
 
   width: fit-content;
-  height: 100vh;
+  min-height: 100vh;
 
   margin-top: 25vh;
   margin-left: 30vw;
@@ -102,14 +102,17 @@ a {
 
   user-select: none;
 
-  /* X anchor for submenus (fixed “slot” under active icon) */
+  --icon-size: 120px;
+  --icon-font-size: 15px;
+  --sub-font-size: 16px;
+  --sub-gap: 30px;
+
+  /* X anchor for submenus */
   --anchor-x: 120px;
 
-  /* (still used by submenu top offsets) */
   --row-bottom: 120px;
   --row-top: 0px;
 
-  /* (currently NOT used for scroll motion, but harmless + used by your JS writer) */
   --sub-step: 22px;
   --sub-active-idx: 0;
 }
@@ -132,19 +135,20 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
-  width: 120px;
-  height: 120px;
+  width: var(--icon-size);
+  height: var(--icon-size);
 
   opacity: 0.6;
   outline: none;
   user-select: none;
 
   font-family: "ps3-font";
-  font-size: 15px;
+  font-size: var(--icon-font-size);
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.85);
 
-  transition: opacity 150ms ease;
+  transition: opacity 150ms ease, transform 200ms ease;
 }
 
 .icon-square:hover {
@@ -169,10 +173,9 @@ a {
   position: absolute;
   left: 0;
 
-  width: 120px;
+  width: var(--icon-size);
   text-align: center;
 
-  /* keep locked under the anchored active slot */
   transition: transform 220ms cubic-bezier(0.2, 0.9, 0.2, 1);
   will-change: transform;
 }
@@ -190,14 +193,13 @@ a {
 }
 
 /* sub-item styles */
-
 .sub-icon {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: var(--sub-gap);
 
   font-family: "ps3-font";
-  font-size: 16px;
+  font-size: var(--sub-font-size);
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.655);
 }
 
@@ -305,8 +307,8 @@ a {
 }
 
 .image-container {
-  width: 700px;
-  height: 500px;
+  width: 85%;
+  height: 85%;
 
   border-radius: 20px;
 
@@ -326,7 +328,7 @@ a {
   align-items: center;
   justify-content: space-around;
 
-  width: 100%;
+  width: 85%;
   margin-top: 30px;
 }
 
@@ -630,4 +632,415 @@ textarea {
 
 
   user-select: none;
+}
+
+@media (max-width: 1700px) {
+  .content-div {
+    margin-left: 24vw;
+    width: 650px;
+
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image-container,
+  video {
+    width: 80%;
+    height: 80%;
+    background-size: cover;
+  }
+
+  .photo-select-container {
+    width: 80%;
+  }
+}
+
+/* =======================
+   TABLET
+======================= */
+
+@media (max-width: 1024px) {
+
+  html,
+  body {
+    overflow-y: hidden;
+  }
+
+  .photo-select-container {
+    width: 100%;
+  }
+
+  .video-background {
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+  }
+
+  .XMB-container {
+    width: min(92vw, 900px);
+    min-height: auto;
+    margin-top: 18vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 180px;
+
+    --icon-size: 88px;
+    --icon-font-size: 13px;
+    --sub-font-size: 14px;
+    --sub-gap: 22px;
+    --anchor-x: 88px;
+    --row-bottom: 88px;
+  }
+
+  .XMB-horizontal {
+    justify-content: flex-start;
+    width: max-content;
+  }
+
+  .icon-square-text {
+    margin-top: -20px;
+  }
+
+  .icon-square {
+    width: 90px;
+    height: 90px;
+  }
+
+  .icon-image {
+    width: 64px;
+    height: 64px;
+  }
+
+  .XMB-vertical {
+    top: calc(var(--row-bottom) + 28px);
+  }
+
+  .XMB-vertical-above {
+    top: calc(var(--row-top) - 10px);
+  }
+
+  .content-div {
+    width: min(50vw, 520px);
+    min-height: 420px;
+    height: auto;
+    margin-left: 30vw;
+    margin-top: 6vh;
+    background-color: blue;
+  }
+
+  .image-container,
+  .contact-form {
+    width: 100%;
+  }
+
+  .image-container {
+    height: 360px;
+  }
+
+  .video-player {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .information-box-container {
+    position: fixed;
+    top: 28px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: min(92vw, 760px);
+    height: auto;
+    z-index: 5;
+  }
+
+  #infobox-content {
+    gap: 18px;
+    justify-content: center;
+  }
+
+  .infobox-date-time,
+  .infobox-weather,
+  .infobox-weather.crossfade {
+    transform: scale(0.92);
+    transform-origin: center;
+  }
+
+  .audio-toggle-button {
+    left: 30px;
+    bottom: 30px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .my-name {
+    top: 16%;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(120px, 18vw, 180px);
+    height: auto;
+  }
+}
+
+/* =======================
+   MOBILE
+======================= */
+
+@media (max-width: 768px) {
+
+  html,
+  body {
+    overflow-y: hidden;
+  }
+
+  .video-background {
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .XMB-container {
+    width: 100%;
+    min-height: auto;
+    margin-top: 150px;
+    margin-left: 0;
+    padding: 0 16px 130px 16px;
+
+    --icon-size: 64px;
+    --icon-font-size: 11px;
+    --sub-font-size: 13px;
+    --sub-gap: 16px;
+    --anchor-x: 64px;
+    --row-bottom: 64px;
+  }
+
+  .XMB-horizontal {
+    justify-content: flex-start;
+    width: max-content;
+  }
+
+  .XMB-icon-wrap {
+    transition: transform 220ms cubic-bezier(0.2, 0.9, 0.2, 1);
+  }
+
+  .icon-square {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.85);
+  }
+
+  .icon-square-text {
+    margin-top: -12px;
+  }
+
+  .XMB-vertical,
+  .XMB-vertical-above {
+    width: 90px;
+  }
+
+  .XMB-vertical {
+    top: calc(var(--row-bottom) + 20px);
+  }
+
+  .XMB-vertical-above {
+    top: calc(var(--row-top) - 6px);
+  }
+
+  .content-div {
+    width: calc(100vw - 130px);
+    min-width: 0;
+    max-width: none;
+    min-height: 360px;
+    height: auto;
+    margin-left: 92px;
+    margin-top: 3.5vh;
+    padding-right: 6px;
+    background-color: red;
+  }
+
+  .textContent,
+  .linkDescription,
+  .aboutContent,
+  .song-description {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .aboutContent {
+    margin-bottom: 14px;
+  }
+
+  .linkstack-container {
+    gap: 8px;
+  }
+
+  .image-container,
+  .contact-form {
+    width: 100%;
+  }
+
+  .image-container {
+    height: 220px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 60px rgba(8, 52, 82, 0.7);
+  }
+
+  .photo-select-container {
+    margin-top: 18px;
+    gap: 8px;
+  }
+
+  .photo-select {
+    width: 24%;
+    height: 8px;
+  }
+
+  .video-player {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0px 0px 60px rgba(8, 52, 82, 0.7);
+  }
+
+  .contact-form {
+    gap: 14px;
+  }
+
+  input,
+  textarea,
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  textarea {
+    height: 180px;
+  }
+
+  .information-box-container {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: auto;
+
+    pointer-events: auto;
+  }
+
+  #infobox-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .infobox-date-time,
+  .infobox-weather {
+    width: min(100%, 340px);
+    justify-content: center;
+  }
+
+  .infobox-weather.crossfade {
+    min-width: 0;
+    width: min(100%, 340px);
+    height: 48px;
+  }
+
+  .infobox-weather.crossfade .layer {
+    padding: 0 6px;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .info-p {
+    width: auto;
+    min-width: 0;
+    height: auto;
+    margin: 8px 6px;
+    font-size: 20px;
+  }
+
+  .infobox-date-note,
+  .infobox-weather-note {
+    display: none;
+  }
+
+  .audio-toggle-button {
+    left: 16px;
+    bottom: 16px;
+    width: 38px;
+    height: 38px;
+    opacity: 0.72;
+  }
+
+  .my-name {
+    top: 70px;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translateX(-50%);
+    font-size: clamp(72px, 24vw, 120px);
+    opacity: 0.13;
+    text-align: center;
+  }
+}
+
+
+/* =======================
+   SMALLER PHONES
+======================= */
+
+@media (max-width: 430px) {
+
+  html,
+  body {
+    overflow-y: hidden;
+  }
+
+  .XMB-container {
+    margin-top: 132px;
+
+    --icon-size: 56px;
+    --icon-font-size: 10px;
+    --sub-font-size: 12px;
+    --sub-gap: 14px;
+    --anchor-x: 56px;
+    --row-bottom: 56px;
+  }
+
+  .content-div {
+    width: calc(100vw - 108px);
+    margin-left: 78px;
+    margin-top: 22px;
+  }
+
+  .textContent,
+  .linkDescription,
+  .aboutContent,
+  .song-description {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .image-container {
+    height: 190px;
+  }
+
+  .infobox-date-time,
+  .infobox-weather,
+  .infobox-weather.crossfade {
+    width: min(100%, 300px);
+  }
+
+  .info-p {
+    font-size: 11px;
+  }
+
+  textarea {
+    height: 160px;
+  }
 }

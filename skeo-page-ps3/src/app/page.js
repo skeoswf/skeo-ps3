@@ -10,16 +10,6 @@ import { xmbIcons as initialIcons } from "../../xmb_icon_arrays/main_array_data"
 
 export default function Home() {
   const [audioOn, setAudioOn] = useState(true);
-
-
-
-  const playAudio = (sound) => {
-    if (audioOn) {
-      new Audio(`/sounds/snd_system_${sound}.wav`).play().catch(() => { });
-      // catch in case user has interacted with the page but hasn't explicitly allowed audio (e.g. by clicking an icon), which would cause a DOMException error when trying to play audio
-    }
-  };
-
   const [xmbIcons, setXmbIcons] = useState(initialIcons);
   const [xoffset, setxoffset] = useState(0);
 
@@ -28,6 +18,29 @@ export default function Home() {
 
   // the “slot” that stays fixed in the viewport (initial active index)
   const anchorIndexRef = useRef(initialIcons.findIndex((i) => i.active));
+
+  const playAudio = (sound) => {
+    if (audioOn) {
+      new Audio(`/sounds/snd_system_${sound}.wav`).play().catch(() => { });
+    }
+  };
+
+  const getIconStep = useCallback(() => {
+    const containerEl = containerRef.current;
+    if (!containerEl) return 120;
+
+    const styles = getComputedStyle(containerEl);
+    const iconSize = parseFloat(styles.getPropertyValue("--icon-size")) || 120;
+    return iconSize;
+  }, []);
+
+  const getOffsetForIndex = useCallback(
+    (newIndex) => {
+      const step = getIconStep();
+      return (anchorIndexRef.current - newIndex) * step;
+    },
+    [getIconStep]
+  );
 
   const updateVerticalPosition = useCallback(() => {
     const containerEl = containerRef.current;
@@ -38,20 +51,21 @@ export default function Home() {
 
     const activeIcon = xmbIcons[activeIndex];
 
-    // active sub-index
     const activeSubIdx = activeIcon.items.findIndex((item) => item.active);
     containerEl.style.setProperty(
       "--sub-active-idx",
       `${Math.max(activeSubIdx, 0)}`
     );
 
-    // keep sub-step accurate
     const subEl = activeSubItemRef.current;
     if (subEl) {
       const h = subEl.getBoundingClientRect().height;
       containerEl.style.setProperty("--sub-step", `${h + 30}px`);
     }
-  }, [xmbIcons]);
+
+    // keep current active icon visually aligned if breakpoint changed
+    setxoffset(getOffsetForIndex(activeIndex));
+  }, [xmbIcons, getOffsetForIndex]);
 
   useLayoutEffect(() => {
     updateVerticalPosition();
@@ -66,8 +80,7 @@ export default function Home() {
     playAudio("ok");
 
     setXmbIcons((prev) => {
-      // keep active icon locked to the anchor slot
-      setxoffset((anchorIndexRef.current - newIndex) * 120);
+      setxoffset(getOffsetForIndex(newIndex));
 
       return prev.map((icon, index) => {
         const isActive = index === newIndex;
@@ -118,10 +131,8 @@ export default function Home() {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      // if user is typing in a form field, don't do XMB navigation
       if (isTypingField(e.target)) return;
 
-      // prevents div from popping to top of page
       const navKeys = [
         "ArrowLeft",
         "ArrowRight",
@@ -138,7 +149,6 @@ export default function Home() {
         e.preventDefault();
       }
 
-      // left/right main icons
       if (
         e.key === "ArrowLeft" ||
         e.key === "ArrowRight" ||
@@ -150,8 +160,7 @@ export default function Home() {
           const direction = e.key === "ArrowLeft" || e.key === "a" ? -1 : 1;
           const newIndex = (currentIndex + direction + prev.length) % prev.length;
 
-          // keep active icon locked to the anchor slot
-          setxoffset((anchorIndexRef.current - newIndex) * 120);
+          setxoffset(getOffsetForIndex(newIndex));
 
           return prev.map((icon, index) => {
             const isActive = index === newIndex;
@@ -170,7 +179,6 @@ export default function Home() {
         return;
       }
 
-      // up/down subitems
       if (
         e.key === "ArrowUp" ||
         e.key === "ArrowDown" ||
@@ -206,19 +214,17 @@ export default function Home() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [xmbIcons, audioOn]);
+  }, [audioOn, getOffsetForIndex]);
 
   const activeIcon = xmbIcons.find((icon) => icon.active);
 
   return (
     <div className="video-background">
-
       <video autoPlay loop muted className="background-video">
         <source src="/background/background_no_noise_no_fade.mp4" type="video/mp4" />
       </video>
 
       <div className="XMB-container" ref={containerRef}>
-
         <div className="XMB-horizontal">
           {xmbIcons.map((icon, index) => (
             <div
@@ -268,13 +274,11 @@ export default function Home() {
               new Audio(`/sounds/snd_system_ok.wav`).play().catch(() => { });
             }
             setAudioOn((prev) => !prev);
-          }}>
-        </div>
-
-
-      </div >
+          }}
+        />
+      </div>
 
       <div className="my-name">skeo</div>
-    </div >
+    </div>
   );
 }
