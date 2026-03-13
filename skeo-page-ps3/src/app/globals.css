@@ -708,6 +708,11 @@ textarea {
     overflow-y: hidden;
   }
 
+  iframe {
+    width: 100%;
+    height: 125px;
+  }
+
   .XMB-container {
     width: min(92vw, 900px);
     min-height: auto;
@@ -782,6 +787,11 @@ textarea {
     width: 30vw;
     font-size: 80%;
     margin-top: 40px;
+    position: absolute;
+    top: 5vh;
+
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .audio-toggle-button {
@@ -810,23 +820,21 @@ textarea {
   html,
   body {
     overflow-y: hidden;
-    background-color: blue;
   }
 
   .video-background {
     min-height: 100vh;
-    height: auto;
-    overflow-x: hidden;
-    overflow-y: hidden;
-
+    overflow: hidden;
   }
 
+  /* keep tablet layout logic, just smaller */
+
   .XMB-container {
-    width: 100%;
-    min-height: auto;
-    margin-top: 150px;
-    margin-left: 0;
-    padding: 0 16px 130px 16px;
+    width: min(96vw, 640px);
+    margin-top: 16vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 150px;
 
     --icon-size: 64px;
     --icon-font-size: 11px;
@@ -841,12 +849,9 @@ textarea {
     width: max-content;
   }
 
-  .XMB-icon-wrap {
-    transition: transform 220ms cubic-bezier(0.2, 0.9, 0.2, 1);
-  }
-
-  .icon-square {
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.85);
+  .icon-image {
+    width: 48px;
+    height: 48px;
   }
 
   .icon-square-text {
@@ -861,17 +866,82 @@ textarea {
     top: calc(var(--row-top) - 6px);
   }
 
+  /* content box mirrors tablet logic */
+
   .content-div {
-    width: calc(100vw - 130px);
-    min-width: 0;
-    max-width: none;
+    width: min(70vw, 420px);
     min-height: 360px;
     height: auto;
-    margin-left: 92px;
-    margin-top: 3.5vh;
-    padding-right: 6px;
-    background-color: red;
+
+    margin-left: 26vw;
+    margin-top: 6vh;
   }
+
+  /* keep the centered info bar like tablet */
+
+  .information-box-container {
+    position: fixed;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(94vw, 640px);
+    height: auto;
+    z-index: 5;
+  }
+
+  #infobox-content {
+    gap: 14px;
+    justify-content: center;
+  }
+
+  /* 
+  #infobox-content {
+    width: 70%;
+  } */
+
+  .infobox-date-time,
+  .infobox-weather,
+  .infobox-weather.crossfade {
+    transform: scale(0.75);
+    transform-origin: center;
+  }
+
+  /* same centering logic as tablet */
+
+  .infobox-date-note,
+  .infobox-weather-note {
+    font-size: 12px;
+    width: 40vw;
+
+    margin-top: 40px;
+    position: absolute;
+    top: 80vh;
+
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* slightly smaller controls */
+
+  .audio-toggle-button {
+    left: 20px;
+    bottom: 20px;
+    width: 36px;
+    height: 36px;
+  }
+
+  /* title */
+
+  .my-name {
+    top: 14%;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(70px, 22vw, 120px);
+    height: auto;
+  }
+
+  /* text scaling */
 
   .textContent,
   .linkDescription,
@@ -881,126 +951,11 @@ textarea {
     line-height: 1.45;
   }
 
-  .aboutContent {
-    margin-bottom: 14px;
-  }
-
-  .linkstack-container {
-    gap: 8px;
-  }
-
-  .image-container,
-  .contact-form {
+  iframe {
     width: 100%;
-  }
-
-  .image-container {
-    height: 220px;
-    border-radius: 14px;
-    box-shadow: 0px 0px 60px rgba(8, 52, 82, 0.7);
-  }
-
-  .photo-select-container {
-    margin-top: 18px;
-    gap: 8px;
-  }
-
-  .photo-select {
-    width: 24%;
-    height: 8px;
-  }
-
-  .video-player {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 14px;
-    box-shadow: 0px 0px 60px rgba(8, 52, 82, 0.7);
-  }
-
-  .contact-form {
-    gap: 14px;
-  }
-
-  input,
-  textarea,
-  input::placeholder,
-  textarea::placeholder {
-    font-size: 13px;
-    letter-spacing: 0.5px;
-  }
-
-  textarea {
-    height: 180px;
-  }
-
-  .information-box-container {
-    position: static;
-    transform: none;
-    width: 100%;
-    height: auto;
-
-    pointer-events: auto;
-  }
-
-  #infobox-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .infobox-date-time,
-  .infobox-weather {
-    width: min(100%, 340px);
-    justify-content: center;
-  }
-
-  .infobox-weather.crossfade {
-    min-width: 0;
-    width: min(100%, 340px);
-    height: 48px;
-  }
-
-  .infobox-weather.crossfade .layer {
-    padding: 0 6px;
-    justify-content: center;
-    gap: 6px;
-  }
-
-  .info-p {
-    width: auto;
-    min-width: 0;
-    height: auto;
-    margin: 8px 6px;
-    font-size: 20px;
-  }
-
-  .infobox-date-note,
-  .infobox-weather-note {
-    display: none;
-  }
-
-  .audio-toggle-button {
-    left: 16px;
-    bottom: 16px;
-    width: 38px;
-    height: 38px;
-    opacity: 0.72;
-  }
-
-  .my-name {
-    top: 70px;
-    left: 50%;
-    width: 100%;
-    height: auto;
-    transform: translateX(-50%);
-    font-size: clamp(72px, 24vw, 120px);
-    opacity: 0.13;
-    text-align: center;
+    height: 110px;
   }
 }
-
 
 /* =======================
    SMALLER PHONES
@@ -1011,6 +966,26 @@ textarea {
   html,
   body {
     overflow-y: hidden;
+  }
+
+  .information-box-container {
+    height: 150px;
+    width: 200px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 80px;
+  }
+
+  .icon-square {
+    width: 60px;
+    height: 70px;
+  }
+
+  .sub-icon {
+    width: 60px;
+    margin-left: -10vw;
   }
 
   .XMB-container {
@@ -1025,8 +1000,8 @@ textarea {
   }
 
   .content-div {
-    width: calc(100vw - 108px);
-    margin-left: 78px;
+    width: calc(100vw - 125px);
+    margin-left: 100px;
     margin-top: 22px;
   }
 
@@ -1042,12 +1017,6 @@ textarea {
     height: 190px;
   }
 
-  .infobox-date-time,
-  .infobox-weather,
-  .infobox-weather.crossfade {
-    width: min(100%, 300px);
-  }
-
   .info-p {
     font-size: 11px;
   }
@@ -1055,4 +1024,33 @@ textarea {
   textarea {
     height: 160px;
   }
+
+  #infobox-content {
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .information-box-container {
+    height: auto;
+    width: 100%;
+    top: 20px;
+  }
+
+  .infobox-date-time,
+  .infobox-weather,
+  .infobox-weather.crossfade {
+    transform: scale(0.7);
+    transform-origin: center;
+    width: auto;
+  }
+
+  .infobox-date-note,
+  .infobox-date-note {
+    position: absolute;
+    top: 80vh;
+  }
+
+
 }
