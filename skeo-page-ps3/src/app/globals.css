@@ -772,8 +772,16 @@ textarea {
   .infobox-date-time,
   .infobox-weather,
   .infobox-weather.crossfade {
-    transform: scale(0.92);
+    transform: scale(0.8);
     transform-origin: center;
+  }
+
+  .infobox-date-note,
+  .infobox-weather-note {
+    font-size: 12px;
+    width: 30vw;
+    font-size: 80%;
+    margin-top: 40px;
   }
 
   .audio-toggle-button {
