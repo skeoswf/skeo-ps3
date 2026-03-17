@@ -6,7 +6,6 @@
   font-display: block;
 }
 
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -388,14 +387,11 @@ a {
 .infobox-weather {
   display: flex;
   flex-direction: row;
-  /* 
-  background: rgba(255, 255, 255, 0.050); */
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   transition: all ease 0.5s;
   pointer-events: auto;
 }
-
 
 .info-p {
   width: 200px;
@@ -409,13 +405,11 @@ a {
   text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4);
 }
 
-
 .infobox-weather.crossfade {
   position: relative;
 
   display: flex;
   flex-direction: row;
-
 
   height: 55px;
   /* match .info-p height(35) + margin(10+10) */
@@ -429,11 +423,6 @@ a {
 
   transition: all ease 0.5s;
 }
-
-/* .infobox-weather.crossfade:hover {
-  background: rgba(255, 255, 255, 0.090);
-} */
-
 
 .infobox-weather.crossfade .layer {
   position: absolute;
@@ -623,7 +612,7 @@ textarea {
   position: absolute;
   left: 50%;
   top: 20%;
-  opacity: .2;
+  opacity: 0.2;
   width: 40%;
   height: 40%;
   font-size: 300px;
@@ -632,14 +621,12 @@ textarea {
 
   color: rgb(2, 10, 21);
 
-
   user-select: none;
 }
 
 /* less than big desktop */
 
 @media (max-width: 1700px) {
-
   .content-div {
     margin-left: 24vw;
     width: 40vw;
@@ -692,9 +679,6 @@ textarea {
     width: 80%;
     height: 80%;
   }
-
-
-
 }
 
 /* =======================
@@ -702,6 +686,12 @@ textarea {
 ======================= */
 
 @media (max-width: 1024px) {
+
+  .linkstack-buttons,
+  .submit-button {
+    width: 80%;
+    font-size: 85%;
+  }
 
   html,
   body {
@@ -894,7 +884,7 @@ textarea {
     justify-content: center;
   }
 
-  /* 
+  /*
   #infobox-content {
     width: 70%;
   } */
@@ -968,6 +958,26 @@ textarea {
     overflow-y: hidden;
   }
 
+  .XMB-vertical {
+    transform: translateX(calc(var(--anchor-x) + var(--global-x-offset)));
+  }
+
+  .XMB-vertical-above {
+    transform: translateX(calc(var(--anchor-x) + var(--global-x-offset))) translateY(-100%);
+  }
+
+  .XMB-horizontal {
+    transform: translateX(var(--global-x-offset));
+  }
+
+  .sub-icon {
+    font-size: 60%;
+  }
+
+  .linkstack-buttons {
+    font-size: 70%;
+  }
+
   .information-box-container {
     height: 150px;
     width: 200px;
@@ -979,17 +989,15 @@ textarea {
   }
 
   .icon-square {
-    width: 60px;
-    height: 70px;
-  }
-
-  .sub-icon {
-    width: 60px;
-    margin-left: -10vw;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    font-size: 60%;
   }
 
   .XMB-container {
     margin-top: 132px;
+
+    --global-x-offset: -10vw;
 
     --icon-size: 56px;
     --icon-font-size: 10px;
@@ -1051,6 +1059,4 @@ textarea {
     position: absolute;
     top: 80vh;
   }
-
-
 }
