@@ -81,17 +81,16 @@ function InfoboxContent() {
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const { data: geoData, error: geoError } = useSWR("/api/geolib", fetcher);
 
-  const roughLocation = geoData?.city;
+  // there are cities with the same name. originally i had used rough location (e.g. city) to get the weather, but that caused some issues with duplicate city names. 
 
   const { data: weatherData, error: weatherError } = useSWR(
-    roughLocation
-      ? `https://api.weatherapi.com/v1/forecast.json?key=7de18e37cf0249249d274829260102&q=${roughLocation}&days=1&aqi=no&alerts=no`
+    geoData?.lat && geoData?.lon
+      ? `https://api.weatherapi.com/v1/forecast.json?key=7de18e37cf0249249d274829260102&q=${geoData.lat},${geoData.lon}&days=1&aqi=no&alerts=no`
       : null,
     fetcher
   );
 
   console.log("geoData:", geoData);
-  console.log("roughLocation:", roughLocation);
 
   // is it awful practice to have an api key in frontend code? yes. but it was also free and i really doubt anyone would be enough of a loser (well...) to use/abuse it. it's easier to just do this for now. tech debt wont apply too much here even in the worse possible outcomes.
 
