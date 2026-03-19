@@ -129,6 +129,31 @@ export default function Home() {
     );
   };
 
+  const moveVertical = useCallback((direction) => {
+    setXmbIcons((prev) => {
+      const currentSubIconIndex = prev.findIndex(
+        (icon) => icon.items.findIndex((item) => item.active) !== -1
+      );
+      if (currentSubIconIndex === -1) return prev;
+
+      const items = prev[currentSubIconIndex].items;
+      const activeItemIndex = items.findIndex((item) => item.active);
+      const newIndex = (activeItemIndex + direction + items.length) % items.length;
+
+      return prev.map((icon, index) => {
+        if (index !== currentSubIconIndex) return icon;
+
+        return {
+          ...icon,
+          items: icon.items.map((item, idx) => ({
+            ...item,
+            active: idx === newIndex,
+          })),
+        };
+      });
+    });
+  }, []);
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (isTypingField(e.target)) return;
@@ -185,36 +210,29 @@ export default function Home() {
         e.key === "w" ||
         e.key === "s"
       ) {
-        setXmbIcons((prev) => {
-          const currentSubIconIndex = prev.findIndex(
-            (icon) => icon.items.findIndex((item) => item.active) !== -1
-          );
-          if (currentSubIconIndex === -1) return prev;
-
-          const items = prev[currentSubIconIndex].items;
-          const activeItemIndex = items.findIndex((item) => item.active);
-
-          const direction = e.key === "ArrowUp" || e.key === "w" ? -1 : 1;
-          const newIndex = (activeItemIndex + direction + items.length) % items.length;
-
-          return prev.map((icon, index) => {
-            if (index !== currentSubIconIndex) return icon;
-
-            return {
-              ...icon,
-              items: icon.items.map((item, idx) => ({
-                ...item,
-                active: idx === newIndex,
-              })),
-            };
-          });
-        });
+        const direction = e.key === "ArrowUp" || e.key === "w" ? -1 : 1;
+        moveVertical(direction);
       }
     };
 
+    const handleWheel = (e) => {
+      if (isTypingField(e.target)) return;
+
+      e.preventDefault();
+      playAudio("ng");
+
+      const direction = e.deltaY < 0 ? -1 : 1;
+      moveVertical(direction);
+    };
+
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [audioOn, getOffsetForIndex]);
+    window.addEventListener("wheel", handleWheel, { passive: false });
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, [audioOn, getOffsetForIndex, moveVertical]);
 
   const activeIcon = xmbIcons.find((icon) => icon.active);
 
