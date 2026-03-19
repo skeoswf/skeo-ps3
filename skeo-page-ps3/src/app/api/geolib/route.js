@@ -10,14 +10,29 @@ export async function GET(request) {
     host: "geolite.info",
   });
 
-  const forwardedFor = request.headers.get("x-forwarded-for");
+  const forwardedFor =
+    request.headers.get("x-vercel-forwarded-for") ||
+    request.headers.get("x-forwarded-for");
+
   const ip = forwardedFor?.split(",")[0]?.trim();
 
-  const lookupIp = ip && ip !== "127.0.0.1" && ip !== "::1"
-    ? ip
-    : "151.143.51.85"; // test ip address - sacremento area
+  const isLocal =
+    !ip ||
+    ip === "127.0.0.1" ||
+    ip === "::1" ||
+    ip.startsWith("192.") ||
+    ip.startsWith("10.") ||
+    ip.startsWith("172.");
+
+  const lookupIp = isLocal ? "151.143.51.85" : ip;
 
   const geo = await client.city(lookupIp);
+
+  console.log("IP HEADERS:", {
+    vercel: request.headers.get("x-vercel-forwarded-for"),
+    forwarded: request.headers.get("x-forwarded-for"),
+  });
+
 
   return Response.json({
     ip: lookupIp,
