@@ -804,20 +804,3 @@ textarea {
     height: auto;
   }
 }
-
-@media (max-width: 768px) {
-  body {
-    transform: scale(0.8);
-    transform-origin: top center;
-    width: 125%;
-    /* prevents clipping */
-  }
-}
-
-@media (max-width: 430px) {
-  body {
-    transform: scale(0.65);
-    transform-origin: top center;
-    width: 155%;
-  }
-}
