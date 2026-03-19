@@ -90,6 +90,9 @@ function InfoboxContent() {
     fetcher
   );
 
+  console.log("geoData:", geoData);
+  console.log("roughLocation:", roughLocation);
+
   // is it awful practice to have an api key in frontend code? yes. but it was also free and i really doubt anyone would be enough of a loser (well...) to use/abuse it. it's easier to just do this for now. tech debt wont apply too much here even in the worse possible outcomes.
 
   if (weatherError) return <div>failed to load weather data</div>;
