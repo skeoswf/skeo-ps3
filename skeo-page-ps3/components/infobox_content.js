@@ -106,8 +106,6 @@ function InfoboxContent() {
   const currentWeatherLower = currentWeather.toLowerCase();
   const currentWeatherText = weatherNoteText.find((note) => note.condition === currentWeatherLower);
 
-  console.log("Matched note:", currentWeatherText);
-
   return (
     <div id="infobox-content">
 
