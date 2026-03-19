@@ -85,7 +85,7 @@ function InfoboxContent() {
 
   const { data: weatherData, error: weatherError } = useSWR(
     roughLocation
-      ? `http://api.weatherapi.com/v1/forecast.json?key=7de18e37cf0249249d274829260102&q=${roughLocation}&days=1&aqi=no&alerts=no`
+      ? `https://api.weatherapi.com/v1/forecast.json?key=7de18e37cf0249249d274829260102&q=${roughLocation}&days=1&aqi=no&alerts=no`
       : null,
     fetcher
   );
