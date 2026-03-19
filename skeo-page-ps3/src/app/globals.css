@@ -805,7 +805,7 @@ textarea {
   }
 }
 
-/@media (max-width: 768px) {
+@media (max-width: 768px) {
   body {
     transform: scale(0.8);
     transform-origin: top center;
