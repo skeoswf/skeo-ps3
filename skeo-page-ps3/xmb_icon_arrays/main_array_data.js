@@ -9,7 +9,9 @@ const xmbIcons = [
         id: "home_about",
         title: "about",
         text_content:
-          "originally, this page was intended to be a sort of professional/portfolio page. i always felt that the xmb bar from the playstation 3 era was clean, interactive, and intuitive, without it being plagued by an overtly 'sterile' quality you see in a lot of more modern uis. with a place for photos and videos as well, it'd be a nice way to also showcase who i am -- beyond the resume.",
+          `originally, this page was intended to be a sort of professional/portfolio page. i always felt that the xmb bar from the playstation 3 era was clean, interactive, and intuitive, without it being plagued by an overtly 'sterile' quality you see in a lot of more modern uis. with a place for photos and videos as well, it'd be a nice way to also showcase who i am -- beyond the resume.
+          
+          also! if you're on mobile, it may be best to 'view as desktop site' to get the full experience of the xmb layout...i won't deny there's some areas and viewports where it may not be perfect, but either way, welcome! feel free to look around and check out the different sections. if you have any questions or just wanna chat about anything, hit me up on the contact page or linkedin!`,
         active: false,
         type: "text",
       },
