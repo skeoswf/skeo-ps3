@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=1024, initial-scale=1"></meta>
+        <meta name="viewport" content="width=1024, initial-scale=0.4"></meta>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
