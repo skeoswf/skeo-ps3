@@ -96,7 +96,7 @@ const xmbIcons = [
         title: "about me",
         text_content: `i am a software engineer currently looking for my first role! i graduated nashville software school in 2025, with a focus on development fundamentals and problem solving. the final three months of the program was executed in a simulated company environment with scrum methodology.
 
-        in the past, i took on a variety of roles in the food industry. i worked both FOH and BOH in roles ranging from line cook and barista to trainer and manager — experience that shaped how I work with people, pressure, and fast-moving environments. 
+        in the past, i took on a variety of roles in the food industry. i worked both FOH and BOH in roles ranging from line cook and barista to trainer and manager — experience that shaped how i work with people, pressure, and fast-moving environments. 
         
         in my personal life, i enjoy new things immensely, and am always looking to learn! i especially love my riding my motorcycle (kawasaki ninja!!), making music, playing video games,  cooking, and photography. these days in particular ive been really into pottery and ceramics! i also have a cat named pixel who is the best.`,
         active: true,

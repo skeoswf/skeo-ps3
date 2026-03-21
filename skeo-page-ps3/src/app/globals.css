@@ -574,8 +574,6 @@ textarea {
   background-image: url("/audio_toggle_images/soundon.png");
 }
 
-/* video background */
-
 .video-background {
   position: relative;
 
@@ -941,7 +939,7 @@ textarea {
   .linkDescription,
   .aboutContent,
   .song-description {
-    font-size: 13px;
+    font-size: 10px;
     line-height: 1.45;
   }
 
@@ -1012,8 +1010,8 @@ textarea {
   }
 
   .content-div {
-    width: calc(100vw - 125px);
-    margin-left: 100px;
+    width: calc(100vw - 150px);
+    margin-left: 27vw;
     margin-top: 22px;
   }
 
@@ -1021,7 +1019,7 @@ textarea {
   .linkDescription,
   .aboutContent,
   .song-description {
-    font-size: 12px;
+    font-size: 10px;
     line-height: 1.4;
   }
 
