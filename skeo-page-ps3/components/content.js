@@ -176,6 +176,37 @@ function XMBcontent({ iconObj }) {
         </>
       );
 
+    case "songlist": {
+      const songs = iconObj.items[activeIdx]?.songs_embedded ?? [];
+      const safeIdx = Math.min(activeAssetIdx, Math.max(songs.length - 1, 0));
+      const currentSong = songs[safeIdx];
+
+      return (
+        <>
+          <div
+            className="embed-soundcloud"
+            dangerouslySetInnerHTML={{
+              __html: currentSong?.embedded ?? "",
+            }}
+          />
+
+          <div className="song-description">
+            {currentSong?.text_content ?? ""}
+          </div>
+
+          <div className="song-select-container">
+            {songs.map((song, index) => (
+              <div
+                key={index}
+                className={`song-select ${index === safeIdx ? "active" : ""}`}
+                onClick={() => setActiveAssetIdx(index)}
+              />
+            ))}
+          </div>
+        </>
+      );
+    }
+
     case "contact":
       return (
         <form className="contact-form" onSubmit={onSubmit}>

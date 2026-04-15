@@ -321,7 +321,8 @@ a {
   animation: fadeSwitch 1.5s ease;
 }
 
-.photo-select-container {
+.photo-select-container,
+.song-select-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -331,7 +332,12 @@ a {
   margin-top: 30px;
 }
 
-.photo-select {
+.song-select-container {
+  width: 100%;
+}
+
+.photo-select,
+.song-select {
   width: 25%;
   height: 10px;
 
@@ -343,17 +349,24 @@ a {
     box-shadow 300ms ease;
 }
 
+.song-select {
+  width: 16%;
+}
+
+.song-select:hover,
 .photo-select:hover {
   background: rgba(19, 109, 169, 0.4);
   cursor: pointer;
   transition: all ease 200ms;
 }
 
+.song-select:active,
 .photo-select:active {
   background: rgba(52, 148, 212, 0.4);
   transition: all ease 100ms;
 }
 
+.song-select:active,
 .photo-select.active {
   background: rgba(8, 201, 166, 0.744);
   box-shadow: 0px 0px 60px rgb(8, 201, 166);
