@@ -268,6 +268,7 @@ const xmbIcons = [
         asset: [
           { type: "image", src: "/photosets/set1_motorcycle/photo1_1.png" },
           { type: "image", src: "/photosets/set1_motorcycle/photo2_1.png" },
+          { type: "image", src: "/photosets/set1_motorcycle/photo3_1.png" },
         ],
         active: false,
         type: "image",
@@ -277,9 +278,9 @@ const xmbIcons = [
         title: "hands",
         text_content: `sample photo 2 description`,
         asset: [
+          { type: "image", src: "/photosets/set2_hands/photos5_2.png" },
           { type: "image", src: "/photosets/set2_hands/photo3_2.png" },
           { type: "image", src: "/photosets/set2_hands/photo4_2.png" },
-          { type: "image", src: "/photosets/set2_hands/photos5_2.png" },
         ],
         active: false,
         type: "image",
@@ -304,6 +305,7 @@ const xmbIcons = [
           { type: "image", src: "/photosets/set4_helmet/photos9_4.png" },
           { type: "image", src: "/photosets/set4_helmet/photos11_4.png" },
           { type: "image", src: "/photosets/set4_helmet/photos11_5.png" },
+          { type: "image", src: "/photosets/set4_helmet/photo3_1.png" },
         ],
         active: false,
         type: "image",
@@ -335,6 +337,7 @@ const xmbIcons = [
         text_content: "videos of cats",
         asset: [
           { type: "video", src: "/videosets/catvidyas/cat1.mp4" },
+          { type: "video", src: "/videosets/catvidyas/cat3.mp4" },
           { type: "video", src: "/videosets/catvidyas/cat2.mp4" },
         ],
         active: false,
