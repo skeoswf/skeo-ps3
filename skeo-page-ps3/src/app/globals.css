@@ -353,6 +353,10 @@ a {
   width: 16%;
 }
 
+.photo-select {
+  width: 10%;
+}
+
 .song-select:hover,
 .photo-select:hover {
   background: rgba(19, 109, 169, 0.4);
