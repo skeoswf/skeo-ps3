@@ -208,25 +208,41 @@ const xmbIcons = [
     active: false,
     items: [
       {
-        id: "weekly_song_current",
-        title: "current week!",
-        text_content: `she was a 'wisp' girl and he was a 'whirr' boy. whirr is definitely a wonderful example of modern shoegaze. this track in particular slams you with a wall of almost-aggressive, fuzzy, overdriven guitar, all while being so melodic and accompanied by these relentless drums. soon, a woman's voice could be heard, just barely drowned out by the instrumentation. as far as other shoegaze bands go, i feel like whirr is a lot more textural and abrasive, not focusing so much on melodic vocals and a "clean"-er sound. that being said, 'leave' is whirr's most well known song, and id definitely recommend their other works-- especially their 'distressor' album!!`,
-        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1352054233&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/whirr-official" title="Whirr" target="_blank" style="color: #cccccc; text-decoration: none;">Whirr</a> · <a href="https://soundcloud.com/whirr-official/leave" title="Leave" target="_blank" style="color: #cccccc; text-decoration: none;">Leave</a></div>`,
+        id: "current_song_rec",
+        title: "may 1-9th",
+        text_content: `azie is an artist from atlanta -- and recently she's made a presence in the underground scene with her release of "everglades". it's an awesome track. understated, but on the nose with the chill drums, the lowkey overdriven guitars, and clean flow. she carries an emo aesthetic with her, and this song feels like a culmination of so many different genres. i HEAR the alternative rock, the hip hop, and the emo rap influence from the mid 2010s. she deserves to blow up!`,
+        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2281253198&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/aziedoesntexist" title="AZIEDOESNTEXIST" target="_blank" style="color: #cccccc; text-decoration: none;">AZIEDOESNTEXIST</a> · <a href="https://soundcloud.com/aziedoesntexist/everglades" title="Everglades" target="_blank" style="color: #cccccc; text-decoration: none;">Everglades</a></div>`,
         type: "song",
       },
       {
-        id: "weekly_song_past_1",
-        title: "arpil 5-11th",
-        text_content: `the entry this week is 'heartlocket' by elusin.i found it going through my recommended soundcloud playlists -- the 'weekly wave'. they really do pull through sometimes! the song immediately draws you in with this lovely, misty electric guitar and light humming. whispered lyrics of nights spent talking about guns and god, recollections of heart- touched sleeves and heavy minds. what a precious song! we should all be so lucky to be in someone's heartlocket. i don't know anything about this artist or their works, but this track has me convinced to change that.`,
-        embedded: `<iframe width = "100%" height = "170" scrolling = "no" frameborder = "no" allow = "autoplay" src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1357363174&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" ></ > <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/elusin13" title="elusin" target="_blank" style="color: #cccccc; text-decoration: none;">elusin</a> · <a href="https://soundcloud.com/elusin13/heart-locket" title="Heart Locket" target="_blank" style="color: #cccccc; text-decoration: none;">Heart Locket</a></div>`,
-        type: "song",
-      },
-      {
-        id: "weekly_song_past_0",
-        title: "april 1-4th",
-        text_content: `this week i wanna recommend atmosphere's 'sunshine'. i have fond memories of listening to this song when i was younger. i think the track came out in 2007? i came across it sometime during late middle school/early high school, and lost the track to memory...until recently! i was doing some laundry. and just thought 'man what was that song ? '. these days -- a good 10+ years later -- ive come to really appreciate the lyrics.`,
-        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A18913738&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/rhymesayers" title="rhymesayers" target="_blank" style="color: #cccccc; text-decoration: none;">rhymesayers</a> · <a href="https://soundcloud.com/rhymesayers/atmosphere-sunshine" title="Atmosphere - Sunshine" target="_blank" style="color: #cccccc; text-decoration: none;">Atmosphere - Sunshine</a></div>`,
-        type: "song",
+        id: "april_2026",
+        title: "april 2026 weeklies",
+        songs_embedded: [
+          {
+            id: "weekly_song_past_3",
+            text_content: `april 19th-30th: in the mood for some bright-surfacy melodic yearning jpop?? this track is about the singer having a friend with a heart of a "sugarless girl". the singer herself is upbeat, and calls out to her about the morning, grinning. meanwhile her friend talks of terrible things happening, and the singer replies with traps in romance, blowing her off for music, and not caring if her friend blames everything on the times-- saying it isn't enough to make her feel like everything is alright. the singer talking to her friend is stubburn, direct, and caring-- just like the song-- refusing to let her sink.`,
+            embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A187450954&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/maslyastar" title="maslyastar" target="_blank" style="color: #cccccc; text-decoration: none;">maslyastar</a> · <a href="https://soundcloud.com/maslyastar/capsule-sugarless-girl" title="capsule - Sugarless GiRL" target="_blank" style="color: #cccccc; text-decoration: none;">capsule - Sugarless GiRL</a></div>`,
+            type: "song",
+          },
+          {
+
+            text_content: `april 12th-18th: she was a 'wisp' girl and he was a 'whirr' boy. whirr is definitely a wonderful example of modern shoegaze. this track in particular slams you with a wall of almost-aggressive, fuzzy, overdriven guitar, all while being so melodic and accompanied by these relentless drums. soon, a woman's voice could be heard, just barely drowned out by the instrumentation. as far as other shoegaze bands go, i feel like whirr is a lot more textural and abrasive, not focusing so much on melodic vocals and a "clean"-er sound. that being said, 'leave' is whirr's most well known song, and id definitely recommend their other works-- especially their 'distressor' album!!`,
+            embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1352054233&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/whirr-official" title="Whirr" target="_blank" style="color: #cccccc; text-decoration: none;">Whirr</a> · <a href="https://soundcloud.com/whirr-official/leave" title="Leave" target="_blank" style="color: #cccccc; text-decoration: none;">Leave</a></div>`,
+            type: "song",
+          },
+          {
+
+            text_content: `april 5-11th: the entry this week is 'heartlocket' by elusin. i found it going through my recommended soundcloud playlists -- the 'weekly wave'. they really do pull through sometimes! the song immediately draws you in with this lovely, misty electric guitar and light humming. whispered lyrics of nights spent talking about guns and god, recollections of heart- touched sleeves and heavy minds. what a precious song! we should all be so lucky to be in someone's heartlocket. i don't know anything about this artist or their works, but this track has me convinced to change that.`,
+            embedded: `<iframe width = "100%" height = "170" scrolling = "no" frameborder = "no" allow = "autoplay" src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1357363174&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" ></ > <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/elusin13" title="elusin" target="_blank" style="color: #cccccc; text-decoration: none;">elusin</a> · <a href="https://soundcloud.com/elusin13/heart-locket" title="Heart Locket" target="_blank" style="color: #cccccc; text-decoration: none;">Heart Locket</a></div>`,
+            type: "song",
+          },
+          {
+            text_content: `april: 1-4th: this week i wanna recommend atmosphere's 'sunshine'. i have fond memories of listening to this song when i was younger. i think the track came out in 2007? i came across it sometime during late middle school/early high school, and lost the track to memory...until recently! i was doing some laundry. and just thought 'man what was that song ? '. these days -- a good 10+ years later -- ive come to really appreciate the lyrics.`,
+            embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A18913738&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/rhymesayers" title="rhymesayers" target="_blank" style="color: #cccccc; text-decoration: none;">rhymesayers</a> · <a href="https://soundcloud.com/rhymesayers/atmosphere-sunshine" title="Atmosphere - Sunshine" target="_blank" style="color: #cccccc; text-decoration: none;">Atmosphere - Sunshine</a></div>`,
+            type: "song",
+          },
+        ],
+        type: "songlist",
       },
       {
         id: "march_2026",
@@ -253,6 +269,7 @@ const xmbIcons = [
       },
 
     ],
+
   },
 
   {
