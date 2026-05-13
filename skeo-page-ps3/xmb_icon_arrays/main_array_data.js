@@ -98,7 +98,7 @@ const xmbIcons = [
 
         in the past, i took on a variety of roles in the food industry. i worked both FOH and BOH in roles ranging from line cook and barista to trainer and manager — experience that shaped how i work with people, pressure, and fast-moving environments. 
         
-        in my personal life, i enjoy new things immensely, and am always looking to learn! i especially love my riding my motorcycle (kawasaki ninja!!), making music, playing video games,  cooking, and photography. these days in particular ive been really into pottery and ceramics! i also have a cat named pixel who is the best.`,
+        in my personal life, i enjoy new things immensely, and am always looking to learn! i especially love riding my motorcycle (kawasaki ninja!!), making music, playing video games,  cooking, and photography. these days in particular ive been really into pottery and ceramics! i also have a cat named pixel who is the best.`,
         active: true,
         type: "about",
         link: "resume/sawakkeo-resume.pdf",
@@ -145,7 +145,7 @@ const xmbIcons = [
 
         'notemap' solves the problem of communication between musicians who 1) largely perform freelance, 2) is looking for fulfill a role (or roles) for a group, 3) is already in a group and is looking for members, or 4) is interested in creating a group. for the most part, outside of relatively niche online communities and local networking, it can be hard for the average musician to socially connect for the sole purpose of performance.
 
-        notemap was developed during as a frontstone capstone during my time at nashville software school. created with react, react-bootstrap, and firebase.`,
+        notemap was developed during as a frontend capstone during my time at nashville software school. created with react, react-bootstrap, and firebase.`,
         link: "https://github.com/skeoswf/notemap",
         active: false,
         type: "link",
@@ -167,7 +167,7 @@ const xmbIcons = [
         id: "github_vocab_you_lary_repo",
         title: "vocab-you-lary",
         text_content: `vocab-you-lary repository`,
-        text_description: `a vocabulary building application designed to help users practice study on user submitted vocabularly words. created with firebase.`,
+        text_description: `a vocabulary building application designed to help users practice study on user submitted vocabulary words. created with firebase.`,
         link: "https://github.com/skeoswf/vocab-you-lary",
         active: false,
         type: "link",
@@ -185,7 +185,7 @@ const xmbIcons = [
         id: "github_flicker_repo",
         title: "flickerwalk",
         text_content: `flickerwalk repository`,
-        text_description: `another WIP personal project. a relatively unsettling atmospheric point and click adventure game with some sort of scattered lore thinly veiled as something else. maybe with a rudimentary inventory system?`,
+        text_description: `another WIP personal project. a relatively unsettling atmospheric point-and-click adventure game with some sort of scattered lore thinly veiled as something else. maybe with a rudimentary inventory system?`,
         link: "https://github.com/skeoswf/flickerwalk",
         active: false,
         type: "link",
@@ -220,7 +220,7 @@ const xmbIcons = [
         songs_embedded: [
           {
             id: "weekly_song_past_3",
-            text_content: `april 19th-30th: in the mood for some bright-surfacy melodic yearning jpop?? this track is about the singer having a friend with a heart of a "sugarless girl". the singer herself is upbeat, and calls out to her about the morning, grinning. meanwhile her friend talks of terrible things happening, and the singer replies with traps in romance, blowing her off for music, and not caring if her friend blames everything on the times-- saying it isn't enough to make her feel like everything is alright. the singer talking to her friend is stubburn, direct, and caring-- just like the song-- refusing to let her sink.`,
+            text_content: `april 19th-30th: in the mood for some bright-surfacy melodic yearning jpop?? this track is about the singer having a friend with a heart of a "sugarless girl". the singer herself is upbeat, and calls out to her about the morning, grinning. meanwhile her friend talks of terrible things happening, and the singer replies with traps in romance, blowing her off for music, and not caring if her friend blames everything on the times-- saying it isn't enough to make her feel like everything is alright. the singer talking to her friend is stubborn, direct, and caring-- just like the song-- refusing to let her sink.`,
             embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A187450954&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/maslyastar" title="maslyastar" target="_blank" style="color: #cccccc; text-decoration: none;">maslyastar</a> · <a href="https://soundcloud.com/maslyastar/capsule-sugarless-girl" title="capsule - Sugarless GiRL" target="_blank" style="color: #cccccc; text-decoration: none;">capsule - Sugarless GiRL</a></div>`,
             type: "song",
           },
