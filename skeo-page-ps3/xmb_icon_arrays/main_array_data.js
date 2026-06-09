@@ -208,33 +208,35 @@ const xmbIcons = [
     active: false,
     items: [
       {
-        id: "current_song",
-        title: "may 24-31st",
-        text_content: `i'm a sucker for underground soundcloud rap. i know there's a (honestly relatively deserved) rep-- but i genuinely believe there's so many gems out there! whereami is an uk underground rapper, and 'deja vu' was produced by typhelicia. the production is CRISP. hearing these sort lines of almost-angsty, bravado rap lyrics from the underground scene over olivia rodrigo's well known "deja vu" sampled lyrics-- it's such an interesting mix. his lines "i don't think they feel me, i don't think they'll feel me like you do" fading into olivia's "...do you get deja vu when she's with you?". awesome track!! i cant tell you how many times ive had this single song on repeat on my night rides.`,
-        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2149700496&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/er100-240297185" title="whereami" target="_blank" style="color: #cccccc; text-decoration: none;">whereami</a> · <a href="https://soundcloud.com/er100-240297185/2dc57f74-4831-48e4-b1b4-795183f57f17" title="deja vu (prod. typhelicia)" target="_blank" style="color: #cccccc; text-decoration: none;">deja vu (prod. typhelicia)</a></div>`,
-        type: "song",
-      },
-      {
-        id: "past_song_rec_may_17_23rd",
-        title: "may 17-23rd",
-        text_content: `we can't forget nujabes! stay easy.`,
-        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1121609815&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/nujabes-sc" title="Nujabes" target="_blank" style="color: #cccccc; text-decoration: none;">Nujabes</a> · <a href="https://soundcloud.com/nujabes-sc/reflection-eternal" title="reflection eternal" target="_blank" style="color: #cccccc; text-decoration: none;">reflection eternal</a></div>`,
-        type: "song",
-      },
-      {
-        id: "past_song_rec_may_10_16th",
-        title: "may 10-16th",
-        text_content: `"cheerwine" by chrysalis is another soft, lovely song. chrysalis is actually local to here! they're a nashville based alternative/indie group. the song is drifting, casual, earnestly vulnerable -- relatable too, of all things. i remember first hearing the line "i dial drunk and know exactly who i called too", and thinking 'huh'. yeah. i've done that.`,
-        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2043974908&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/chrysalis80170" title="chrysalis" target="_blank" style="color: #cccccc; text-decoration: none;">chrysalis</a> · <a href="https://soundcloud.com/chrysalis80170/cheerwine" title="cheerwine" target="_blank" style="color: #cccccc; text-decoration: none;">cheerwine</a></div>`,
-        type: "song",
-      },
-
-      {
-        id: "past_song_rec_may_1_9th",
-        title: "may 1-9th",
-        text_content: `azie is an artist from atlanta -- and recently she's made a presence in the underground scene with her release of "everglades". it's an awesome track. understated, but on the nose with the chill drums, the lowkey overdriven guitars, and clean flow. she carries an emo aesthetic with her, and this song feels like a culmination of so many different genres. i HEAR the alternative rock, the hip hop, and the emo rap influence from the mid 2010s. she deserves to blow up!`,
-        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2281253198&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/aziedoesntexist" title="AZIEDOESNTEXIST" target="_blank" style="color: #cccccc; text-decoration: none;">AZIEDOESNTEXIST</a> · <a href="https://soundcloud.com/aziedoesntexist/everglades" title="Everglades" target="_blank" style="color: #cccccc; text-decoration: none;">Everglades</a></div>`,
-        type: "song",
+        id: "may_2026",
+        title: "may 2026 weeklies",
+        songs_embedded: [
+          {
+            id: "weekly_song_may_24_31st",
+            text_content: `may 24-31st: i'm a sucker for underground soundcloud rap. i know there's a (honestly relatively deserved) rep-- but i genuinely believe there's so many gems out there! whereami is an uk underground rapper, and 'deja vu' was produced by typhelicia. the production is CRISP. hearing these sort lines of almost-angsty, bravado rap lyrics from the underground scene over olivia rodrigo's well known "deja vu" sampled lyrics-- it's such an interesting mix. his lines "i don't think they feel me, i don't think they'll feel me like you do" fading into olivia's "...do you get deja vu when she's with you?". awesome track!! i cant tell you how many times ive had this single song on repeat on my night rides.`,
+            embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2149700496&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/er100-240297185" title="whereami" target="_blank" style="color: #cccccc; text-decoration: none;">whereami</a> · <a href="https://soundcloud.com/er100-240297185/2dc57f74-4831-48e4-b1b4-795183f57f17" title="deja vu (prod. typhelicia)" target="_blank" style="color: #cccccc; text-decoration: none;">deja vu (prod. typhelicia)</a></div>`,
+            type: "song",
+          },
+          {
+            id: "weekly_song_may_17_23rd",
+            text_content: `may 17-23rd: we can't forget nujabes! stay easy.`,
+            embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1121609815&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/nujabes-sc" title="Nujabes" target="_blank" style="color: #cccccc; text-decoration: none;">Nujabes</a> · <a href="https://soundcloud.com/nujabes-sc/reflection-eternal" title="reflection eternal" target="_blank" style="color: #cccccc; text-decoration: none;">reflection eternal</a></div>`,
+            type: "song",
+          },
+          {
+            id: "weekly_song_may_10_16th",
+            text_content: `may 10-16th: "cheerwine" by chrysalis is another soft, lovely song. chrysalis is actually local to here! they're a nashville based alternative/indie group. the song is drifting, casual, earnestly vulnerable -- relatable too, of all things. i remember first hearing the line "i dial drunk and know exactly who i called too", and thinking 'huh'. yeah. i've done that.`,
+            embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2043974908&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/chrysalis80170" title="chrysalis" target="_blank" style="color: #cccccc; text-decoration: none;">chrysalis</a> · <a href="https://soundcloud.com/chrysalis80170/cheerwine" title="cheerwine" target="_blank" style="color: #cccccc; text-decoration: none;">cheerwine</a></div>`,
+            type: "song",
+          },
+          {
+            id: "weekly_song_may_1_9th",
+            text_content: `may 1-9th: azie is an artist from atlanta -- and recently she's made a presence in the underground scene with her release of "everglades". it's an awesome track. understated, but on the nose with the chill drums, the lowkey overdriven guitars, and clean flow. she carries an emo aesthetic with her, and this song feels like a culmination of so many different genres. i HEAR the alternative rock, the hip hop, and the emo rap influence from the mid 2010s. she deserves to blow up!`,
+            embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2281253198&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/aziedoesntexist" title="AZIEDOESNTEXIST" target="_blank" style="color: #cccccc; text-decoration: none;">AZIEDOESNTEXIST</a> · <a href="https://soundcloud.com/aziedoesntexist/everglades" title="Everglades" target="_blank" style="color: #cccccc; text-decoration: none;">Everglades</a></div>`,
+            type: "song",
+          },
+        ],
+        type: "songlist",
       },
       {
         id: "april_2026",
