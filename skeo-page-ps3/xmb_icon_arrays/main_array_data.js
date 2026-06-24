@@ -208,6 +208,20 @@ const xmbIcons = [
     active: false,
     items: [
       {
+        id: "june_21-30",
+        title: "june 21-30th",
+        text_content: `i found this randomly during a ride to my buddie's place in clarksville about an hour away. max volume, empty night interstate. i found myself messing with my cardo (helmet audio system) to keep putting the song back on repeat whenever it ended. the immediate heavy synths, the melancholic pitched up vocals. the chamber slide and single casing drop. 0:12 comes in with a wall of abrasive, distorted, almost industrial synths. repeated lyrics of remaining love, cold drinks, changes, and what matters. the sudden break about a minute in with the boops and the beeps and the hesistant guitars and the sudden return to the wall of synths. MAN. if you know songs like this please immediately hit me up. shoutout to nano.`,
+        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2219971646&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/nano17780" title="nano" target="_blank" style="color: #cccccc; text-decoration: none;">nano</a> · <a href="https://soundcloud.com/nano17780/virus-feat-whateveryouwantband" title="Virus (feat. whateveryouwantband)" target="_blank" style="color: #cccccc; text-decoration: none;">Virus (feat. whateveryouwantband)</a></div>`,
+        type: "song",
+      },
+      {
+        id: "june_14-20",
+        title: "june 14-20th",
+        text_content: `i DID say i have a thing for underground soundcloud rap. here we got 'project x' by haldadedd. i don't know anything about that producer/singer/artist-- but like whereami from few weeks back, they're also uk based. that being said, this song's definitely made it on my racing playlist (https://soundcloud.com/tapleswf/sets/ego-ride). i DO have some fond memories winning laps with this song. what can i say!! it gets me feeling myself.`,
+        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2131272033&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/halfadedd" title="halfadedd" target="_blank" style="color: #cccccc; text-decoration: none;">halfadedd</a> · <a href="https://soundcloud.com/halfadedd/project-x-1" title="project x" target="_blank" style="color: #cccccc; text-decoration: none;">project x</a></div>`,
+        type: "song",
+      },
+      {
         id: "june_7-13",
         title: "june 7-13th",
         text_content: `here's another example of music i picked up from the radio! i found this song a few hours ago on 91.1 WNXP. i don't know too much about feeble little horse, but apparently they're an indie rock band from pennsylvania. and as it turns out-- they're gonna be at the basement east in just a month! maybe i should go. 'rewind' is just such a pretty song. sometimes affections come and go. maybe we really are that different! `,
