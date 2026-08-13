@@ -208,6 +208,37 @@ const xmbIcons = [
     active: false,
     items: [
       {
+        id: "july_2026",
+        title: "july 2026 weeklies",
+        songs_embedded: [
+          {
+            id: "july_1-11",
+            text_content: `yung lean's someone i certainly look up to. right away you'd notice the slightly out of tune piano and the sort of not-quite-sad and certainly-not-happy lyrics. there's a sort of hope here. among yung lean's works, this is certainly one of the more minimalistic songs of his. the instrumental break at 1:00 might sound familiar -- it's been making the rounds on social media. apparently the song was written about lean's return to his father's house after his time in a psychiatric unit. let's see...haunting? no, i wouldn't say so. "so many times i realized what i seek for is right in front of my eyes."`,
+            embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A824616631&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/p3r0x1d3" title="P3R0X1D3" target="_blank" style="color: #cccccc; text-decoration: none;">P3R0X1D3</a> · <a href="https://soundcloud.com/p3r0x1d3/agony" title="Yung Lean - Agony" target="_blank" style="color: #cccccc; text-decoration: none;">Yung Lean - Agony</a></div>`,
+            type: "song",
+          },
+          {
+            id: "july_12-18",
+            text_content: `this song's a big collaborative effort between a lot of early-2020s soundcloud hyperpop/indie electronic artists. observer as a group is comprised of 15+ artists "and friends". the production of idmyw is sourced to 7 artists, and was mixed by 3. the lyrics are song by 5+ different singers. all of that said -- that's besides the point. i just thought that was really interesting. idmyw stands for "i don't mind your way". i found this song a couple years ago (my comment that shoutout the saxophone blurbs at 2:10 are still there!). i adore the lyrics and production. the string and horns and the pizzicato-esque sounds flowing with the layered lyrics at 2:30-3:10. MAN. it still hits just as hard as it did when i first heard it.`,
+            embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1465428283&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/hiddencontact" title="hidden contact" target="_blank" style="color: #cccccc; text-decoration: none;">hidden contact</a> · <a href="https://soundcloud.com/hiddencontact/observer-idmyw" title="observer - IDMYW" target="_blank" style="color: #cccccc; text-decoration: none;">observer - IDMYW</a></div>`,
+            type: "song",
+          },
+          {
+            id: "july_19-25",
+            text_content: `super catchy. hard. "i just-- i just walked in da sto 🗣️🗣️". zaybeezy is a newer, more underground rapper with some songs garnering good success in the past few years. 360/2 was released by him september 1st, 2024, but has been making the rounds in the underground scene. while zaybeezy's most popular songs took several years to reach about half a hundred thousand listens (still a huge feat!!), 360/2 has been rapidly approaching those numbers since being recently "discovered". if you like 360/2 by him, certainly check out his other track "infinity". not as energetic and playful. definitely more angsty. but a lot of what makes 360/2 so nice could be heard just as well.`,
+            embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1907940293&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/itszaybeezy" title="zaybeezy !" target="_blank" style="color: #cccccc; text-decoration: none;">zaybeezy !</a> · <a href="https://soundcloud.com/itszaybeezy/beez360" title="360/2" target="_blank" style="color: #cccccc; text-decoration: none;">360/2</a></div>`,
+            type: "song",
+          },
+          {
+            id: "july_26-31",
+            text_content: `an orchestraic retelling (pretentious, i know. i couldn't think of a better word!) of black hole sun with female led vocals. you'll notice right away this is BASICALLY an entirely different song. trust the build up. get blown away as i did when i first heard this song in some counter-strike frag movie about a decade ago.`,
+            embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A165539620&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/nmmo1995" title="Tushkkar" target="_blank" style="color: #cccccc; text-decoration: none;">Tushkkar</a> · <a href="https://soundcloud.com/nmmo1995/black-hole-sun-nauela-ftswann" title="Black Hole Sun - Nauela Ft.Swann" target="_blank" style="color: #cccccc; text-decoration: none;">Black Hole Sun - Nauela Ft.Swann</a></div>`,
+            type: "song",
+          }
+        ],
+        type: "songlist",
+      },
+      {
         id: "june_2026",
         title: "june 2026 weeklies",
         songs_embedded: [
