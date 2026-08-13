@@ -208,6 +208,20 @@ const xmbIcons = [
     active: false,
     items: [
       {
+        id: "aug_9-15th",
+        title: "august 9-15th",
+        text_content: `leon the professional is one of my favorite movies. it's about a girl named matilda who returned home from the grocery store to find her family murdered. i don't know alt-j that well. im sure for most people (myself included), alt-j becomes familiar in the context of the song that more or less brought them into the mainstream all those years ago -- breezeblocks. so when i found this song and immediately recognized that it  was likened it to leon the professional, i was shook. matilda does need leon in every possible way. you can hear it in the choruses. `,
+        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A46579085&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/alt-j" title="alt-J" target="_blank" style="color: #cccccc; text-decoration: none;">alt-J</a> · <a href="https://soundcloud.com/alt-j/08-m-tilda" title="Matilda" target="_blank" style="color: #cccccc; text-decoration: none;">Matilda</a></div>`,
+        type: "song",
+      },
+      {
+        id: "aug_1-8th",
+        title: "august 1-8th",
+        text_content: `dream, ivory is an electronic pop band from southern california.they're a pair of brothers. milk was another one of their songs i stumbled upon in my soundcloud weekly ages ago. i have a distinct memory of riding my bike in an early a.m, listening to the lines of "racing through the street", and "bright lights reflecting" while i watched the interstate streetlights streak across my visor. i absolutely adore the segment at 1:28 with the higher pitched, moodier excerpt.`,
+        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1625872767&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/dreamivory" title="Dream, Ivory" target="_blank" style="color: #cccccc; text-decoration: none;">Dream, Ivory</a> · <a href="https://soundcloud.com/dreamivory/milk" title="Milk" target="_blank" style="color: #cccccc; text-decoration: none;">Milk</a></div>`,
+        type: "song",
+      },
+      {
         id: "july_2026",
         title: "july 2026 weeklies",
         songs_embedded: [
