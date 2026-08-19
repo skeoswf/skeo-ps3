@@ -208,6 +208,13 @@ const xmbIcons = [
     active: false,
     items: [
       {
+        id: "aug_16-22nd",
+        title: "august 16-22nd",
+        text_content: `so i don't know much about a$ap. i certainly should -- with him being such a big name in the modern hip-hop/rap scene, and with the realization that this song was that same artist. when i first heard this song, i couldnt believe it was him. 'don't be dumb/ trip baby' is track 14 on his fourth studio album of the same name. it's a two-parter, with the second half being 'trip baby'. im not too much of a fan of trip baby. at any rate, don't be dumb is sultry, heartfelt, and filled with emotional lyricism. i want to hear more like this from rocky.`,
+        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2248554653&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/n9qyn1psq6ua" title="lsxqrt" target="_blank" style="color: #cccccc; text-decoration: none;">lsxqrt</a> · <a href="https://soundcloud.com/n9qyn1psq6ua/dont-ve-dumb-without-trir-vabu" title="DON&#x27;T BE DUMB (without TRIP BABY)" target="_blank" style="color: #cccccc; text-decoration: none;">DON&#x27;T BE DUMB (without TRIP BABY)</a></div>`,
+        type: "song",
+      },
+      {
         id: "aug_9-15th",
         title: "august 9-15th",
         text_content: `leon the professional is one of my favorite movies. it's about a girl named matilda who returned home from the grocery store to find her family murdered. i don't know alt-j that well. im sure for most people (myself included), alt-j becomes familiar in the context of the song that more or less brought them into the mainstream all those years ago -- breezeblocks. so when i found this song and immediately recognized that it  was likened it to leon the professional, i was shook. matilda does need leon in every possible way. you can hear it in the choruses. `,
