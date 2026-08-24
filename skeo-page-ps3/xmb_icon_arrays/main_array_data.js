@@ -208,6 +208,13 @@ const xmbIcons = [
     active: false,
     items: [
       {
+        id: "aug_23-31st",
+        title: "august 23-31st",
+        text_content: `let's get blasted back in time...SOMEBODY CALL 911 🗣️🗣️🔥🔥`,
+        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A309809494&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/seankingston" title="Sean Kingston" target="_blank" style="color: #cccccc; text-decoration: none;">Sean Kingston</a> · <a href="https://soundcloud.com/seankingston/fire-burning-album-version" title="Fire Burning" target="_blank" style="color: #cccccc; text-decoration: none;">Fire Burning</a></div>`,
+        type: "song",
+      },
+      {
         id: "aug_16-22nd",
         title: "august 16-22nd",
         text_content: `so i don't know much about a$ap. i certainly should -- with him being such a big name in the modern hip-hop/rap scene, and with the realization that this song was that same artist. when i first heard this song, i couldnt believe it was him. 'don't be dumb/ trip baby' is track 14 on his fourth studio album of the same name. it's a two-parter, with the second half being 'trip baby'. im not too much of a fan of trip baby. at any rate, don't be dumb is sultry, heartfelt, and filled with emotional lyricism. i want to hear more like this from rocky.`,
