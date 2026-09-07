@@ -208,6 +208,13 @@ const xmbIcons = [
     active: false,
     items: [
       {
+        id: "sep_6-12th",
+        title: "september 6-12th",
+        text_content: `panchiko was a british indie rock band formed almost 30 years ago -- and finally received public attention in 2016 after their cd was randomly discovered and posted about online. since then they've definitely fostered a cult following. laputa was from their debut album d>e>a>t>h>m>e>t>a>l, and was made in reference to studio ghilbi's 'castle in the sky'. it's wildly interesting to consider that the song was made by a group of then 16-17 year olds inspired by studio ghilbi, and the music caught up to them -- and their audience -- several decades later.`,
+        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1353942505&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-73551862" title="Panchiko" target="_blank" style="color: #cccccc; text-decoration: none;">Panchiko</a> · <a href="https://soundcloud.com/user-73551862/laputa-1" title="Laputa" target="_blank" style="color: #cccccc; text-decoration: none;">Laputa</a></div>`,
+        type: "song",
+      },
+      {
         id: "sep_1-5",
         title: "september 1-5th",
         text_content: `mitaya is another atlanta based hyperpop artist. pluggnb really, if we wanna get into it. fall through is an airy, floaty, and flowy track. i discovered fall through a couple years back, and fell in love with the soft lyrics and sultry chorus backed up by this sort of modern, internet-adjacent produced way about it. the language and feelings in the song -- im sure we can all relate at some point. oh! she had a house party a long time ago. of course i went -- turns out she's hilarious! that's a plus.`,
