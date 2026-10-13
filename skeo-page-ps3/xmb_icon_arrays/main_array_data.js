@@ -208,19 +208,56 @@ const xmbIcons = [
     active: false,
     items: [
       {
-        id: "sep_6-12th",
-        title: "september 6-12th",
-        text_content: `panchiko was a british indie rock band formed almost 30 years ago -- and finally received public attention in 2016 after their cd was randomly discovered and posted about online. since then they've definitely fostered a cult following. laputa was from their debut album d>e>a>t>h>m>e>t>a>l, and was made in reference to studio ghilbi's 'castle in the sky'. it's wildly interesting to consider that the song was made by a group of then 16-17 year olds inspired by studio ghilbi, and the music caught up to them -- and their audience -- several decades later.`,
-        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1353942505&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-73551862" title="Panchiko" target="_blank" style="color: #cccccc; text-decoration: none;">Panchiko</a> · <a href="https://soundcloud.com/user-73551862/laputa-1" title="Laputa" target="_blank" style="color: #cccccc; text-decoration: none;">Laputa</a></div>`,
+        id: "nov11-17th",
+        title: "november 11-17th",
+        text_content: `immediately you could tell there's just so much going in this song. i love it. throughout the whole song you hear some light guitar, violin plucks, and a soft woman's hum. atop of that context you hear these brash lyrics of someone overloaded in every direction -- spats of "going back and forth" and "i dont really know who im supposed to choose". exhaustion, questions of vulnerability, clutching his jaw while another bites their tongue. all the while with these scanning, booming glitchy horns and synths, overloaded drum, almost fighting with the underlying serenade. there's a constant mix of harmonies and energy. it's an incredibly well done, complex, intriguing song. `,
+        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2401742109&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-590804579-990825236" title="jeryke" target="_blank" style="color: #cccccc; text-decoration: none;">jeryke</a> · <a href="https://soundcloud.com/user-590804579-990825236/it-sounds-stup1d-i-know" title="It sounds Stup1d I Know!! ." target="_blank" style="color: #cccccc; text-decoration: none;">It sounds Stup1d I Know!! .</a></div>`,
         type: "song",
       },
       {
-        id: "sep_1-5",
-        title: "september 1-5th",
-        text_content: `mitaya is another atlanta based hyperpop artist. pluggnb really, if we wanna get into it. fall through is an airy, floaty, and flowy track. i discovered fall through a couple years back, and fell in love with the soft lyrics and sultry chorus backed up by this sort of modern, internet-adjacent produced way about it. the language and feelings in the song -- im sure we can all relate at some point. oh! she had a house party a long time ago. of course i went -- turns out she's hilarious! that's a plus.`,
-        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1527924199&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/m1taya" title="Mitaya" target="_blank" style="color: #cccccc; text-decoration: none;">Mitaya</a> · <a href="https://soundcloud.com/m1taya/fall-through" title="Fall Through" target="_blank" style="color: #cccccc; text-decoration: none;">Fall Through</a></div>`,
+        id: "nov1-10th",
+        title: "november 1-10th",
+        text_content: `i just found out this artist super recently on my soundcloud discovers. as it turns out, theyve produced a ton of songs for and worked with feng -- a prominent english rapper in the uk underground scene. i dont know too much of feng's music either... but i definitely recognized that name. at any rate, intravenous by soraya cinema is a rapid flowing beat. the upbeat jingles(?) and alternating beats with guitar chords and female vocal chops (especially after 1:24) is just so captivating.`,
+        embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2338219613&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sorayacinema" title="Soraya Cinema" target="_blank" style="color: #cccccc; text-decoration: none;">Soraya Cinema</a> · <a href="https://soundcloud.com/sorayacinema/intravenous" title="Intravenous" target="_blank" style="color: #cccccc; text-decoration: none;">Intravenous</a></div>`,
         type: "song",
       },
+      {
+        id: "september_2026",
+        title: "september 2026 weeklies",
+        songs_embedded: [
+
+          {
+            id: "sep_6-12th",
+            title: "september 6-12th",
+            text_content: `panchiko was a british indie rock band formed almost 30 years ago -- and finally received public attention in 2016 after their cd was randomly discovered and posted about online. since then they've definitely fostered a cult following. laputa was from their debut album d>e>a>t>h>m>e>t>a>l, and was made in reference to studio ghilbi's 'castle in the sky'. it's wildly interesting to consider that the song was made by a group of then 16-17 year olds inspired by studio ghilbi, and the music caught up to them -- and their audience -- several decades later.`,
+            embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1353942505&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-73551862" title="Panchiko" target="_blank" style="color: #cccccc; text-decoration: none;">Panchiko</a> · <a href="https://soundcloud.com/user-73551862/laputa-1" title="Laputa" target="_blank" style="color: #cccccc; text-decoration: none;">Laputa</a></div>`,
+            type: "song",
+          },
+          {
+            id: "sep_1-5",
+            title: "september 1-5th",
+            text_content: `mitaya is another atlanta based hyperpop artist. pluggnb really, if we wanna get into it. fall through is an airy, floaty, and flowy track. i discovered fall through a couple years back, and fell in love with the soft lyrics and sultry chorus backed up by this sort of modern, internet-adjacent produced way about it. the language and feelings in the song -- im sure we can all relate at some point. oh! she had a house party a long time ago. of course i went -- turns out she's hilarious! that's a plus.`,
+            embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1527924199&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/m1taya" title="Mitaya" target="_blank" style="color: #cccccc; text-decoration: none;">Mitaya</a> · <a href="https://soundcloud.com/m1taya/fall-through" title="Fall Through" target="_blank" style="color: #cccccc; text-decoration: none;">Fall Through</a></div>`,
+            type: "song",
+          },
+          {
+            id: "sep_13-19th",
+            title: "september 13-19th",
+            text_content: `this is like the pluggnb version of miley cyrus's we can't stop. as it turns out, fakemink more or less rapped over this a couple years ago, and i found that song on his page just now. ive known this version a lot longer though -- and it doesn't have his rapping. i like it more.`,
+            embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1915657832&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/cranessssss" title="cranes" target="_blank" style="color: #cccccc; text-decoration: none;">cranes</a> · <a href="https://soundcloud.com/cranessssss/cant-stop-cranesss-ss3bby" title="cant stop w/ ss3bby" target="_blank" style="color: #cccccc; text-decoration: none;">cant stop w/ ss3bby</a></div>`,
+            type: "song",
+          },
+          {
+            id: "sep_20-31st",
+            title: "september 20-31st",
+            text_content: `i hear this song and immediately envision: nighttime. speed. blurs of street lamps and headlights. cold breath and foggy visor. the switches back and forth into and from high energy breakcore-esque pop with ravey edm adjacent drops is just so kinetic and COOL to me.  `,
+            embedded: `<iframe width="100%" height="170" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2152345752&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/maikel-geiss" title="Tekkofon" target="_blank" style="color: #cccccc; text-decoration: none;">Tekkofon</a> · <a href="https://soundcloud.com/maikel-geiss/one-more-casual-affairs" title="one more casual Affairs" target="_blank" style="color: #cccccc; text-decoration: none;">one more casual Affairs</a></div>`,
+            type: "song"
+          }
+        ],
+        type: "songlist",
+      },
+
       {
         id: "aug_2026",
         title: "august 2026 weeklies",
