@@ -101,7 +101,7 @@ const xmbIcons = [
         in my personal life, i enjoy new things immensely, and am always looking to learn! i especially love riding my motorcycle (kawasaki ninja!!), making music, playing video games,  cooking, and photography. these days in particular ive been really into pottery and ceramics! i also have a cat named pixel who is the best.`,
         active: true,
         type: "about",
-        link: "resume/sawakkeo-resume.pdf",
+        link: "resume/sawakkeo-Résumé.pdf",
       },
 
       {
